@@ -1,0 +1,292 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Odyssey - Scholarly Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Literata:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "on-primary-fixed-variant": "#004f58",
+                "on-primary": "#00363d",
+                "surface-container-low": "#1c1b1c",
+                "on-primary-container": "#002f35",
+                "on-surface-variant": "#bcc9cb",
+                "primary-fixed-dim": "#64d6e8",
+                "outline-variant": "#3d494b",
+                "on-secondary-container": "#a9bacf",
+                "surface-container": "#201f20",
+                "surface-dim": "#131314",
+                "on-error": "#690005",
+                "surface-tint": "#64d6e8",
+                "outline": "#879395",
+                "on-secondary": "#223242",
+                "on-error-container": "#ffdad6",
+                "error": "#ffb4ab",
+                "secondary-container": "#3b4a5c",
+                "surface": "#131314",
+                "surface-variant": "#353436",
+                "on-tertiary-fixed-variant": "#454748",
+                "inverse-on-surface": "#313031",
+                "surface-container-highest": "#353436",
+                "tertiary-container": "#8f9192",
+                "primary-container": "#159fb0",
+                "secondary-fixed-dim": "#b7c8dd",
+                "on-background": "#e5e2e3",
+                "on-tertiary-fixed": "#191c1d",
+                "tertiary-fixed": "#e1e3e4",
+                "surface-container-lowest": "#0e0e0f",
+                "primary": "#64d6e8",
+                "inverse-primary": "#006874",
+                "background": "#131314",
+                "on-tertiary-container": "#272a2b",
+                "surface-bright": "#39393a",
+                "on-secondary-fixed-variant": "#384859",
+                "secondary": "#b7c8dd",
+                "tertiary-fixed-dim": "#c5c7c8",
+                "inverse-surface": "#e5e2e3",
+                "on-tertiary": "#2e3132",
+                "on-primary-fixed": "#001f24",
+                "secondary-fixed": "#d3e4fa",
+                "error-container": "#93000a",
+                "tertiary": "#c5c7c8",
+                "on-surface": "#e5e2e3",
+                "on-secondary-fixed": "#0c1d2c",
+                "primary-fixed": "#99f0ff",
+                "surface-container-high": "#2a2a2b"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+        },
+        "spacing": {
+                    "lg": "48px",
+                    "margin-mobile": "16px",
+                    "base": "8px",
+                    "margin-desktop": "64px",
+                    "gutter": "24px",
+                    "md": "24px",
+                    "xl": "80px",
+                    "sm": "12px",
+                    "xs": "4px"
+        },
+        "fontFamily": {
+                "headline": ["Literata"],
+                "display": ["Literata"],
+                "body": ["Literata"],
+                "label": ["Inter"]
+        },
+        "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "display-lg": ["40px", {"lineHeight": "48px", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}]
+        }
+},
+    },
+  }
+</script>
+<style>
+.texture-overlay {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCX6KFTatpz9OQm8tcHmTPe2p1nApZsBCQPOzTxS4m1pKJedwcBHWAbQk0QFaRaCezC9Dw3c6bWS37sQYEQceI99kAtw8L9AVJzIFn6vrqIFNZe2L4c29IgYeljZu0ePb43E1YMVwIHkpkTBoSjF9P8fWXYF9JfOUGXe2EQE9B49e53dtyjkBwkKp8cRu7XQ_uRx1Pk8_rF-OaIwRoqlD45no7HqHhLfWEg-sF2frgORskjPyNkPnpZM4bqbgExHn20-beHEY2nfHg);
+    opacity: 0.05;
+    pointer-events: none;
+}
+.card-paper {
+    background-color: #201f20;
+    border: 1px solid #3d494b;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+.card-paper:hover {
+    transform: translateY(-2px);
+}
+body {
+  min-height: max(884px, 100dvh);
+}
+</style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-secondary-container selection:text-on-secondary-container">
+<div class="fixed inset-0 texture-overlay z-0"></div>
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-40 bg-surface-container border-b border-outline-variant flex justify-between items-center px-margin-mobile md:px-margin-desktop py-base">
+<div class="flex items-center gap-md">
+<span class="font-display text-display-lg font-bold text-primary">Odyssey</span>
+</div>
+<div class="hidden md:flex gap-lg">
+<a class="font-headline text-headline-md text-primary font-bold transition-colors duration-200" href="home.html">Home</a>
+<a class="font-headline text-headline-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="subjects.html">Subjects</a>
+<a class="font-headline text-headline-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="scenario.html">Lessons</a>
+<a class="font-headline text-headline-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="progress.html">Progress</a>
+</div>
+<div class="flex items-center gap-md">
+<button class="material-symbols-outlined text-primary text-2xl">settings</button>
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center overflow-hidden border border-outline-variant">
+<img alt="Student Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcSo7ENLFPdw1aFwXOe7i_sEWiA90NOPphUYk97dLUUQbUlxLqn6CNKad_BQ_9p5ff-eiJLB3hOHPpG_TSY2LfeFud5xCt2RYyjGDva4tG2O-eyzWvU7K_pOMCKWzpqhoSoJzP7Ytyek67tw03xForen9K385hQUyA839Cm6GNty3W0DPIQ6Ktw3rpsc831C5oxnH2m-r1LX4Xeok7KfvSCfA47CKJcQElnA4qstx4OfXqb7LguR29J_nhMl0j6PqP_RESZKvP4TM">
+</div>
+</div>
+</header>
+<main class="relative z-10 pt-32 pb-32 max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop">
+<!-- Hero Greeting -->
+<section class="mb-xl">
+<h1 class="font-display text-display-lg text-secondary mb-xs">Hello, Sailor</h1>
+<p class="font-body text-body-lg text-on-surface-variant max-w-2xl">Your journey through the academic landscape continues. Today is a perfect day to master new expressions.</p>
+</section>
+<section class="mb-lg">
+<h3 class="font-label text-label-md text-on-surface-variant uppercase tracking-wider mb-sm">Your Native Language</h3>
+<div class="flex flex-wrap gap-sm">
+<button class="flex items-center gap-xs px-md py-base border-2 border-primary-container bg-primary-container text-on-primary-container font-label rounded-full shadow-sm hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-base">check_circle</span>
+      Korean
+    </button>
+<button class="flex items-center gap-xs px-md py-base border-2 border-outline-variant text-secondary font-label rounded-full hover:bg-secondary-container hover:border-secondary-container transition-all">
+      Chinese
+    </button>
+<button class="flex items-center gap-xs px-md py-base border-2 border-outline-variant text-secondary font-label rounded-full hover:bg-secondary-container hover:border-secondary-container transition-all">
+      Spanish
+    </button>
+</div>
+</section>
+<!-- Bento Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Progress Summary Card -->
+<div class="col-span-1 md:col-span-8 card-paper rounded-xl p-md flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-md">
+<h2 class="font-headline text-headline-md text-secondary">Daily Progress</h2>
+<span class="font-label text-label-md px-3 py-1 bg-primary-container text-on-primary-container rounded-full">75% Complete</span>
+</div>
+<div class="space-y-md">
+<div>
+<div class="flex justify-between mb-xs">
+<span class="font-label text-label-md text-on-surface-variant">Academic Vocabulary</span>
+<span class="font-label text-label-md text-primary">12/15 words</span>
+</div>
+<div class="w-full h-2 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 80%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-xs">
+<span class="font-label text-label-md text-on-surface-variant">Daily Phrase Scenarios</span>
+<span class="font-label text-label-md text-primary">2/3 completed</span>
+</div>
+<div class="w-full h-2 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-secondary" style="width: 66%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-lg pt-md border-t border-outline-variant flex gap-md">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: &quot;FILL&quot; 1;">workspace_premium</span>
+<span class="font-label text-label-sm text-on-surface-variant">Day 12 Streak</span>
+</div>
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: &quot;FILL&quot; 1;">local_fire_department</span>
+<span class="font-label text-label-sm text-on-surface-variant">450 Scholar Points</span>
+</div>
+</div>
+</div>
+<!-- Word of the Day Card -->
+<div class="col-span-1 md:col-span-12 card-paper rounded-xl p-md border-l-8 border-primary flex flex-col md:flex-row items-center justify-between gap-md">
+<div class="flex items-center gap-md">
+<div class="w-16 h-16 bg-primary-container text-on-primary-container rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">school</span>
+</div>
+<div>
+<h3 class="font-headline text-headline-md text-secondary">Continue Learning</h3>
+<p class="font-body text-body-md text-on-surface-variant">Last Session: <span class="font-bold text-on-surface">STEM Terminology - Part 2</span></p>
+</div>
+</div>
+<button class="bg-primary text-on-primary px-lg py-3 rounded-lg font-label flex items-center gap-xs shadow-md hover:bg-primary-fixed-dim hover:text-on-primary-fixed transition-all">
+                    Resume Lesson
+                    <span class="material-symbols-outlined">play_arrow</span>
+</button>
+</div><div class="col-span-1 md:col-span-4 card-paper rounded-xl p-md bg-secondary text-on-secondary relative overflow-hidden">
+<div class="absolute top-0 right-0 p-md opacity-20">
+<span class="material-symbols-outlined text-6xl">menu_book</span>
+</div>
+<h3 class="font-label text-label-md uppercase tracking-widest mb-md opacity-80">Word of the Day</h3>
+<div class="mb-lg">
+<h2 class="font-display text-display-lg font-bold mb-xs">Abstract</h2>
+<p class="font-label text-label-sm italic mb-md">/ˈæb.strækt/</p>
+<p class="font-body text-body-md leading-relaxed opacity-90">Existing in thought or as an idea but not having a physical or concrete existence.</p>
+</div>
+<button class="w-full py-3 bg-on-secondary text-secondary font-label rounded-lg flex items-center justify-center gap-xs hover:bg-secondary-fixed-dim transition-colors">
+                    Add to Lexicon
+                    <span class="material-symbols-outlined text-sm">add_circle</span>
+</button>
+</div>
+<!-- Path: Daily Life -->
+<div class="col-span-1 md:col-span-6 card-paper rounded-xl overflow-hidden group">
+<div class="h-48 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwZoznVDIZAzwINZgagWHeUneoDj1yg9HWWZxHFGoXHm8A10sdqkVEYbe8fhmAXl6TNyUs-cG0RpsuMwmtZ-ouq-pPmz67dn-pO437-A5s42GrZIVQym0IOyd3IA96x6xQQBc3E6e08vhHdlgxgCKjevDf1pnBKg80GMENI4T0BmHXp8HsWf5sOWgvuxDnPrI43LPK1UkOFbSnOfyLsGsnx5dTwVyu4HYyd4LGV6qEKj9yv1sGLYRAFS77B7RNJUGJ95mewwPh9dQ">
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+<div class="absolute bottom-md left-md">
+<h3 class="font-headline text-headline-lg text-on-background">Daily Life</h3>
+<p class="text-on-surface-variant font-body text-body-md">Supermarkets, Clinics, Banking</p>
+</div>
+</div>
+<div class="p-md">
+<p class="font-body text-body-md text-on-surface-variant mb-md">Practice essential communication for your new environment through realistic simulations.</p>
+<button class="px-md py-base border-2 border-primary text-primary font-label rounded-lg hover:bg-primary hover:text-on-primary transition-all">
+                        Explore Scenarios
+                    </button>
+</div>
+</div>
+<!-- Path: Academic Excellence -->
+<div class="col-span-1 md:col-span-6 card-paper rounded-xl overflow-hidden group">
+<div class="h-48 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_sas-DutraKYuJA5SQ2rReA7S0QukKL4EptKwoR-G-HJSK80qpHHBUFUPTdKiAEPatU3i1TrEEM4Yb_1AcMtLUpSyw5r62-xFNiApsww1NqatauY2hVfngBbjiHZzJ1zDDyzv2DpS4hlXlySrxFc0eEsFphoNfjbfZ6VM-Mb7g1BcW4wE3qJAIsiz49OHlrjpdRfGOjjxtLzWA7wX8M-mbGL4W0TAryaYXvwAHygdjNIcVMZOXXwowuxYsPOToKq_wgsLfa-ceos">
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+<div class="absolute bottom-md left-md">
+<h3 class="font-headline text-headline-lg text-on-background">Prepare for School</h3>
+<p class="text-on-surface-variant font-body text-body-md">Curated modules for scholars</p>
+</div>
+</div>
+<div class="p-md">
+<p class="font-body text-body-md text-on-surface-variant mb-md">Get ahead for the upcoming semester with curated prep modules and advanced vocabulary.</p>
+<button class="px-md py-base border-2 border-primary text-primary font-label rounded-lg hover:bg-primary hover:text-on-primary transition-all">
+                        Open Hubs
+                    </button>
+</div>
+</div>
+<!-- Continue Learning Card -->
+
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-surface border-t border-surface-variant flex justify-around items-center px-4 pb-4 pt-2 shadow-sm rounded-t-xl">
+<a href="home.html" class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-md text-label-md">Home</span>
+</a>
+<a href="subjects.html" class="flex flex-col items-center justify-center text-secondary">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="font-label-md text-label-md">Subjects</span>
+</a>
+<a href="scenario.html" class="flex flex-col items-center justify-center text-secondary">
+<span class="material-symbols-outlined">school</span>
+<span class="font-label-md text-label-md">Lessons</span>
+</a>
+<a href="progress.html" class="flex flex-col items-center justify-center text-secondary">
+<span class="material-symbols-outlined">map</span>
+<span class="font-label-md text-label-md">Progress</span>
+</a>
+</nav>
+
+
+
+
+</body></html>

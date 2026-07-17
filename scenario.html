@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html class="light dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Daily Scenario: At the Supermarket</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;family=Literata:wght@600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.grain-overlay {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuA5e0P01uxObqmafCCLP8f_97XNla9yzvvHzbbOt2unO7g49xSafU3Q7oLAM6saLNfrhNCFr7CZRNZoyQsBE2jwemvHhMnHtdBNGyHkSMIBSwcjnM5NLt-RjXs1blXfv91U9rbgL2LkFFOP-LahkIRMkAYVyXZ5J5mMhkDt0T526dHg125xTDt5VQIm30kRoEDCOr5_E0UxfQFo8H7544kLdeeUMImEdeNfzp-1wfcbdbaYtPWBTmBKj3NqeJCFyDLEaRZpaue-bq4);
+    opacity: 0.03;
+    pointer-events: none
+    }</style>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"on-secondary": "#143057", "on-error-container": "#ffdad6", error: "#ffb4ab", "surface-container": "#1f2020", outline: "#879395", "surface-tint": "#64d6e8", "on-error": "#690005", "surface-dim": "#131314", "on-secondary-container": "#9db6e4", "outline-variant": "#3d494b", "primary-fixed-dim": "#64d6e8", "on-surface-variant": "#bcc9cb", "surface-container-low": "#1b1c1c", "on-primary-container": "#002f35", "on-primary-fixed-variant": "#004f58", "on-primary": "#00363d", "surface-container-lowest": "#0e0e0e", primary: "#64d6e8", background: "#131314", "inverse-primary": "#006874", "on-background": "#e4e2e2", "secondary-fixed-dim": "#aec7f6", "tertiary-fixed": "#e4e2dd", "on-tertiary-fixed": "#1b1c19", "inverse-on-surface": "#303030", "on-tertiary-fixed-variant": "#474744", "surface-variant": "#343535", "primary-container": "#159fb0", "tertiary-container": "#91918d", "surface-container-highest": "#343535", "secondary-container": "#2d476f", surface: "#131314", secondary: "#aec7f6", "surface-bright": "#393939", "on-secondary-fixed-variant": "#2d476f", "on-tertiary-container": "#292a27", "primary-fixed": "#99f0ff", "surface-container-high": "#2a2a2a", "on-secondary-fixed": "#001b3d", "error-container": "#93000a", "secondary-fixed": "#d6e3ff", "on-surface": "#e4e2e2", tertiary: "#c8c6c2", "inverse-surface": "#e4e2e2", "tertiary-fixed-dim": "#c8c6c2", "on-tertiary": "#30312e", "on-primary-fixed": "#001f24"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {lg: "48px", "margin-mobile": "16px", base: "8px", "margin-desktop": "64px", gutter: "24px", md: "24px", xl: "80px", sm: "12px", xs: "4px"}, fontFamily: {"body-lg": ["Public Sans"], "label-sm": ["Public Sans"], "headline-lg": ["Literata"], "headline-lg-mobile": ["Literata"], "display-lg": ["Literata"], "headline-md": ["Literata"], "body-md": ["Public Sans"], "label-md": ["Public Sans"]}, fontSize: {"body-lg": ["18px", {lineHeight: "28px", fontWeight: "400"}], "label-sm": ["12px", {lineHeight: "16px", fontWeight: "500"}], "headline-lg": ["32px", {lineHeight: "40px", fontWeight: "600"}], "headline-lg-mobile": ["28px", {lineHeight: "36px", fontWeight: "600"}], "display-lg": ["40px", {lineHeight: "48px", fontWeight: "700"}], "headline-md": ["24px", {lineHeight: "32px", fontWeight: "600"}], "body-md": ["16px", {lineHeight: "24px", fontWeight: "400"}], "label-md": ["14px", {lineHeight: "20px", letterSpacing: "0.02em", fontWeight: "600"}]}}}};</script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md min-h-screen relative">
+<div class="grain-overlay fixed inset-0 z-0"></div>
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-40 bg-surface-container border-b border-outline-variant flex justify-between items-center px-margin-mobile md:px-margin-desktop py-base">
+<div class="flex items-center gap-md">
+<span class="font-display text-display-lg font-bold text-primary">Odyssey</span>
+</div>
+<div class="hidden md:flex gap-lg">
+<a class="font-headline text-headline-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="home.html">Home</a>
+<a class="font-headline text-headline-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="subjects.html">Subjects</a>
+<a class="font-headline text-headline-md text-primary font-bold transition-colors duration-200" href="scenario.html">Lessons</a>
+<a class="font-headline text-headline-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="progress.html">Progress</a>
+</div>
+<div class="flex items-center gap-md">
+<button class="material-symbols-outlined text-primary text-2xl">settings</button>
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center overflow-hidden border border-outline-variant">
+<img alt="Student Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwP4mASXaqWc_9WFyoIKRr_67VgWtC5yGSvW3uJFcvXoK-NUm5oGOg4vMkAO1iaDVxOrucIUBeqCRDN96H8HIDAquGMwR4Y0RoXct9zFKyXYcw7HuT4t7uPiER-EDptSnuiWtXvf4Dcs1SsUZvaq6AIqZae9q8yfukQoS7KG1TiQIF_R63rGVrQfou22MNIafPb8zGAzLHSpXAVlYD2Tkb8zzsCH8vVZIcoBnFUphUm5jsoP5U21uJzgNjs8KAmlgII-zNs7tdnSg"/>
+</div>
+</div>
+</header>
+<main class="relative z-10 max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop pt-32 pb-xl">
+<!-- Scenario Hero Section -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start mb-xl">
+<div class="md:col-span-7">
+<div class="flex items-center gap-xs mb-base text-primary">
+<span class="material-symbols-outlined text-[20px]">local_mall</span>
+<span class="font-label-md text-label-md uppercase tracking-wider">Daily Scenario</span>
+</div>
+<h2 class="font-display-lg text-display-lg text-on-surface mb-md">At the Supermarket</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg leading-relaxed max-w-2xl">
+                    Navigating a grocery store in a new country can be overwhelming. In this scenario, you will learn how to locate specific items, ask for assistance with pricing, and successfully complete a checkout transaction at a typical academic-area supermarket.
+                </p>
+<div class="flex flex-wrap gap-base">
+<button class="bg-primary text-on-primary px-lg py-sm rounded-lg font-label-md hover:bg-primary-container transition-all flex items-center gap-base">
+<span class="material-symbols-outlined">play_circle</span>
+                        Start Lesson
+                    </button>
+<button class="border border-secondary text-secondary px-lg py-sm rounded-lg font-label-md hover:bg-secondary-container transition-all">
+                        View Resources
+                    </button>
+</div>
+</div>
+<div class="md:col-span-5 w-full aspect-[4/3] rounded-xl overflow-hidden shadow-sm border border-surface-variant">
+<img alt="Supermarket Aisle" class="w-full h-full object-cover" data-alt="A clean, well-organized grocery store aisle featuring vibrant fresh produce in the foreground. The lighting is bright and crisp, emphasizing the high-quality textures of fruits and vegetables. The overall mood is calm and orderly, reflecting a modern-tactile academic aesthetic with a palette of bone, turquoise, and navy tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa5781iF7xE7Ermh93MG5OWEE6IxeTdY5fKq-ia7ZcF0biwnizeSg4tV6wOMERmcI23nOMrYj-djH9gSQ3f45B428VQU3bzrLpFWJWxKtkiUbw016dwQngV1GN4w0YFgXxARWxnJNs8oCr9xK1xj_IJGOZZtssTZgBSHopOdNQ1dRsKx21jw0hlff7kFE_bwKYJgrV14S9wAtgwvNnmqQQ9YlygVHOb0wIQMU59LWX1eWW4wm1MYGztnsEc3JfAZwEuq5HkBtgFeA"/>
+</div>
+</section>
+<!-- Bento Grid: Vocabulary & Conversation -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Key Vocabulary Column -->
+<div class="md:col-span-5 space-y-md">
+<div class="bg-surface-container-lowest p-md rounded-xl border border-surface-variant shadow-sm">
+<h3 class="font-headline-md text-headline-md text-primary mb-md flex items-center gap-base">
+<span class="material-symbols-outlined">translate</span>
+                        Key Vocabulary
+                    </h3>
+<div class="space-y-base">
+<!-- Vocab Item 1 -->
+<div class="flex items-center justify-between p-sm rounded-lg hover:bg-surface-container transition-colors group border border-transparent hover:border-outline-variant">
+<div>
+<p class="font-label-md text-label-md text-on-surface">Aisle</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant">/aɪl/ • 通路 • 통로</p>
+</div>
+<button class="text-secondary opacity-40 group-hover:opacity-100 transition-opacity material-symbols-outlined">volume_up</button>
+</div>
+<!-- Vocab Item 2 -->
+<div class="flex items-center justify-between p-sm rounded-lg hover:bg-surface-container transition-colors group border border-transparent hover:border-outline-variant">
+<div>
+<p class="font-label-md text-label-md text-on-surface">Self-checkout</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant">/ˌselfˈtʃekaʊt/ • 自助结账 • 셀프 계산대</p>
+</div>
+<button class="text-secondary opacity-40 group-hover:opacity-100 transition-opacity material-symbols-outlined">volume_up</button>
+</div>
+<!-- Vocab Item 3 -->
+<div class="flex items-center justify-between p-sm rounded-lg hover:bg-surface-container transition-colors group border border-transparent hover:border-outline-variant">
+<div>
+<p class="font-label-md text-label-md text-on-surface">Receipt</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant">/rɪˈsiːt/ • 收据 • 영수증</p>
+</div>
+<button class="text-secondary opacity-40 group-hover:opacity-100 transition-opacity material-symbols-outlined">volume_up</button>
+</div>
+<!-- Vocab Item 4 -->
+<div class="flex items-center justify-between p-sm rounded-lg hover:bg-surface-container transition-colors group border border-transparent hover:border-outline-variant">
+<div>
+<p class="font-label-md text-label-md text-on-surface">Organic</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant">/ɔːrˈɡænɪk/ • 有机的 • 유기농</p>
+</div>
+<button class="text-secondary opacity-40 group-hover:opacity-100 transition-opacity material-symbols-outlined">volume_up</button>
+</div>
+</div>
+</div>
+<div class="bg-secondary-container p-md rounded-xl border border-outline-variant">
+<p class="font-label-md text-label-md text-on-secondary-fixed-variant mb-xs">Mentor's Note</p>
+<p class="font-body-md text-body-md text-secondary leading-snug">
+                        "In most academic towns, students are expected to bring their own reusable bags or pay a small fee for paper ones. Don't be surprised if the cashier asks: 'Do you need a bag today?'"
+                    </p>
+</div>
+</div>
+<!-- Practice Conversation Column -->
+<div class="md:col-span-7">
+<div class="bg-surface-container-lowest p-md rounded-xl border border-surface-variant shadow-sm h-full">
+<div class="flex items-center justify-between mb-lg">
+<h3 class="font-headline-md text-headline-md text-primary flex items-center gap-base">
+<span class="material-symbols-outlined">forum</span>
+                            Practice Conversation
+                        </h3>
+<span class="text-label-sm font-label-sm text-on-surface-variant bg-surface-variant px-base py-xs rounded-full">Level: Intermediate</span>
+</div>
+<div class="space-y-lg relative">
+<!-- Dialogue Start -->
+<div class="flex gap-md items-start">
+<div class="w-10 h-10 rounded-full bg-tertiary-container flex-shrink-0 flex items-center justify-center text-on-tertiary-container font-bold text-label-md">S</div>
+<div class="space-y-xs">
+<p class="font-label-sm text-label-sm text-on-surface-variant">Staff Member</p>
+<div class="bg-surface-container p-md rounded-tr-xl rounded-b-xl max-w-md">
+<p class="font-body-md text-body-md">"Hello! Are you finding everything okay, or can I help you locate something today?"</p>
+</div>
+</div>
+</div>
+<div class="flex gap-md items-start flex-row-reverse">
+<div class="w-10 h-10 rounded-full bg-primary flex-shrink-0 flex items-center justify-center text-on-primary font-bold text-label-md">U</div>
+<div class="space-y-xs text-right">
+<p class="font-label-sm text-label-sm text-on-surface-variant">You</p>
+<div class="bg-primary-container text-on-primary-container p-md rounded-tl-xl rounded-b-xl max-w-md ml-auto">
+<p class="font-body-md text-body-md">"Actually, yes. Could you tell me where I can find the organic almond milk?"</p>
+</div>
+</div>
+</div>
+<div class="flex gap-md items-start">
+<div class="w-10 h-10 rounded-full bg-tertiary-container flex-shrink-0 flex items-center justify-center text-on-tertiary-container font-bold text-label-md">S</div>
+<div class="space-y-xs">
+<p class="font-label-sm text-label-sm text-on-surface-variant">Staff Member</p>
+<div class="bg-surface-container p-md rounded-tr-xl rounded-b-xl max-w-md">
+<p class="font-body-md text-body-md">"Sure thing. That's located in the dairy aisle, which is aisle four, just past the produce section on your left."</p>
+</div>
+</div>
+</div>
+<div class="flex gap-md items-start flex-row-reverse">
+<div class="w-10 h-10 rounded-full bg-primary flex-shrink-0 flex items-center justify-center text-on-primary font-bold text-label-md">U</div>
+<div class="space-y-xs text-right">
+<p class="font-label-sm text-label-sm text-on-surface-variant">You</p>
+<div class="bg-primary-container text-on-primary-container p-md rounded-tl-xl rounded-b-xl max-w-md ml-auto">
+<p class="font-body-md text-body-md">"Aisle four, got it. Thank you so much for your help!"</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-xl pt-lg border-t border-surface-variant flex justify-center">
+<button class="bg-secondary text-on-secondary px-xl py-md rounded-full font-label-md hover:opacity-90 transition-all flex items-center gap-base shadow-sm">
+<span class="material-symbols-outlined">mic</span>
+                            Record Your Response
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-surface border-t border-surface-variant flex justify-around items-center px-4 pb-4 pt-2 shadow-sm rounded-t-xl">
+<a href="home.html" class="flex flex-col items-center justify-center text-secondary">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-md text-label-md">Home</span>
+</a>
+<a href="subjects.html" class="flex flex-col items-center justify-center text-secondary">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="font-label-md text-label-md">Subjects</span>
+</a>
+<a href="scenario.html" class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">school</span>
+<span class="font-label-md text-label-md">Lessons</span>
+</a>
+<a href="progress.html" class="flex flex-col items-center justify-center text-secondary">
+<span class="material-symbols-outlined">map</span>
+<span class="font-label-md text-label-md">Progress</span>
+</a>
+</nav>
+</body></html>
