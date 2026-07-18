@@ -91,22 +91,22 @@
 <p class="font-body-md text-on-surface-variant mb-md max-w-xl" data-i18n="prog_share_desc">You've completed 15 lessons and learned 124 new academic phrases this week. Celebrate your scholarly journey with your network.</p>
 <div class="flex flex-wrap gap-md">
 <!-- Kakao -->
-<button class="flex items-center gap-base px-md py-sm bg-[#FEE500] text-[#191919] font-label-md rounded-lg hover:opacity-90 transition-opacity">
+<button id="btn-kakao" class="flex items-center gap-base px-md py-sm bg-[#FEE500] text-[#191919] font-label-md rounded-lg hover:opacity-90 transition-opacity active:scale-95">
 <span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
 <span data-i18n="prog_kakao">KakaoTalk</span>
 </button>
 <!-- WeChat -->
-<button class="flex items-center gap-base px-md py-sm bg-[#07C160] text-white font-label-md rounded-lg hover:opacity-90 transition-opacity">
+<button id="btn-wechat" class="flex items-center gap-base px-md py-sm bg-[#07C160] text-white font-label-md rounded-lg hover:opacity-90 transition-opacity active:scale-95">
 <span class="material-symbols-outlined" data-icon="forum">forum</span>
 <span data-i18n="prog_wechat">WeChat</span>
 </button>
 <!-- WhatsApp -->
-<button class="flex items-center gap-base px-md py-sm bg-[#25D366] text-white font-label-md rounded-lg hover:opacity-90 transition-opacity">
+<button id="btn-whatsapp" class="flex items-center gap-base px-md py-sm bg-[#25D366] text-white font-label-md rounded-lg hover:opacity-90 transition-opacity active:scale-95">
 <span class="material-symbols-outlined" data-icon="call">call</span>
 <span data-i18n="prog_whatsapp">WhatsApp</span>
 </button>
 <!-- Global Share -->
-<button class="flex items-center gap-base px-md py-sm border border-secondary text-secondary font-label-md rounded-lg hover:bg-secondary-container transition-all">
+<button id="btn-more" class="flex items-center gap-base px-md py-sm border border-secondary text-secondary font-label-md rounded-lg hover:bg-secondary-container transition-all active:scale-95">
 <span class="material-symbols-outlined" data-icon="share">share</span>
 <span data-i18n="prog_more_options">More Options</span>
 </button>
@@ -161,6 +161,13 @@
 </div>
 </section>
 </main>
+
+<!-- Toast Notification -->
+<div id="share-toast" class="fixed bottom-24 left-1/2 -translate-x-1/2 z-[100] flex items-center gap-sm px-md py-sm bg-surface-container-high text-on-surface rounded-full shadow-lg border border-outline-variant opacity-0 pointer-events-none transition-all duration-300 text-label-md font-label-md whitespace-nowrap">
+  <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1">check_circle</span>
+  <span id="share-toast-msg">링크가 복사되었습니다</span>
+</div>
+
 <!-- BottomNavBar -->
 <nav class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-surface border-t border-surface-variant flex justify-around items-center px-4 pb-4 pt-2 shadow-sm rounded-t-xl">
 <a href="home.html" class="flex flex-col items-center justify-center text-secondary">
@@ -180,6 +187,94 @@
 <span class="font-label-md text-label-md" data-i18n="menu_progress">Progress</span>
 </a>
 </nav>
+
+<script>
+/* ── Share / Copy functionality ─────────────────────────────── */
+(function () {
+  const SITE_URL = location.href.replace(/\/[^/]*$/, '/') + 'progress.html';
+  const SHARE_TITLE = '🎓 Odyssey — 나의 학습 진도';
+  const SHARE_TEXT =
+    '📚 이번 주 학습 결과\n' +
+    '• 숙달 단어: 1,428개 (상위 5%)\n' +
+    '• 연속 학습: 84일 (12주 완주)\n' +
+    '• 완료 레슨: 15개 · 새 표현: 124개\n\n' +
+    'Odyssey와 함께 학문적 여정을 떠나보세요! 👉';
+
+  function showToast(msg) {
+    const toast = document.getElementById('share-toast');
+    const msgEl = document.getElementById('share-toast-msg');
+    msgEl.textContent = msg;
+    toast.style.opacity = '1';
+    toast.style.transform = 'translateX(-50%) translateY(0)';
+    setTimeout(() => {
+      toast.style.opacity = '0';
+      toast.style.transform = 'translateX(-50%) translateY(8px)';
+    }, 2500);
+  }
+
+  async function doShare(platform) {
+    const shareData = {
+      title: SHARE_TITLE,
+      text: SHARE_TEXT,
+      url: SITE_URL
+    };
+
+    // 모바일 Web Share API 지원 여부 확인
+    if (navigator.share && navigator.canShare && navigator.canShare(shareData)) {
+      try {
+        await navigator.share(shareData);
+      } catch (err) {
+        if (err.name !== 'AbortError') showToast('공유 중 오류가 발생했습니다.');
+      }
+      return;
+    }
+
+    // 데스크톱 폴백: 플랫폼별 딥링크 또는 클립보드 복사
+    const encodedText = encodeURIComponent(SHARE_TEXT + '\n' + SITE_URL);
+    const encodedUrl  = encodeURIComponent(SITE_URL);
+
+    let deepLink = null;
+    if (platform === 'whatsapp') {
+      deepLink = `https://wa.me/?text=${encodedText}`;
+    } else if (platform === 'wechat') {
+      // WeChat은 딥링크 미지원 → 클립보드 복사
+      deepLink = null;
+    } else if (platform === 'kakao') {
+      // KakaoTalk 웹 공유 미지원 → 클립보드 복사
+      deepLink = null;
+    }
+
+    if (deepLink) {
+      window.open(deepLink, '_blank', 'noopener,noreferrer');
+    } else {
+      // 클립보드 복사
+      const copyText = SHARE_TEXT + '\n' + SITE_URL;
+      try {
+        await navigator.clipboard.writeText(copyText);
+        showToast('링크가 복사되었습니다 ✓');
+      } catch {
+        // clipboard API 실패 시 execCommand 폴백
+        const ta = document.createElement('textarea');
+        ta.value = copyText;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        showToast('링크가 복사되었습니다 ✓');
+      }
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('btn-kakao').addEventListener('click',   () => doShare('kakao'));
+    document.getElementById('btn-wechat').addEventListener('click',  () => doShare('wechat'));
+    document.getElementById('btn-whatsapp').addEventListener('click',() => doShare('whatsapp'));
+    document.getElementById('btn-more').addEventListener('click',    () => doShare('more'));
+  });
+}());
+</script>
 
 <script>
 const translations = {
