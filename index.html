@@ -124,10 +124,10 @@ body {
 <span class="font-display text-display-lg font-bold text-primary">Odyssey</span>
 </div>
 <div class="hidden md:flex gap-lg">
-<a class="font-headline text-headline-md text-primary font-bold transition-colors duration-200" href="home.html">Home</a>
-<a class="font-headline text-headline-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="subjects.html">Subjects</a>
-<a class="font-headline text-headline-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="scenario.html">Lessons</a>
-<a class="font-headline text-headline-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="progress.html">Progress</a>
+<a class="font-headline text-headline-md text-primary font-bold transition-colors duration-200" href="home.html" data-i18n="menu_home">Home</a>
+<a class="font-headline text-headline-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="subjects.html" data-i18n="menu_subjects">Subjects</a>
+<a class="font-headline text-headline-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="scenario.html" data-i18n="menu_lessons">Lessons</a>
+<a class="font-headline text-headline-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="progress.html" data-i18n="menu_progress">Progress</a>
 </div>
 <div class="flex items-center gap-md">
 <button class="material-symbols-outlined text-primary text-2xl">settings</button>
@@ -139,22 +139,16 @@ body {
 <main class="relative z-10 pt-32 pb-32 max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop">
 <!-- Hero Greeting -->
 <section class="mb-xl">
-<h1 class="font-display text-display-lg text-secondary mb-xs">Hello, Sailor</h1>
-<p class="font-body text-body-lg text-on-surface-variant max-w-2xl">Your journey through the academic landscape continues. Today is a perfect day to master new expressions.</p>
+<h1 class="font-display text-display-lg text-secondary mb-xs" data-i18n="hero_title">Hello, Sailor</h1>
+<p class="font-body text-body-lg text-on-surface-variant max-w-2xl" data-i18n="hero_desc">Your journey through the academic landscape continues. Today is a perfect day to master new expressions.</p>
 </section>
 <section class="mb-lg">
-<h3 class="font-label text-label-md text-on-surface-variant uppercase tracking-wider mb-sm">Your Native Language</h3>
-<div class="flex flex-wrap gap-sm">
-<button class="flex items-center gap-xs px-md py-base border-2 border-primary-container bg-primary-container text-on-primary-container font-label rounded-full shadow-sm hover:shadow-md transition-all">
-<span class="material-symbols-outlined text-base">check_circle</span>
-      Korean
-    </button>
-<button class="flex items-center gap-xs px-md py-base border-2 border-outline-variant text-secondary font-label rounded-full hover:bg-secondary-container hover:border-secondary-container transition-all">
-      Chinese
-    </button>
-<button class="flex items-center gap-xs px-md py-base border-2 border-outline-variant text-secondary font-label rounded-full hover:bg-secondary-container hover:border-secondary-container transition-all">
-      Spanish
-    </button>
+<h3 class="font-label text-label-md text-on-surface-variant uppercase tracking-wider mb-sm" data-i18n="native_lang_title">Your Native Language</h3>
+<div class="flex flex-wrap gap-sm" id="lang-buttons">
+<button data-lang="en" class="flex items-center gap-xs px-md py-base border-2 border-outline-variant text-secondary font-label rounded-full hover:bg-secondary-container hover:border-secondary-container transition-all">English</button>
+<button data-lang="ko" class="flex items-center gap-xs px-md py-base border-2 border-outline-variant text-secondary font-label rounded-full hover:bg-secondary-container hover:border-secondary-container transition-all">Korean</button>
+<button data-lang="zh" class="flex items-center gap-xs px-md py-base border-2 border-outline-variant text-secondary font-label rounded-full hover:bg-secondary-container hover:border-secondary-container transition-all">Chinese</button>
+<button data-lang="es" class="flex items-center gap-xs px-md py-base border-2 border-outline-variant text-secondary font-label rounded-full hover:bg-secondary-container hover:border-secondary-container transition-all">Spanish</button>
 </div>
 </section>
 <!-- Bento Layout -->
@@ -163,14 +157,14 @@ body {
 <div class="col-span-1 md:col-span-8 card-paper rounded-xl p-md flex flex-col justify-between">
 <div>
 <div class="flex justify-between items-start mb-md">
-<h2 class="font-headline text-headline-md text-secondary">Daily Progress</h2>
-<span class="font-label text-label-md px-3 py-1 bg-primary-container text-on-primary-container rounded-full">75% Complete</span>
+<h2 class="font-headline text-headline-md text-secondary" data-i18n="daily_progress_title">Daily Progress</h2>
+<span class="font-label text-label-md px-3 py-1 bg-primary-container text-on-primary-container rounded-full" data-i18n="daily_progress_badge">75% Complete</span>
 </div>
 <div class="space-y-md">
 <div>
 <div class="flex justify-between mb-xs">
-<span class="font-label text-label-md text-on-surface-variant">Academic Vocabulary</span>
-<span class="font-label text-label-md text-primary">12/15 words</span>
+<span class="font-label text-label-md text-on-surface-variant" data-i18n="daily_progress_vocab">Academic Vocabulary</span>
+<span class="font-label text-label-md text-primary" data-i18n="daily_progress_vocab_val">12/15 words</span>
 </div>
 <div class="w-full h-2 bg-surface-container-high rounded-full overflow-hidden">
 <div class="h-full bg-primary" style="width: 80%"></div>
@@ -178,8 +172,8 @@ body {
 </div>
 <div>
 <div class="flex justify-between mb-xs">
-<span class="font-label text-label-md text-on-surface-variant">Daily Phrase Scenarios</span>
-<span class="font-label text-label-md text-primary">2/3 completed</span>
+<span class="font-label text-label-md text-on-surface-variant" data-i18n="daily_progress_phrase">Daily Phrase Scenarios</span>
+<span class="font-label text-label-md text-primary" data-i18n="daily_progress_phrase_val">2/3 completed</span>
 </div>
 <div class="w-full h-2 bg-surface-container-high rounded-full overflow-hidden">
 <div class="h-full bg-secondary" style="width: 66%"></div>
@@ -190,11 +184,11 @@ body {
 <div class="mt-lg pt-md border-t border-outline-variant flex gap-md">
 <div class="flex items-center gap-xs">
 <span class="material-symbols-outlined text-primary" style="font-variation-settings: &quot;FILL&quot; 1;">workspace_premium</span>
-<span class="font-label text-label-sm text-on-surface-variant">Day 12 Streak</span>
+<span class="font-label text-label-sm text-on-surface-variant" data-i18n="daily_progress_streak">Day 12 Streak</span>
 </div>
 <div class="flex items-center gap-xs">
 <span class="material-symbols-outlined text-secondary" style="font-variation-settings: &quot;FILL&quot; 1;">local_fire_department</span>
-<span class="font-label text-label-sm text-on-surface-variant">450 Scholar Points</span>
+<span class="font-label text-label-sm text-on-surface-variant" data-i18n="daily_progress_points">450 Scholar Points</span>
 </div>
 </div>
 </div>
@@ -205,26 +199,26 @@ body {
 <span class="material-symbols-outlined text-3xl">school</span>
 </div>
 <div>
-<h3 class="font-headline text-headline-md text-secondary">Continue Learning</h3>
-<p class="font-body text-body-md text-on-surface-variant">Last Session: <span class="font-bold text-on-surface">STEM Terminology - Part 2</span></p>
+<h3 class="font-headline text-headline-md text-secondary" data-i18n="continue_learning_title">Continue Learning</h3>
+<p class="font-body text-body-md text-on-surface-variant"><span data-i18n="continue_learning_last_prefix">Last Session:</span> <span class="font-bold text-on-surface" data-i18n="continue_learning_last_session">STEM Terminology - Part 2</span></p>
 </div>
 </div>
 <button class="bg-primary text-on-primary px-lg py-3 rounded-lg font-label flex items-center gap-xs shadow-md hover:bg-primary-fixed-dim hover:text-on-primary-fixed transition-all">
-                    Resume Lesson
+                    <span data-i18n="continue_learning_btn">Resume Lesson</span>
                     <span class="material-symbols-outlined">play_arrow</span>
 </button>
 </div><div class="col-span-1 md:col-span-4 card-paper rounded-xl p-md bg-secondary text-on-secondary relative overflow-hidden">
 <div class="absolute top-0 right-0 p-md opacity-20">
 <span class="material-symbols-outlined text-6xl">menu_book</span>
 </div>
-<h3 class="font-label text-label-md uppercase tracking-widest mb-md opacity-80">Word of the Day</h3>
+<h3 class="font-label text-label-md uppercase tracking-widest mb-md opacity-80" data-i18n="word_of_day_title">Word of the Day</h3>
 <div class="mb-lg">
-<h2 class="font-display text-display-lg font-bold mb-xs">Abstract</h2>
+<h2 class="font-display text-display-lg font-bold mb-xs" data-i18n="word_of_day_word">Abstract</h2>
 <p class="font-label text-label-sm italic mb-md">/ˈæb.strækt/</p>
-<p class="font-body text-body-md leading-relaxed opacity-90">Existing in thought or as an idea but not having a physical or concrete existence.</p>
+<p class="font-body text-body-md leading-relaxed opacity-90" data-i18n="word_of_day_desc">Existing in thought or as an idea but not having a physical or concrete existence.</p>
 </div>
 <button class="w-full py-3 bg-on-secondary text-secondary font-label rounded-lg flex items-center justify-center gap-xs hover:bg-secondary-fixed-dim transition-colors">
-                    Add to Lexicon
+                    <span data-i18n="word_of_day_btn">Add to Lexicon</span>
                     <span class="material-symbols-outlined text-sm">add_circle</span>
 </button>
 </div>
@@ -234,13 +228,13 @@ body {
 <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwZoznVDIZAzwINZgagWHeUneoDj1yg9HWWZxHFGoXHm8A10sdqkVEYbe8fhmAXl6TNyUs-cG0RpsuMwmtZ-ouq-pPmz67dn-pO437-A5s42GrZIVQym0IOyd3IA96x6xQQBc3E6e08vhHdlgxgCKjevDf1pnBKg80GMENI4T0BmHXp8HsWf5sOWgvuxDnPrI43LPK1UkOFbSnOfyLsGsnx5dTwVyu4HYyd4LGV6qEKj9yv1sGLYRAFS77B7RNJUGJ95mewwPh9dQ">
 <div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
 <div class="absolute bottom-md left-md">
-<h3 class="font-headline text-headline-lg text-on-background">Daily Life</h3>
-<p class="text-on-surface-variant font-body text-body-md">Supermarkets, Clinics, Banking</p>
+<h3 class="font-headline text-headline-lg text-on-background" data-i18n="daily_life_title">Daily Life</h3>
+<p class="text-on-surface-variant font-body text-body-md" data-i18n="daily_life_subtitle">Supermarkets, Clinics, Banking</p>
 </div>
 </div>
 <div class="p-md">
-<p class="font-body text-body-md text-on-surface-variant mb-md">Practice essential communication for your new environment through realistic simulations.</p>
-<button class="px-md py-base border-2 border-primary text-primary font-label rounded-lg hover:bg-primary hover:text-on-primary transition-all">
+<p class="font-body text-body-md text-on-surface-variant mb-md" data-i18n="daily_life_desc">Practice essential communication for your new environment through realistic simulations.</p>
+<button class="px-md py-base border-2 border-primary text-primary font-label rounded-lg hover:bg-primary hover:text-on-primary transition-all" data-i18n="daily_life_btn">
                         Explore Scenarios
                     </button>
 </div>
@@ -251,13 +245,13 @@ body {
 <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_sas-DutraKYuJA5SQ2rReA7S0QukKL4EptKwoR-G-HJSK80qpHHBUFUPTdKiAEPatU3i1TrEEM4Yb_1AcMtLUpSyw5r62-xFNiApsww1NqatauY2hVfngBbjiHZzJ1zDDyzv2DpS4hlXlySrxFc0eEsFphoNfjbfZ6VM-Mb7g1BcW4wE3qJAIsiz49OHlrjpdRfGOjjxtLzWA7wX8M-mbGL4W0TAryaYXvwAHygdjNIcVMZOXXwowuxYsPOToKq_wgsLfa-ceos">
 <div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
 <div class="absolute bottom-md left-md">
-<h3 class="font-headline text-headline-lg text-on-background">Prepare for School</h3>
-<p class="text-on-surface-variant font-body text-body-md">Curated modules for scholars</p>
+<h3 class="font-headline text-headline-lg text-on-background" data-i18n="prep_school_title">Prepare for School</h3>
+<p class="text-on-surface-variant font-body text-body-md" data-i18n="prep_school_subtitle">Curated modules for scholars</p>
 </div>
 </div>
 <div class="p-md">
-<p class="font-body text-body-md text-on-surface-variant mb-md">Get ahead for the upcoming semester with curated prep modules and advanced vocabulary.</p>
-<button class="px-md py-base border-2 border-primary text-primary font-label rounded-lg hover:bg-primary hover:text-on-primary transition-all">
+<p class="font-body text-body-md text-on-surface-variant mb-md" data-i18n="prep_school_desc">Get ahead for the upcoming semester with curated prep modules and advanced vocabulary.</p>
+<button class="px-md py-base border-2 border-primary text-primary font-label rounded-lg hover:bg-primary hover:text-on-primary transition-all" data-i18n="prep_school_btn">
                         Open Hubs
                     </button>
 </div>
@@ -270,23 +264,205 @@ body {
 <nav class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-surface border-t border-surface-variant flex justify-around items-center px-4 pb-4 pt-2 shadow-sm rounded-t-xl">
 <a href="home.html" class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 scale-95 active:scale-90 transition-transform">
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
-<span class="font-label-md text-label-md">Home</span>
+<span class="font-label-md text-label-md" data-i18n="menu_home">Home</span>
 </a>
 <a href="subjects.html" class="flex flex-col items-center justify-center text-secondary">
 <span class="material-symbols-outlined">menu_book</span>
-<span class="font-label-md text-label-md">Subjects</span>
+<span class="font-label-md text-label-md" data-i18n="menu_subjects">Subjects</span>
 </a>
 <a href="scenario.html" class="flex flex-col items-center justify-center text-secondary">
 <span class="material-symbols-outlined">school</span>
-<span class="font-label-md text-label-md">Lessons</span>
+<span class="font-label-md text-label-md" data-i18n="menu_lessons">Lessons</span>
 </a>
 <a href="progress.html" class="flex flex-col items-center justify-center text-secondary">
 <span class="material-symbols-outlined">map</span>
-<span class="font-label-md text-label-md">Progress</span>
+<span class="font-label-md text-label-md" data-i18n="menu_progress">Progress</span>
 </a>
 </nav>
 
+<script>
+const translations = {
+  en: {
+    menu_home: "Home",
+    menu_subjects: "Subjects",
+    menu_lessons: "Lessons",
+    menu_progress: "Progress",
+    native_lang_title: "Your Native Language",
+    hero_title: "Hello, Sailor",
+    hero_desc: "Your journey through the academic landscape continues. Today is a perfect day to master new expressions.",
+    daily_progress_title: "Daily Progress",
+    daily_progress_badge: "75% Complete",
+    daily_progress_vocab: "Academic Vocabulary",
+    daily_progress_vocab_val: "12/15 words",
+    daily_progress_phrase: "Daily Phrase Scenarios",
+    daily_progress_phrase_val: "2/3 completed",
+    daily_progress_streak: "Day 12 Streak",
+    daily_progress_points: "450 Scholar Points",
+    continue_learning_title: "Continue Learning",
+    continue_learning_last_prefix: "Last Session:",
+    continue_learning_last_session: "STEM Terminology - Part 2",
+    continue_learning_btn: "Resume Lesson",
+    word_of_day_title: "Word of the Day",
+    word_of_day_word: "Abstract",
+    word_of_day_desc: "Existing in thought or as an idea but not having a physical or concrete existence.",
+    word_of_day_btn: "Add to Lexicon",
+    daily_life_title: "Daily Life",
+    daily_life_subtitle: "Supermarkets, Clinics, Banking",
+    daily_life_desc: "Practice essential communication for your new environment through realistic simulations.",
+    daily_life_btn: "Explore Scenarios",
+    prep_school_title: "Prepare for School",
+    prep_school_subtitle: "Curated modules for scholars",
+    prep_school_desc: "Get ahead for the upcoming semester with curated prep modules and advanced vocabulary.",
+    prep_school_btn: "Open Hubs"
+  },
+  ko: {
+    menu_home: "홈",
+    menu_subjects: "과목",
+    menu_lessons: "레슨",
+    menu_progress: "학습 진도",
+    native_lang_title: "모국어 설정",
+    hero_title: "안녕, 선원!",
+    hero_desc: "학업의 여정이 계속됩니다. 오늘은 새로운 표현을 마스터하기 가장 좋은 날입니다.",
+    daily_progress_title: "일일 진도",
+    daily_progress_badge: "75% 완료",
+    daily_progress_vocab: "학술 어휘",
+    daily_progress_vocab_val: "12/15 단어",
+    daily_progress_phrase: "일상 회화 시나리오",
+    daily_progress_phrase_val: "2/3 완료됨",
+    daily_progress_streak: "12일 연속 학습 중",
+    daily_progress_points: "450 학술 포인트",
+    continue_learning_title: "학습 이어하기",
+    continue_learning_last_prefix: "최근 학습:",
+    continue_learning_last_session: "STEM 학술 용어 - 파트 2",
+    continue_learning_btn: "레슨 재개",
+    word_of_day_title: "오늘의 단어",
+    word_of_day_word: "추상적인 (Abstract)",
+    word_of_day_desc: "생각이나 관념으로 존재하지만 물리적이거나 구체적인 형태로는 존재하지 않는 것.",
+    word_of_day_btn: "어휘장에 추가",
+    daily_life_title: "일상 생활",
+    daily_life_subtitle: "마트, 병원, 은행",
+    daily_life_desc: "실감 나는 시뮬레이션을 통해 새로운 환경에 필요한 필수 회화를 연습해 보세요.",
+    daily_life_btn: "시나리오 둘러보기",
+    prep_school_title: "대학 예비 과정",
+    prep_school_subtitle: "학습자를 위해 특별히 엄선된 모듈",
+    prep_school_desc: "엄선된 예습 모듈과 고급 어휘를 통해 다가오는 새 학기를 한발 앞서 준비하세요.",
+    prep_school_btn: "허브 열기"
+  },
+  zh: {
+    menu_home: "首页",
+    menu_subjects: "学科",
+    menu_lessons: "课程",
+    menu_progress: "学习进度",
+    native_lang_title: "你的母语",
+    hero_title: "你好，水手",
+    hero_desc: "你的学术之旅仍在继续。今天是掌握新表达的完美一天。",
+    daily_progress_title: "每日进度",
+    daily_progress_badge: "已完成 75%",
+    daily_progress_vocab: "学术词汇",
+    daily_progress_vocab_val: "12/15 单词",
+    daily_progress_phrase: "日常短语场景",
+    daily_progress_phrase_val: "2/3 已完成",
+    daily_progress_streak: "连续 12 天",
+    daily_progress_points: "450 学术积分",
+    continue_learning_title: "继续学习",
+    continue_learning_last_prefix: "上次课程:",
+    continue_learning_last_session: "STEM 术语 - 第二部分",
+    continue_learning_btn: "恢复课程",
+    word_of_day_title: "每日一词",
+    word_of_day_word: "抽象 (Abstract)",
+    word_of_day_desc: "存在于思想或作为一种想法，但没有物理或具体的存在。",
+    word_of_day_btn: "添加到词汇表",
+    daily_life_title: "日常生活",
+    daily_life_subtitle: "超市、诊所、银行",
+    daily_life_desc: "通过逼真场景模拟，在新环境中练习必不可少的沟通方式。",
+    daily_life_btn: "探索场景",
+    prep_school_title: "学校准备",
+    prep_school_subtitle: "为学者精心策划的模块",
+    prep_school_desc: "通过精心策划的准备模块和高级词汇，在即将到来的学期中取得领先。",
+    prep_school_btn: "打开中心"
+  },
+  es: {
+    menu_home: "Inicio",
+    menu_subjects: "Asignaturas",
+    menu_lessons: "Lecciones",
+    menu_progress: "Progreso",
+    native_lang_title: "Tu idioma nativo",
+    hero_title: "Hola, marinero",
+    hero_desc: "Tu viaje por el panorama académico continúa. Hoy es un día perfecto para dominar nuevas expresiones.",
+    daily_progress_title: "Progreso diario",
+    daily_progress_badge: "75% completado",
+    daily_progress_vocab: "Vocabulario académico",
+    daily_progress_vocab_val: "12/15 palabras",
+    daily_progress_phrase: "Escenarios de frases diarias",
+    daily_progress_phrase_val: "2/3 completado",
+    daily_progress_streak: "Racha de 12 días",
+    daily_progress_points: "450 Puntos académicos",
+    continue_learning_title: "Continuar aprendiendo",
+    continue_learning_last_prefix: "Última sesión:",
+    continue_learning_last_session: "Terminología STEM - Parte 2",
+    continue_learning_btn: "Reanudar lección",
+    word_of_day_title: "Palabra del día",
+    word_of_day_word: "Abstracto (Abstract)",
+    word_of_day_desc: "Existente en el pensamiento o como una idea pero que no tiene una existencia física o concreta.",
+    word_of_day_btn: "Añadir al lexicón",
+    daily_life_title: "Vida diaria",
+    daily_life_subtitle: "Supermercados, clínicas, banca",
+    daily_life_desc: "Practica la comunicación esencial para tu nuevo entorno a través de simulaciones realistas.",
+    daily_life_btn: "Explorar escenarios",
+    prep_school_title: "Prepararse para la escuela",
+    prep_school_subtitle: "Módulos seleccionados para académicos",
+    prep_school_desc: "Anticípate al próximo semestre con módulos de preparación seleccionados y vocabulario avanzado.",
+    prep_school_btn: "Abrir centros"
+  }
+};
 
+const langButtons = document.querySelectorAll('#lang-buttons button');
+const defaultClass = "flex items-center gap-xs px-md py-base border-2 border-outline-variant text-secondary font-label rounded-full hover:bg-secondary-container hover:border-secondary-container transition-all";
+const activeClass = "flex items-center gap-xs px-md py-base border-2 border-primary-container bg-primary-container text-on-primary-container font-label rounded-full shadow-sm hover:shadow-md transition-all";
 
+function updateButtonStyles(selectedLang) {
+  langButtons.forEach(btn => {
+    const btnLang = btn.getAttribute('data-lang');
+    if (btnLang === selectedLang) {
+      btn.className = activeClass;
+      if (!btn.querySelector('.material-symbols-outlined')) {
+        const icon = document.createElement('span');
+        icon.className = "material-symbols-outlined text-base";
+        icon.textContent = "check_circle";
+        btn.prepend(icon);
+      }
+    } else {
+      btn.className = defaultClass;
+      const icon = btn.querySelector('.material-symbols-outlined');
+      if (icon) {
+        icon.remove();
+      }
+    }
+  });
+}
 
+function applyLanguage(lang) {
+  const t = translations[lang] || translations['en'];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[key]) {
+      el.textContent = t[key];
+    }
+  });
+  updateButtonStyles(lang);
+}
+
+langButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const targetLang = btn.getAttribute('data-lang');
+    localStorage.setItem('selectedLanguage', targetLang);
+    applyLanguage(targetLang);
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+  applyLanguage(savedLang);
+});
+</script>
 </body></html>
