@@ -50,25 +50,35 @@
 <div class="grid grid-cols-4 md:grid-cols-12 gap-gutter mb-lg">
 <div class="col-span-4 md:col-span-6 bg-surface border border-surface-variant p-md rounded-xl paper-shadow flex flex-col justify-between h-full">
 <div class="flex items-center justify-between mb-base">
-<span class="font-label-md text-label-md text-secondary uppercase tracking-wider">Words Mastered</span>
+<span class="font-label-md text-label-md text-secondary uppercase tracking-wider" data-i18n="prog_words_label">Words Mastered</span>
 <span class="material-symbols-outlined text-primary" data-icon="auto_stories">auto_stories</span>
 </div>
 <div>
 <div class="font-display-lg text-display-lg text-primary">1,428</div>
-<p class="font-body-md text-on-surface-variant mt-xs">Top 5% of Scholars</p>
+<p class="font-body-md text-on-surface-variant mt-xs" data-i18n="prog_words_sub">Top 5% of Scholars</p>
 </div>
 </div>
 <div class="col-span-4 md:col-span-6 bg-surface border border-surface-variant p-md rounded-xl paper-shadow flex flex-col justify-between h-full">
 <div class="flex items-center justify-between mb-base">
-<span class="font-label-md text-label-md text-secondary uppercase tracking-wider">Days Active</span>
+<span class="font-label-md text-label-md text-secondary uppercase tracking-wider" data-i18n="prog_days_label">Days Active</span>
 <span class="material-symbols-outlined text-primary" data-icon="calendar_today">calendar_today</span>
 </div>
 <div>
 <div class="font-display-lg text-display-lg text-primary">84</div>
-<p class="font-body-md text-on-surface-variant mt-xs">Perfect 12-week streak</p>
+<p class="font-body-md text-on-surface-variant mt-xs" data-i18n="prog_days_sub">Perfect 12-week streak</p>
 </div>
 </div>
 </div>
+<!-- Native Language Selector -->
+<section class="mb-lg">
+<h3 class="font-label text-label-md text-on-surface-variant uppercase tracking-wider mb-sm" data-i18n="native_lang_title">Your Native Language</h3>
+<div class="flex flex-wrap gap-sm" id="lang-buttons">
+<button data-lang="en" class="flex items-center gap-xs px-md py-base border-2 border-outline-variant text-secondary font-label rounded-full hover:bg-secondary-container hover:border-secondary-container transition-all">English</button>
+<button data-lang="ko" class="flex items-center gap-xs px-md py-base border-2 border-outline-variant text-secondary font-label rounded-full hover:bg-secondary-container hover:border-secondary-container transition-all">Korean</button>
+<button data-lang="zh" class="flex items-center gap-xs px-md py-base border-2 border-outline-variant text-secondary font-label rounded-full hover:bg-secondary-container hover:border-secondary-container transition-all">Chinese</button>
+<button data-lang="es" class="flex items-center gap-xs px-md py-base border-2 border-outline-variant text-secondary font-label rounded-full hover:bg-secondary-container hover:border-secondary-container transition-all">Spanish</button>
+</div>
+</section>
 <!-- Share My Weekly Progress Section -->
 <section class="mb-lg">
 <div class="bg-surface border border-surface-variant rounded-xl paper-shadow overflow-hidden">
@@ -77,29 +87,29 @@
 <img alt="Learning Progress" data-alt="A cinematic, low-angle shot of a classic mahogany study desk. A fresh leather-bound journal lies open alongside a modern tablet showing elegant turquoise progress charts. The atmosphere is quiet and intellectually rigorous, with soft golden light streaming from a nearby window, illuminating dust motes. The mood is one of accomplishment and calm scholarly dedication." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGCLB24XV5ugOvDa0um-KLwZSUedmHP5SXpFS_y-vB5sC03OcLfRU_God7Jw7p2OndUwSZU4xjiQxiKjbGkOaaJs-t9eTYjsXXAASQjPIfeupeXkEX9lMHoJKvW5QQWLQjvbuFPgOkhPlaD5M3A9MXmL05Gb85vLb4rZufcbDYoKOUAvpPjAR18Cb_jnYH6emgOXhscojUeKLkEOFuWer6isaDTqc6_GqbtaHTRPImqaMUW1J-nZpmItFH63z5scEnGjIGZQtM9-8"/>
 </div>
 <div class="p-md md:p-lg md:w-2/3 flex flex-col justify-center">
-<h3 class="font-headline-md text-headline-md text-on-surface mb-base">Share My Weekly Progress</h3>
-<p class="font-body-md text-on-surface-variant mb-md max-w-xl">You've completed 15 lessons and learned 124 new academic phrases this week. Celebrate your scholarly journey with your network.</p>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-base" data-i18n="prog_share_title">Share My Weekly Progress</h3>
+<p class="font-body-md text-on-surface-variant mb-md max-w-xl" data-i18n="prog_share_desc">You've completed 15 lessons and learned 124 new academic phrases this week. Celebrate your scholarly journey with your network.</p>
 <div class="flex flex-wrap gap-md">
 <!-- Kakao -->
 <button class="flex items-center gap-base px-md py-sm bg-[#FEE500] text-[#191919] font-label-md rounded-lg hover:opacity-90 transition-opacity">
 <span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
-                                KakaoTalk
-                            </button>
+<span data-i18n="prog_kakao">KakaoTalk</span>
+</button>
 <!-- WeChat -->
 <button class="flex items-center gap-base px-md py-sm bg-[#07C160] text-white font-label-md rounded-lg hover:opacity-90 transition-opacity">
 <span class="material-symbols-outlined" data-icon="forum">forum</span>
-                                WeChat
-                            </button>
+<span data-i18n="prog_wechat">WeChat</span>
+</button>
 <!-- WhatsApp -->
 <button class="flex items-center gap-base px-md py-sm bg-[#25D366] text-white font-label-md rounded-lg hover:opacity-90 transition-opacity">
 <span class="material-symbols-outlined" data-icon="call">call</span>
-                                WhatsApp
-                            </button>
+<span data-i18n="prog_whatsapp">WhatsApp</span>
+</button>
 <!-- Global Share -->
 <button class="flex items-center gap-base px-md py-sm border border-secondary text-secondary font-label-md rounded-lg hover:bg-secondary-container transition-all">
 <span class="material-symbols-outlined" data-icon="share">share</span>
-                                More Options
-                            </button>
+<span data-i18n="prog_more_options">More Options</span>
+</button>
 </div>
 </div>
 </div>
@@ -107,7 +117,7 @@
 </section>
 <!-- Community Highlights -->
 <section>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-md">Odyssey Scholars Near You</h3>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-md" data-i18n="prog_community_title">Odyssey Scholars Near You</h3>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
 <!-- Community Card 1 -->
 <div class="bg-surface border border-surface-variant p-md rounded-xl paper-shadow flex gap-md">
@@ -115,10 +125,10 @@
 <span class="material-symbols-outlined" data-icon="groups">groups</span>
 </div>
 <div>
-<h4 class="font-label-md text-label-md text-on-surface">London Study Circle</h4>
-<p class="font-label-sm text-label-sm text-on-surface-variant mb-base">12 Members active today</p>
+<h4 class="font-label-md text-label-md text-on-surface" data-i18n="prog_comm1_title">London Study Circle</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-base" data-i18n="prog_comm1_members">12 Members active today</p>
 <button class="text-primary font-label-md hover:underline flex items-center gap-xs">
-                            Join Discussion <span class="material-symbols-outlined text-[16px]" data-icon="arrow_forward">arrow_forward</span>
+<span data-i18n="prog_comm1_btn">Join Discussion</span> <span class="material-symbols-outlined text-[16px]" data-icon="arrow_forward">arrow_forward</span>
 </button>
 </div>
 </div>
@@ -128,10 +138,10 @@
 <span class="material-symbols-outlined" data-icon="emoji_events">emoji_events</span>
 </div>
 <div>
-<h4 class="font-label-md text-label-md text-on-surface">Vocabulary Challenge</h4>
-<p class="font-label-sm text-label-sm text-on-surface-variant mb-base">New global leaderboard open</p>
+<h4 class="font-label-md text-label-md text-on-surface" data-i18n="prog_comm2_title">Vocabulary Challenge</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-base" data-i18n="prog_comm2_sub">New global leaderboard open</p>
 <button class="text-primary font-label-md hover:underline flex items-center gap-xs">
-                            View Rankings <span class="material-symbols-outlined text-[16px]" data-icon="arrow_forward">arrow_forward</span>
+<span data-i18n="prog_comm2_btn">View Rankings</span> <span class="material-symbols-outlined text-[16px]" data-icon="arrow_forward">arrow_forward</span>
 </button>
 </div>
 </div>
@@ -141,10 +151,10 @@
 <span class="material-symbols-outlined" data-icon="psychology">psychology</span>
 </div>
 <div>
-<h4 class="font-label-md text-label-md text-on-surface">Mentor Office Hours</h4>
-<p class="font-label-sm text-label-sm text-on-surface-variant mb-base">Live Q&amp;A starts in 2 hours</p>
+<h4 class="font-label-md text-label-md text-on-surface" data-i18n="prog_comm3_title">Mentor Office Hours</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-base" data-i18n="prog_comm3_sub">Live Q&amp;A starts in 2 hours</p>
 <button class="text-primary font-label-md hover:underline flex items-center gap-xs">
-                            Set Reminder <span class="material-symbols-outlined text-[16px]" data-icon="arrow_forward">arrow_forward</span>
+<span data-i18n="prog_comm3_btn">Set Reminder</span> <span class="material-symbols-outlined text-[16px]" data-icon="arrow_forward">arrow_forward</span>
 </button>
 </div>
 </div>
@@ -155,19 +165,177 @@
 <nav class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-surface border-t border-surface-variant flex justify-around items-center px-4 pb-4 pt-2 shadow-sm rounded-t-xl">
 <a href="home.html" class="flex flex-col items-center justify-center text-secondary">
 <span class="material-symbols-outlined">home</span>
-<span class="font-label-md text-label-md">Home</span>
+<span class="font-label-md text-label-md" data-i18n="menu_home">Home</span>
 </a>
 <a href="subjects.html" class="flex flex-col items-center justify-center text-secondary">
 <span class="material-symbols-outlined">menu_book</span>
-<span class="font-label-md text-label-md">Subjects</span>
+<span class="font-label-md text-label-md" data-i18n="menu_subjects">Subjects</span>
 </a>
 <a href="scenario.html" class="flex flex-col items-center justify-center text-secondary">
 <span class="material-symbols-outlined">school</span>
-<span class="font-label-md text-label-md">Lessons</span>
+<span class="font-label-md text-label-md" data-i18n="menu_lessons">Lessons</span>
 </a>
 <a href="progress.html" class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 scale-95 active:scale-90 transition-transform">
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">map</span>
-<span class="font-label-md text-label-md">Progress</span>
+<span class="font-label-md text-label-md" data-i18n="menu_progress">Progress</span>
 </a>
 </nav>
+
+<script>
+const translations = {
+  en: {
+    menu_home: "Home",
+    menu_subjects: "Subjects",
+    menu_lessons: "Lessons",
+    menu_progress: "Progress",
+    native_lang_title: "Your Native Language",
+    prog_words_label: "Words Mastered",
+    prog_words_sub: "Top 5% of Scholars",
+    prog_days_label: "Days Active",
+    prog_days_sub: "Perfect 12-week streak",
+    prog_share_title: "Share My Weekly Progress",
+    prog_share_desc: "You've completed 15 lessons and learned 124 new academic phrases this week. Celebrate your scholarly journey with your network.",
+    prog_kakao: "KakaoTalk",
+    prog_wechat: "WeChat",
+    prog_whatsapp: "WhatsApp",
+    prog_more_options: "More Options",
+    prog_community_title: "Odyssey Scholars Near You",
+    prog_comm1_title: "London Study Circle",
+    prog_comm1_members: "12 Members active today",
+    prog_comm1_btn: "Join Discussion",
+    prog_comm2_title: "Vocabulary Challenge",
+    prog_comm2_sub: "New global leaderboard open",
+    prog_comm2_btn: "View Rankings",
+    prog_comm3_title: "Mentor Office Hours",
+    prog_comm3_sub: "Live Q&A starts in 2 hours",
+    prog_comm3_btn: "Set Reminder"
+  },
+  ko: {
+    menu_home: "홈",
+    menu_subjects: "과목",
+    menu_lessons: "레슨",
+    menu_progress: "학습 진도",
+    native_lang_title: "모국어 설정",
+    prog_words_label: "숫독 단어 수",
+    prog_words_sub: "상위 5% 학자",
+    prog_days_label: "학습 일수",
+    prog_days_sub: "12주 연속 완주",
+    prog_share_title: "주간 학습 진도 공유",
+    prog_share_desc: "이번 주에 15개의 레슨을 완료하고 124개의 새로운 학술 표현을 배웠습니다. 학문적 여정을 네트워크와 함께 축하하세요.",
+    prog_kakao: "카카오톡",
+    prog_wechat: "위챗",
+    prog_whatsapp: "왓츠앱",
+    prog_more_options: "더 보기",
+    prog_community_title: "내 주변의 오디세이 학자들",
+    prog_comm1_title: "런던 스터디 허브",
+    prog_comm1_members: "오늘 활동 중인 회원 12명",
+    prog_comm1_btn: "토론 연겨보기",
+    prog_comm2_title: "어휘 첼린지",
+    prog_comm2_sub: "새 글로벌 리더보드 개혀",
+    prog_comm2_btn: "순위로이더보기",
+    prog_comm3_title: "멘토 오피스 아워",
+    prog_comm3_sub: "2시간 후 라이브 Q&A 시작",
+    prog_comm3_btn: "알림 설정"
+  },
+  zh: {
+    menu_home: "首页",
+    menu_subjects: "学科",
+    menu_lessons: "课程",
+    menu_progress: "学习进度",
+    native_lang_title: "你的母语",
+    prog_words_label: "掌握单词数",
+    prog_words_sub: "前5%学者",
+    prog_days_label: "学习天数",
+    prog_days_sub: "12周连续完美",
+    prog_share_title: "分享我的周学习进度",
+    prog_share_desc: "本周您完成了15课并学了124个新学术短语。与您的网络分享您的学术之旅。",
+    prog_kakao: "KakaoTalk",
+    prog_wechat: "微信",
+    prog_whatsapp: "WhatsApp",
+    prog_more_options: "更多选项",
+    prog_community_title: "您附近的奥得赛学者",
+    prog_comm1_title: "伦敦学习小组",
+    prog_comm1_members: "今日12位成员在线",
+    prog_comm1_btn: "加入讨论",
+    prog_comm2_title: "词汇挑战",
+    prog_comm2_sub: "新全球排行榜已开放",
+    prog_comm2_btn: "查看排名",
+    prog_comm3_title: "导师办公时间",
+    prog_comm3_sub: "2小时后开始直播问答",
+    prog_comm3_btn: "设置提醒"
+  },
+  es: {
+    menu_home: "Inicio",
+    menu_subjects: "Asignaturas",
+    menu_lessons: "Lecciones",
+    menu_progress: "Progreso",
+    native_lang_title: "Tu idioma nativo",
+    prog_words_label: "Palabras dominadas",
+    prog_words_sub: "Top 5% de los estudiantes",
+    prog_days_label: "Días activo",
+    prog_days_sub: "Racha perfecta de 12 semanas",
+    prog_share_title: "Compartir mi progreso semanal",
+    prog_share_desc: "Completaste 15 lecciones y aprendiste 124 frases académicas nuevas esta semana. Celebra tu viaje académico con tu red.",
+    prog_kakao: "KakaoTalk",
+    prog_wechat: "WeChat",
+    prog_whatsapp: "WhatsApp",
+    prog_more_options: "Más opciones",
+    prog_community_title: "Estudiantes de Odyssey cerca de ti",
+    prog_comm1_title: "Círculo de estudio de Londres",
+    prog_comm1_members: "12 miembros activos hoy",
+    prog_comm1_btn: "Unirse a la discusión",
+    prog_comm2_title: "Desafío de vocabulario",
+    prog_comm2_sub: "Nueva tabla de clasificación global abierta",
+    prog_comm2_btn: "Ver clasificaciones",
+    prog_comm3_title: "Horas de oficina del mentor",
+    prog_comm3_sub: "Preguntas y respuestas en vivo comienzan en 2 horas",
+    prog_comm3_btn: "Establecer recordatorio"
+  }
+};
+
+const langButtons = document.querySelectorAll('#lang-buttons button');
+const defaultClass = "flex items-center gap-xs px-md py-base border-2 border-outline-variant text-secondary font-label rounded-full hover:bg-secondary-container hover:border-secondary-container transition-all";
+const activeClass = "flex items-center gap-xs px-md py-base border-2 border-primary-container bg-primary-container text-on-primary-container font-label rounded-full shadow-sm hover:shadow-md transition-all";
+
+function updateButtonStyles(selectedLang) {
+  langButtons.forEach(btn => {
+    const btnLang = btn.getAttribute('data-lang');
+    if (btnLang === selectedLang) {
+      btn.className = activeClass;
+      if (!btn.querySelector('.material-symbols-outlined')) {
+        const icon = document.createElement('span');
+        icon.className = "material-symbols-outlined text-base";
+        icon.textContent = "check_circle";
+        btn.prepend(icon);
+      }
+    } else {
+      btn.className = defaultClass;
+      const icon = btn.querySelector('.material-symbols-outlined');
+      if (icon) icon.remove();
+    }
+  });
+}
+
+function applyLanguage(lang) {
+  const t = translations[lang] || translations['en'];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[key]) el.textContent = t[key];
+  });
+  updateButtonStyles(lang);
+}
+
+langButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const targetLang = btn.getAttribute('data-lang');
+    localStorage.setItem('selectedLanguage', targetLang);
+    applyLanguage(targetLang);
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+  applyLanguage(savedLang);
+});
+</script>
 </body></html>

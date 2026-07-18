@@ -54,10 +54,19 @@
 <main class="flex-grow w-full max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop pt-32 pb-lg relative z-10">
 <!-- Hero Section / Header -->
 <section class="mb-xl">
-<h2 class="font-headline-lg text-headline-lg text-primary mb-base">Subject Hubs</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-base" data-i18n="subj_hero_title">Subject Hubs</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl" data-i18n="subj_hero_desc">
                 Deepen your understanding of core academic disciplines through curated modules designed for scholarly excellence.
             </p>
+</section>
+<section class="mb-lg">
+<h3 class="font-label text-label-md text-on-surface-variant uppercase tracking-wider mb-sm" data-i18n="native_lang_title">Your Native Language</h3>
+<div class="flex flex-wrap gap-sm" id="lang-buttons">
+<button data-lang="en" class="flex items-center gap-xs px-md py-base border-2 border-outline-variant text-secondary font-label rounded-full hover:bg-secondary-container hover:border-secondary-container transition-all">English</button>
+<button data-lang="ko" class="flex items-center gap-xs px-md py-base border-2 border-outline-variant text-secondary font-label rounded-full hover:bg-secondary-container hover:border-secondary-container transition-all">Korean</button>
+<button data-lang="zh" class="flex items-center gap-xs px-md py-base border-2 border-outline-variant text-secondary font-label rounded-full hover:bg-secondary-container hover:border-secondary-container transition-all">Chinese</button>
+<button data-lang="es" class="flex items-center gap-xs px-md py-base border-2 border-outline-variant text-secondary font-label rounded-full hover:bg-secondary-container hover:border-secondary-container transition-all">Spanish</button>
+</div>
 </section>
 <!-- Subjects Grid (Asymmetric/Bento Style) -->
 <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
@@ -71,8 +80,8 @@
 <!-- Geometry Card -->
 <div class="bg-surface-container-lowest border border-surface-variant rounded-xl p-md card-shadow flex flex-col gap-base hover:border-primary transition-all duration-300">
 <span class="material-symbols-outlined text-primary-container text-[32px]">architecture</span>
-<h4 class="font-label-md text-label-md text-on-surface">Geometry</h4>
-<p class="text-label-sm text-on-surface-variant">The logic of space and form.</p>
+<h4 class="font-label-md text-label-md text-on-surface" data-i18n="subj_geometry_title">Geometry</h4>
+<p class="text-label-sm text-on-surface-variant" data-i18n="subj_geometry_desc">The logic of space and form.</p>
 <div class="mt-xs w-full bg-surface-variant h-1 rounded-full overflow-hidden">
 <div class="bg-primary h-full w-3/4"></div>
 </div>
@@ -80,8 +89,8 @@
 <!-- Trigonometry -->
 <div class="bg-surface-container-lowest border border-surface-variant rounded-xl p-md card-shadow flex flex-col gap-base hover:border-primary transition-all duration-300">
 <span class="material-symbols-outlined text-primary-container text-[32px]">change_history</span>
-<h4 class="font-label-md text-label-md text-on-surface">Trigonometry</h4>
-<p class="text-label-sm text-on-surface-variant">Waveforms and periodic functions.</p>
+<h4 class="font-label-md text-label-md text-on-surface" data-i18n="subj_trig_title">Trigonometry</h4>
+<p class="text-label-sm text-on-surface-variant" data-i18n="subj_trig_desc">Waveforms and periodic functions.</p>
 <div class="mt-xs w-full bg-surface-variant h-1 rounded-full overflow-hidden">
 <div class="bg-primary h-full w-1/4"></div>
 </div>
@@ -89,8 +98,8 @@
 <!-- Biology -->
 <div class="bg-surface-container-lowest border border-surface-variant rounded-xl p-md card-shadow flex flex-col gap-base hover:border-primary transition-all duration-300">
 <span class="material-symbols-outlined text-primary-container text-[32px]">biotech</span>
-<h4 class="font-label-md text-label-md text-on-surface">Biology</h4>
-<p class="text-label-sm text-on-surface-variant">Life sciences and ecosystems.</p>
+<h4 class="font-label-md text-label-md text-on-surface" data-i18n="subj_biology_title">Biology</h4>
+<p class="text-label-sm text-on-surface-variant" data-i18n="subj_biology_desc">Life sciences and ecosystems.</p>
 <div class="mt-xs w-full bg-surface-variant h-1 rounded-full overflow-hidden">
 <div class="bg-primary h-full w-1/2"></div>
 </div>
@@ -98,8 +107,8 @@
 <!-- Chemistry -->
 <div class="bg-surface-container-lowest border border-surface-variant rounded-xl p-md card-shadow flex flex-col gap-base hover:border-primary transition-all duration-300">
 <span class="material-symbols-outlined text-primary-container text-[32px]">science</span>
-<h4 class="font-label-md text-label-md text-on-surface">Chemistry</h4>
-<p class="text-label-sm text-on-surface-variant">Molecular structures and reactions.</p>
+<h4 class="font-label-md text-label-md text-on-surface" data-i18n="subj_chemistry_title">Chemistry</h4>
+<p class="text-label-sm text-on-surface-variant" data-i18n="subj_chemistry_desc">Molecular structures and reactions.</p>
 <div class="mt-xs w-full bg-surface-variant h-1 rounded-full overflow-hidden">
 <div class="bg-primary h-full w-2/3"></div>
 </div>
@@ -107,8 +116,8 @@
 <!-- Physics -->
 <div class="bg-surface-container-lowest border border-surface-variant rounded-xl p-md card-shadow flex flex-col gap-base hover:border-primary transition-all duration-300">
 <span class="material-symbols-outlined text-primary-container text-[32px]">flare</span>
-<h4 class="font-label-md text-label-md text-on-surface">Physics</h4>
-<p class="text-label-sm text-on-surface-variant">Laws of motion and energy.</p>
+<h4 class="font-label-md text-label-md text-on-surface" data-i18n="subj_physics_title">Physics</h4>
+<p class="text-label-sm text-on-surface-variant" data-i18n="subj_physics_desc">Laws of motion and energy.</p>
 <div class="mt-xs w-full bg-surface-variant h-1 rounded-full overflow-hidden">
 <div class="bg-primary h-full w-1/5"></div>
 </div>
@@ -129,8 +138,8 @@
 <span class="material-symbols-outlined">account_balance</span>
 </div>
 <div>
-<h4 class="font-label-md text-label-md text-on-surface">U.S. History</h4>
-<p class="text-label-sm text-on-surface-variant">Foundations of democracy.</p>
+<h4 class="font-label-md text-label-md text-on-surface" data-i18n="subj_history_title">U.S. History</h4>
+<p class="text-label-sm text-on-surface-variant" data-i18n="subj_history_desc">Foundations of democracy.</p>
 </div>
 </div>
 <div class="bg-surface-container-lowest border border-surface-variant rounded-xl p-md card-shadow flex items-center gap-md hover:border-secondary transition-all duration-300">
@@ -138,8 +147,8 @@
 <span class="material-symbols-outlined">insights</span>
 </div>
 <div>
-<h4 class="font-label-md text-label-md text-on-surface">Economics</h4>
-<p class="text-label-sm text-on-surface-variant">Markets and financial systems.</p>
+<h4 class="font-label-md text-label-md text-on-surface" data-i18n="subj_economics_title">Economics</h4>
+<p class="text-label-sm text-on-surface-variant" data-i18n="subj_economics_desc">Markets and financial systems.</p>
 </div>
 </div>
 </div>
@@ -153,10 +162,10 @@
 <div class="bg-primary p-md rounded-xl card-shadow text-on-primary relative overflow-hidden group">
 <img class="absolute inset-0 w-full h-full object-cover opacity-20 transition-transform duration-700 group-hover:scale-110" data-alt="A beautifully bound stack of vintage hardcover books on a clean wooden desk. The background is a soft-focus library with warm light filtering through high windows. The atmosphere is quiet, intellectual, and inviting, with tones of turquoise and deep blue. High-key lighting highlights the paper textures of the open pages." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZoesGO9exd8i0n38diNlnAQYyizOHEdEEZ8RthOxDKd9muXXbGOAKpgiBN8LMbFlcuzeYQO7UFEyw_hxKAkb9-2R2iPiD__nURFad8U-k4NNmYDmEpLWN6KAu-jldmAaGQFpg5_MxUs3btGfubUjlNgZpmk-P6bp0xJHJr6MvvuRnJ-T3BMA_qS_OtuoNJxCPv4rgIdJQWR3Hyk9HqvyG68MEaF7sedoHjBlwE766m-qFMkNpRvH3ma5Ae4xcF_kCtLdatJig5xE"/>
 <div class="relative z-10 flex flex-col gap-sm">
-<h4 class="font-label-md text-label-md">Advanced English</h4>
-<p class="text-label-sm opacity-90">Literature analysis &amp; Rhetorical writing.</p>
+<h4 class="font-label-md text-label-md" data-i18n="subj_english_title">Advanced English</h4>
+<p class="text-label-sm opacity-90" data-i18n="subj_english_desc">Literature analysis &amp; Rhetorical writing.</p>
 <button class="mt-sm bg-on-primary text-primary px-4 py-2 rounded-lg font-label-md text-center hover:bg-primary-fixed transition-colors">
-                                Resume Reading
+                                <span data-i18n="subj_english_btn">Resume Reading</span>
                             </button>
 </div>
 </div>
@@ -168,8 +177,8 @@
 <div class="flex gap-md items-start">
 <span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
 <div>
-<h5 class="font-label-md text-label-md text-primary-container mb-xs">Academic Advice</h5>
-<p class="font-body-md text-on-surface-variant italic">
+<h5 class="font-label-md text-label-md text-primary-container mb-xs" data-i18n="subj_advice_title">Academic Advice</h5>
+<p class="font-body-md text-on-surface-variant italic" data-i18n="subj_advice_desc">
                         "Consistency is the companion of success. Focus on one STEM hub today to balance your Humanities reading load. Research shows that switching between disciplines can enhance cognitive flexibility."
                     </p>
 </div>
@@ -177,23 +186,188 @@
 </section>
 </main>
 <!-- BottomNavBar (Mobile Only) -->
-<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-surface border-t border-surface-variant flex justify-around items-center px-4 pb-4 pt-2 shadow-sm rounded-t-xl">
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-surface border-t border-surface-variant px-4 pb-4 pt-2 flex justify-around items-center shadow-sm rounded-t-xl">
 <a href="home.html" class="flex flex-col items-center justify-center text-secondary">
 <span class="material-symbols-outlined">home</span>
-<span class="font-label-md text-label-md">Home</span>
+<span class="font-label-md text-label-md" data-i18n="menu_home">Home</span>
 </a>
 <a href="subjects.html" class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 scale-95 active:scale-90 transition-transform">
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">menu_book</span>
-<span class="font-label-md text-label-md">Subjects</span>
+<span class="font-label-md text-label-md" data-i18n="menu_subjects">Subjects</span>
 </a>
 <a href="scenario.html" class="flex flex-col items-center justify-center text-secondary">
 <span class="material-symbols-outlined">school</span>
-<span class="font-label-md text-label-md">Lessons</span>
+<span class="font-label-md text-label-md" data-i18n="menu_lessons">Lessons</span>
 </a>
 <a href="progress.html" class="flex flex-col items-center justify-center text-secondary">
 <span class="material-symbols-outlined">map</span>
-<span class="font-label-md text-label-md">Progress</span>
+<span class="font-label-md text-label-md" data-i18n="menu_progress">Progress</span>
 </a>
 </nav>
-<!-- FAB (Suppressed based on screen type, but keeping logic in mind - not needed for navigation focus) -->
+
+<script>
+const translations = {
+  en: {
+    menu_home: "Home",
+    menu_subjects: "Subjects",
+    menu_lessons: "Lessons",
+    menu_progress: "Progress",
+    native_lang_title: "Your Native Language",
+    subj_hero_title: "Subject Hubs",
+    subj_hero_desc: "Deepen your understanding of core academic disciplines through curated modules designed for scholarly excellence.",
+    subj_geometry_title: "Geometry",
+    subj_geometry_desc: "The logic of space and form.",
+    subj_trig_title: "Trigonometry",
+    subj_trig_desc: "Waveforms and periodic functions.",
+    subj_biology_title: "Biology",
+    subj_biology_desc: "Life sciences and ecosystems.",
+    subj_chemistry_title: "Chemistry",
+    subj_chemistry_desc: "Molecular structures and reactions.",
+    subj_physics_title: "Physics",
+    subj_physics_desc: "Laws of motion and energy.",
+    subj_history_title: "U.S. History",
+    subj_history_desc: "Foundations of democracy.",
+    subj_economics_title: "Economics",
+    subj_economics_desc: "Markets and financial systems.",
+    subj_english_title: "Advanced English",
+    subj_english_desc: "Literature analysis & Rhetorical writing.",
+    subj_english_btn: "Resume Reading",
+    subj_advice_title: "Academic Advice",
+    subj_advice_desc: "\"Consistency is the companion of success. Focus on one STEM hub today to balance your Humanities reading load. Research shows that switching between disciplines can enhance cognitive flexibility.\""
+  },
+  ko: {
+    menu_home: "홈",
+    menu_subjects: "과목",
+    menu_lessons: "레슨",
+    menu_progress: "학습 진도",
+    native_lang_title: "모국어 설정",
+    subj_hero_title: "과목 센터",
+    subj_hero_desc: "학문적 탁월함을 위해 설계된 엄선된 모듈을 통해 핵심 학문 분야에 대한 이해를 깊이 있게 만드세요.",
+    subj_geometry_title: "기하학",
+    subj_geometry_desc: "공간과 도형의 논리.",
+    subj_trig_title: "삼각법",
+    subj_trig_desc: "파형과 주기 함수.",
+    subj_biology_title: "생물학",
+    subj_biology_desc: "생명 과학과 생태계.",
+    subj_chemistry_title: "화학",
+    subj_chemistry_desc: "분자 구조와 화학 반응.",
+    subj_physics_title: "물리학",
+    subj_physics_desc: "운동과 에너지의 법칙.",
+    subj_history_title: "미국사",
+    subj_history_desc: "민주주의의 기초.",
+    subj_economics_title: "경제학",
+    subj_economics_desc: "시장과 금융 시스템.",
+    subj_english_title: "고급 영어",
+    subj_english_desc: "문학 분석 및 수사학적 글쓰기.",
+    subj_english_btn: "독서 재개",
+    subj_advice_title: "학술 조언",
+    subj_advice_desc: "\"꾸준함은 성공의 동반자입니다. 오늘 인문학 독서량의 균형을 맞추기 위해 하나의 STEM 허브에 집중해 보세요. 학문 분야를 바꾸어가며 학습하는 것이 인지적 유연성을 향상시킨다는 연구 결과가 있습니다.\""
+  },
+  zh: {
+    menu_home: "首页",
+    menu_subjects: "学科",
+    menu_lessons: "课程",
+    menu_progress: "学习进度",
+    native_lang_title: "你的母语",
+    subj_hero_title: "学科中心",
+    subj_hero_desc: "通过旨在提高学术卓越性的精选模块，加深您对核心学术学科的理解。",
+    subj_geometry_title: "几何学",
+    subj_geometry_desc: "空间与形式的逻辑。",
+    subj_trig_title: "三角学",
+    subj_trig_desc: "波形与周期函数。",
+    subj_biology_title: "生物学",
+    subj_biology_desc: "生命科学与生态系统。",
+    subj_chemistry_title: "化学",
+    subj_chemistry_desc: "分子结构与反应。",
+    subj_physics_title: "物理学",
+    subj_physics_desc: "运动和能量定律。",
+    subj_history_title: "美国历史",
+    subj_history_desc: "民主的基础。",
+    subj_economics_title: "经济学",
+    subj_economics_desc: "市场与金融体系。",
+    subj_english_title: "高级英语",
+    subj_english_desc: "文学分析与修辞写作。",
+    subj_english_btn: "恢复阅读",
+    subj_advice_title: "学术建议",
+    subj_advice_desc: "“坚持是成功之友。今天专注于一个STEM中心，以平衡你的人文学科阅读负荷。研究表明，在不同学科之间切换可以增强认知灵活性。”"
+  },
+  es: {
+    menu_home: "Inicio",
+    menu_subjects: "Asignaturas",
+    menu_lessons: "Lecciones",
+    menu_progress: "Progreso",
+    native_lang_title: "Tu idioma nativo",
+    subj_hero_title: "Centros de asignaturas",
+    subj_hero_desc: "Profundiza tu comprensión de las disciplinas académicas principales a través de módulos seleccionados diseñados para la excelencia académica.",
+    subj_geometry_title: "Geometría",
+    subj_geometry_desc: "La lógica del espacio y la forma.",
+    subj_trig_title: "Trigonometría",
+    subj_trig_desc: "Formas de onda y funciones periódicas.",
+    subj_biology_title: "Biología",
+    subj_biology_desc: "Ciencias de la vida y ecosistemas.",
+    subj_chemistry_title: "Química",
+    subj_chemistry_desc: "Estructuras y reacciones moleculares.",
+    subj_physics_title: "Física",
+    subj_physics_desc: "Leyes del movimiento y la energía.",
+    subj_history_title: "Historia de EE.UU.",
+    subj_history_desc: "Fundamentos de la democracia.",
+    subj_economics_title: "Economía",
+    subj_economics_desc: "Mercados y sistemas financieros.",
+    subj_english_title: "Inglés avanzado",
+    subj_english_desc: "Análisis literario y escritura retórica.",
+    subj_english_btn: "Reanudar lectura",
+    subj_advice_title: "Consejo académico",
+    subj_advice_desc: "\"La constancia es la compañera del éxito. Concéntrate en un centro STEM hoy para equilibrar tu carga de lectura de Humanidades. Las investigaciones demuestran que alternar entre disciplinas puede mejorar la flexibilidad cognitiva.\""
+  }
+};
+
+const langButtons = document.querySelectorAll('#lang-buttons button');
+const defaultClass = "flex items-center gap-xs px-md py-base border-2 border-outline-variant text-secondary font-label rounded-full hover:bg-secondary-container hover:border-secondary-container transition-all";
+const activeClass = "flex items-center gap-xs px-md py-base border-2 border-primary-container bg-primary-container text-on-primary-container font-label rounded-full shadow-sm hover:shadow-md transition-all";
+
+function updateButtonStyles(selectedLang) {
+  langButtons.forEach(btn => {
+    const btnLang = btn.getAttribute('data-lang');
+    if (btnLang === selectedLang) {
+      btn.className = activeClass;
+      if (!btn.querySelector('.material-symbols-outlined')) {
+        const icon = document.createElement('span');
+        icon.className = "material-symbols-outlined text-base";
+        icon.textContent = "check_circle";
+        btn.prepend(icon);
+      }
+    } else {
+      btn.className = defaultClass;
+      const icon = btn.querySelector('.material-symbols-outlined');
+      if (icon) {
+        icon.remove();
+      }
+    }
+  });
+}
+
+function applyLanguage(lang) {
+  const t = translations[lang] || translations['en'];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[key]) {
+      el.textContent = t[key];
+    }
+  });
+  updateButtonStyles(lang);
+}
+
+langButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const targetLang = btn.getAttribute('data-lang');
+    localStorage.setItem('selectedLanguage', targetLang);
+    applyLanguage(targetLang);
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+  applyLanguage(savedLang);
+});
+</script>
 </body></html>
