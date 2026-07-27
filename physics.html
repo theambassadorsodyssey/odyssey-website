@@ -333,6 +333,7 @@ function renderAccordion(query = '') {
   const filtered  = filterTerms(query.trim());
   const total     = filtered.reduce((sum, c) => sum + c.terms.length, 0);
   const totalAll  = vocabData.categories.reduce((s, c) => s + c.terms.length, 0);
+  const isEn       = currentLang === 'en';
   const nativeName = LANGS.find(l => l.code === currentLang).native;
 
   resultCountEl.textContent = query
@@ -346,12 +347,27 @@ function renderAccordion(query = '') {
 
   accordionEl.innerHTML = filtered.map(c => {
     const isOpen = forceOpen || openCategories.has(c.catIndex);
-    const rows = c.terms.map(t => `
+    const rows = c.terms.map(t => isEn ? `
+      <div class="term-row px-4 py-2.5 rounded-lg items-baseline cursor-default transition-colors">
+        <span class="font-body text-body-md text-on-surface">${highlight(t.en, query)}</span>
+      </div>
+    ` : `
       <div class="term-row grid grid-cols-2 gap-3 px-4 py-2.5 rounded-lg items-baseline cursor-default transition-colors">
         <span class="font-body text-body-md text-on-surface">${highlight(t.en, query)}</span>
         <span class="font-body text-body-md text-primary">${highlight(t[currentLang], query)}</span>
       </div>
     `).join('');
+
+    const headerHtml = isEn ? `
+      <div class="px-4 pb-xs pt-xs border-t border-outline-variant">
+        <span class="font-label text-label-sm text-on-surface-variant uppercase tracking-wider">English</span>
+      </div>
+    ` : `
+      <div class="grid grid-cols-2 gap-3 px-4 pb-xs pt-xs border-t border-outline-variant">
+        <span class="font-label text-label-sm text-on-surface-variant uppercase tracking-wider">English</span>
+        <span class="font-label text-label-sm text-on-surface-variant uppercase tracking-wider">${nativeName}</span>
+      </div>
+    `;
 
     return `
       <section class="card-paper rounded-xl overflow-hidden">
@@ -370,10 +386,7 @@ function renderAccordion(query = '') {
 
         <div class="cat-panel ${isOpen ? 'open' : ''}">
           <div>
-            <div class="grid grid-cols-2 gap-3 px-4 pb-xs pt-xs border-t border-outline-variant">
-              <span class="font-label text-label-sm text-on-surface-variant uppercase tracking-wider">English</span>
-              <span class="font-label text-label-sm text-on-surface-variant uppercase tracking-wider">${nativeName}</span>
-            </div>
+            ${headerHtml}
             ${rows}
             <div class="pb-xs"></div>
           </div>
