@@ -1,0 +1,455 @@
+{
+  "meta": {
+    "title": "Geometry Vocabulary / 기하학 용어집 / 几何词汇 / Vocabulario de Geometría",
+    "source": "Based on Big Ideas Math - Geometry: A Common Core Curriculum",
+    "languages": ["en", "ko", "zh", "es"]
+  },
+  "categories": [
+    {
+      "category": {
+        "en": "Foundations of Geometry",
+        "ko": "기하학의 기초",
+        "zh": "几何基础",
+        "es": "Fundamentos de la Geometría"
+      },
+      "terms": [
+        {"en": "point", "ko": "점", "zh": "点", "es": "punto"},
+        {"en": "line", "ko": "직선(선)", "zh": "线（直线）", "es": "línea (recta)"},
+        {"en": "plane", "ko": "평면", "zh": "平面", "es": "plano"},
+        {"en": "collinear", "ko": "공선(한 직선 위에 있는)", "zh": "共线", "es": "colineal"},
+        {"en": "coplanar", "ko": "공면(한 평면 위에 있는)", "zh": "共面", "es": "coplanar"},
+        {"en": "intersection", "ko": "교점(교선)", "zh": "交点（交线）", "es": "intersección"},
+        {"en": "endpoint", "ko": "끝점", "zh": "端点", "es": "extremo"},
+        {"en": "segment", "ko": "선분", "zh": "线段", "es": "segmento"},
+        {"en": "ray", "ko": "반직선", "zh": "射线", "es": "rayo"},
+        {"en": "opposite rays", "ko": "반대 방향 반직선", "zh": "反向射线", "es": "rayos opuestos"},
+        {"en": "midpoint", "ko": "중점", "zh": "中点", "es": "punto medio"},
+        {"en": "distance", "ko": "거리", "zh": "距离", "es": "distancia"},
+        {"en": "coordinate", "ko": "좌표", "zh": "坐标", "es": "coordenada"},
+        {"en": "coordinate plane", "ko": "좌표평면", "zh": "坐标平面", "es": "plano de coordenadas"},
+        {"en": "origin", "ko": "원점", "zh": "原点", "es": "origen"},
+        {"en": "x-axis", "ko": "x축", "zh": "x轴", "es": "eje x"},
+        {"en": "y-axis", "ko": "y축", "zh": "y轴", "es": "eje y"},
+        {"en": "quadrant", "ko": "사분면", "zh": "象限", "es": "cuadrante"},
+        {"en": "slope", "ko": "기울기", "zh": "斜率", "es": "pendiente"},
+        {"en": "undefined slope", "ko": "정의되지 않은 기울기", "zh": "斜率不存在", "es": "pendiente indefinida"},
+        {"en": "positive slope", "ko": "양의 기울기", "zh": "正斜率", "es": "pendiente positiva"},
+        {"en": "negative slope", "ko": "음의 기울기", "zh": "负斜率", "es": "pendiente negativa"},
+        {"en": "zero slope", "ko": "기울기 0", "zh": "零斜率", "es": "pendiente cero"},
+        {"en": "dimension", "ko": "차원", "zh": "维；维度", "es": "dimensión"},
+        {"en": "space", "ko": "공간", "zh": "空间", "es": "espacio"},
+        {"en": "postulate", "ko": "공준", "zh": "公设", "es": "postulado"},
+        {"en": "axiom", "ko": "공리", "zh": "公理", "es": "axioma"},
+        {"en": "theorem", "ko": "정리", "zh": "定理", "es": "teorema"},
+        {"en": "corollary", "ko": "따름정리", "zh": "推论", "es": "corolario"},
+        {"en": "conjecture", "ko": "추측", "zh": "猜想", "es": "conjetura"},
+        {"en": "proof", "ko": "증명", "zh": "证明", "es": "demostración"},
+        {"en": "statement", "ko": "명제(진술)", "zh": "陈述；命题", "es": "enunciado"},
+        {"en": "reason", "ko": "이유(근거)", "zh": "理由", "es": "razón"}
+      ]
+    },
+    {
+      "category": {
+        "en": "Logic and Proof Vocabulary",
+        "ko": "논리와 증명 어휘",
+        "zh": "逻辑与证明词汇",
+        "es": "Vocabulario de Lógica y Demostración"
+      },
+      "terms": [
+        {"en": "conditional statement", "ko": "조건 명제", "zh": "条件语句（条件命题）", "es": "enunciado condicional"},
+        {"en": "hypothesis", "ko": "가정", "zh": "假设；前提", "es": "hipótesis"},
+        {"en": "conclusion", "ko": "결론", "zh": "结论", "es": "conclusión"},
+        {"en": "converse", "ko": "역", "zh": "逆命题", "es": "recíproco"},
+        {"en": "inverse", "ko": "이", "zh": "否命题", "es": "inverso"},
+        {"en": "contrapositive", "ko": "대우", "zh": "逆否命题", "es": "contrarrecíproco"},
+        {"en": "biconditional", "ko": "쌍조건 명제", "zh": "双条件语句（当且仅当）", "es": "enunciado bicondicional"},
+        {"en": "truth value", "ko": "진리값", "zh": "真值", "es": "valor de verdad"},
+        {"en": "if-then statement", "ko": "'만약~그러면' 명제", "zh": "“如果…那么…”语句", "es": "enunciado \"si-entonces\""},
+        {"en": "two-column proof", "ko": "이단 증명", "zh": "两栏式证明", "es": "demostración de dos columnas"},
+        {"en": "paragraph proof", "ko": "문단 증명", "zh": "段落证明", "es": "demostración en párrafo"},
+        {"en": "flow proof", "ko": "흐름도 증명", "zh": "流程图证明", "es": "demostración de flujo"},
+        {"en": "direct proof", "ko": "직접 증명", "zh": "直接证明", "es": "demostración directa"},
+        {"en": "indirect proof", "ko": "간접 증명", "zh": "间接证明", "es": "demostración indirecta"},
+        {"en": "contradiction", "ko": "모순(귀류법)", "zh": "矛盾（反证法）", "es": "contradicción"},
+        {"en": "reflexive property", "ko": "반사성", "zh": "自反性", "es": "propiedad reflexiva"},
+        {"en": "symmetric property", "ko": "대칭성", "zh": "对称性", "es": "propiedad simétrica"},
+        {"en": "transitive property", "ko": "추이성", "zh": "传递性", "es": "propiedad transitiva"},
+        {"en": "substitution property", "ko": "대입 성질", "zh": "等量代换", "es": "propiedad de sustitución"},
+        {"en": "distributive property", "ko": "분배법칙", "zh": "分配律", "es": "propiedad distributiva"},
+        {"en": "addition property", "ko": "등식의 덧셈 성질", "zh": "等式加法性质", "es": "propiedad de la suma"},
+        {"en": "subtraction property", "ko": "등식의 뺄셈 성질", "zh": "等式减法性质", "es": "propiedad de la resta"},
+        {"en": "multiplication property", "ko": "등식의 곱셈 성질", "zh": "等式乘法性质", "es": "propiedad de la multiplicación"},
+        {"en": "division property", "ko": "등식의 나눗셈 성질", "zh": "等式除法性质", "es": "propiedad de la división"}
+      ]
+    },
+    {
+      "category": {
+        "en": "Segments and Measurement",
+        "ko": "선분과 측정",
+        "zh": "线段与度量",
+        "es": "Segmentos y Medición"
+      },
+      "terms": [
+        {"en": "segment addition postulate", "ko": "선분 덧셈 공준", "zh": "线段加法公设", "es": "postulado de la suma de segmentos"},
+        {"en": "congruent segments", "ko": "합동인 선분", "zh": "全等线段（等长线段）", "es": "segmentos congruentes"},
+        {"en": "bisector", "ko": "이등분선", "zh": "平分线", "es": "bisectriz"},
+        {"en": "segment bisector", "ko": "선분의 이등분선", "zh": "线段平分线", "es": "bisectriz de un segmento"},
+        {"en": "ruler postulate", "ko": "자 공준", "zh": "度量公设（直尺公设）", "es": "postulado de la regla"},
+        {"en": "length", "ko": "길이", "zh": "长度", "es": "longitud"},
+        {"en": "perimeter", "ko": "둘레", "zh": "周长", "es": "perímetro"},
+        {"en": "area", "ko": "넓이(면적)", "zh": "面积", "es": "área"},
+        {"en": "surface area", "ko": "겉넓이(표면적)", "zh": "表面积", "es": "área de superficie"},
+        {"en": "volume", "ko": "부피", "zh": "体积", "es": "volumen"},
+        {"en": "circumference", "ko": "원둘레", "zh": "周长（圆周）", "es": "circunferencia"},
+        {"en": "scale factor", "ko": "축척(닮음비)", "zh": "相似比", "es": "factor de escala"},
+        {"en": "ratio", "ko": "비", "zh": "比", "es": "razón"},
+        {"en": "proportion", "ko": "비례", "zh": "比例", "es": "proporción"}
+      ]
+    },
+    {
+      "category": {
+        "en": "Angles",
+        "ko": "각",
+        "zh": "角",
+        "es": "Ángulos"
+      },
+      "terms": [
+        {"en": "angle", "ko": "각", "zh": "角", "es": "ángulo"},
+        {"en": "vertex", "ko": "꼭짓점", "zh": "顶点", "es": "vértice"},
+        {"en": "interior", "ko": "내부", "zh": "内部", "es": "interior"},
+        {"en": "exterior", "ko": "외부", "zh": "外部", "es": "exterior"},
+        {"en": "acute angle", "ko": "예각", "zh": "锐角", "es": "ángulo agudo"},
+        {"en": "right angle", "ko": "직각", "zh": "直角", "es": "ángulo recto"},
+        {"en": "obtuse angle", "ko": "둔각", "zh": "钝角", "es": "ángulo obtuso"},
+        {"en": "straight angle", "ko": "평각", "zh": "平角", "es": "ángulo llano"},
+        {"en": "reflex angle", "ko": "우각", "zh": "优角", "es": "ángulo reflejo"},
+        {"en": "congruent angles", "ko": "합동인 각", "zh": "全等角（相等的角）", "es": "ángulos congruentes"},
+        {"en": "adjacent angles", "ko": "인접각", "zh": "邻角", "es": "ángulos adyacentes"},
+        {"en": "vertical angles", "ko": "맞꼭지각", "zh": "对顶角", "es": "ángulos opuestos por el vértice"},
+        {"en": "linear pair", "ko": "일직선각쌍", "zh": "邻补角", "es": "par lineal"},
+        {"en": "complementary angles", "ko": "여각", "zh": "余角", "es": "ángulos complementarios"},
+        {"en": "supplementary angles", "ko": "보각", "zh": "补角", "es": "ángulos suplementarios"},
+        {"en": "angle bisector", "ko": "각의 이등분선", "zh": "角平分线", "es": "bisectriz de un ángulo"},
+        {"en": "angle addition postulate", "ko": "각 덧셈 공준", "zh": "角加法公设", "es": "postulado de la suma de ángulos"},
+        {"en": "protractor postulate", "ko": "각도기 공준", "zh": "量角器公设", "es": "postulado del transportador"}
+      ]
+    },
+    {
+      "category": {
+        "en": "Lines and Angle Relationships",
+        "ko": "직선과 각의 관계",
+        "zh": "线与角的关系",
+        "es": "Rectas y Relaciones Angulares"
+      },
+      "terms": [
+        {"en": "parallel lines", "ko": "평행선", "zh": "平行线", "es": "rectas paralelas"},
+        {"en": "perpendicular lines", "ko": "수직선", "zh": "垂直线", "es": "rectas perpendiculares"},
+        {"en": "skew lines", "ko": "꼬인 위치의 직선", "zh": "异面直线", "es": "rectas alabeadas"},
+        {"en": "transversal", "ko": "횡단선", "zh": "截线", "es": "transversal"},
+        {"en": "corresponding angles", "ko": "동위각", "zh": "同位角", "es": "ángulos correspondientes"},
+        {"en": "alternate interior angles", "ko": "엇각(내부)", "zh": "内错角", "es": "ángulos alternos internos"},
+        {"en": "alternate exterior angles", "ko": "엇각(외부)", "zh": "外错角", "es": "ángulos alternos externos"},
+        {"en": "consecutive interior angles", "ko": "같은 쪽 내각", "zh": "同旁内角", "es": "ángulos internos consecutivos"},
+        {"en": "same-side interior angles", "ko": "동측내각", "zh": "同旁内角", "es": "ángulos internos del mismo lado"},
+        {"en": "same-side exterior angles", "ko": "동측외각", "zh": "同旁外角", "es": "ángulos externos del mismo lado"},
+        {"en": "parallel postulate", "ko": "평행선 공준", "zh": "平行公设", "es": "postulado de las paralelas"},
+        {"en": "perpendicular postulate", "ko": "수선 공준", "zh": "垂线公设", "es": "postulado de las perpendiculares"}
+      ]
+    },
+    {
+      "category": {
+        "en": "Triangles",
+        "ko": "삼각형",
+        "zh": "三角形",
+        "es": "Triángulos"
+      },
+      "terms": [
+        {"en": "triangle", "ko": "삼각형", "zh": "三角形", "es": "triángulo"},
+        {"en": "vertex", "ko": "꼭짓점", "zh": "顶点", "es": "vértice"},
+        {"en": "side", "ko": "변", "zh": "边", "es": "lado"},
+        {"en": "interior angle", "ko": "내각", "zh": "内角", "es": "ángulo interior"},
+        {"en": "exterior angle", "ko": "외각", "zh": "外角", "es": "ángulo exterior"},
+        {"en": "scalene triangle", "ko": "부등변삼각형", "zh": "不等边三角形", "es": "triángulo escaleno"},
+        {"en": "isosceles triangle", "ko": "이등변삼각형", "zh": "等腰三角形", "es": "triángulo isósceles"},
+        {"en": "equilateral triangle", "ko": "정삼각형", "zh": "等边三角形", "es": "triángulo equilátero"},
+        {"en": "acute triangle", "ko": "예각삼각형", "zh": "锐角三角形", "es": "triángulo acutángulo"},
+        {"en": "right triangle", "ko": "직각삼각형", "zh": "直角三角形", "es": "triángulo rectángulo"},
+        {"en": "obtuse triangle", "ko": "둔각삼각형", "zh": "钝角三角形", "es": "triángulo obtusángulo"},
+        {"en": "hypotenuse", "ko": "빗변", "zh": "斜边", "es": "hipotenusa"},
+        {"en": "leg", "ko": "직각변", "zh": "直角边（腰）", "es": "cateto"},
+        {"en": "included angle", "ko": "끼인각", "zh": "夹角", "es": "ángulo incluido"},
+        {"en": "included side", "ko": "끼인변", "zh": "夹边", "es": "lado incluido"},
+        {"en": "median", "ko": "중선", "zh": "中线", "es": "mediana"},
+        {"en": "altitude", "ko": "수선(높이)", "zh": "高（高线）", "es": "altura"},
+        {"en": "perpendicular bisector", "ko": "수직이등분선", "zh": "垂直平分线", "es": "mediatriz"},
+        {"en": "angle bisector", "ko": "각의 이등분선", "zh": "角平分线", "es": "bisectriz de un ángulo"},
+        {"en": "centroid", "ko": "무게중심", "zh": "重心", "es": "centroide"},
+        {"en": "circumcenter", "ko": "외심", "zh": "外心", "es": "circuncentro"},
+        {"en": "incenter", "ko": "내심", "zh": "内心", "es": "incentro"},
+        {"en": "orthocenter", "ko": "수심", "zh": "垂心", "es": "ortocentro"},
+        {"en": "triangle sum theorem", "ko": "삼각형 내각의 합 정리", "zh": "三角形内角和定理", "es": "teorema de la suma de los ángulos del triángulo"},
+        {"en": "exterior angle theorem", "ko": "외각 정리", "zh": "外角定理", "es": "teorema del ángulo exterior"},
+        {"en": "triangle inequality theorem", "ko": "삼각형 부등식 정리", "zh": "三角形不等式定理", "es": "teorema de la desigualdad triangular"},
+        {"en": "hinge theorem", "ko": "힌지 정리(경첩 정리)", "zh": "铰链定理", "es": "teorema de la bisagra"}
+      ]
+    },
+    {
+      "category": {
+        "en": "Triangle Congruence",
+        "ko": "삼각형의 합동",
+        "zh": "三角形全等",
+        "es": "Congruencia de Triángulos"
+      },
+      "terms": [
+        {"en": "congruent triangles", "ko": "합동인 삼각형", "zh": "全等三角形", "es": "triángulos congruentes"},
+        {"en": "corresponding parts", "ko": "대응 부분", "zh": "对应部分", "es": "partes correspondientes"},
+        {"en": "CPCTC", "ko": "대응하는 합동 삼각형의 부분은 서로 합동(CPCTC)", "zh": "全等三角形对应部分相等", "es": "CPCTC (partes correspondientes de triángulos congruentes)"},
+        {"en": "SAS congruence", "ko": "SAS 합동(변각변)", "zh": "边角边（SAS）全等", "es": "congruencia LAL (lado-ángulo-lado)"},
+        {"en": "SSS congruence", "ko": "SSS 합동(변변변)", "zh": "边边边（SSS）全等", "es": "congruencia LLL (lado-lado-lado)"},
+        {"en": "ASA congruence", "ko": "ASA 합동(각변각)", "zh": "角边角（ASA）全等", "es": "congruencia ALA (ángulo-lado-ángulo)"},
+        {"en": "AAS congruence", "ko": "AAS 합동(각각변)", "zh": "角角边（AAS）全等", "es": "congruencia AAL (ángulo-ángulo-lado)"},
+        {"en": "HL congruence", "ko": "HL 합동(빗변-직각변)", "zh": "斜边直角边（HL）全等", "es": "congruencia HL (hipotenusa-cateto)"},
+        {"en": "Third Angle Theorem", "ko": "제3각 정리", "zh": "第三角定理", "es": "teorema del tercer ángulo"},
+        {"en": "base angles theorem", "ko": "밑각 정리", "zh": "底角定理", "es": "teorema de los ángulos de la base"}
+      ]
+    },
+    {
+      "category": {
+        "en": "Similarity",
+        "ko": "닮음",
+        "zh": "相似",
+        "es": "Semejanza"
+      },
+      "terms": [
+        {"en": "similar figures", "ko": "닮은 도형", "zh": "相似图形", "es": "figuras semejantes"},
+        {"en": "similar polygons", "ko": "닮은 다각형", "zh": "相似多边形", "es": "polígonos semejantes"},
+        {"en": "similar triangles", "ko": "닮은 삼각형", "zh": "相似三角形", "es": "triángulos semejantes"},
+        {"en": "proportional", "ko": "비례하는", "zh": "成比例", "es": "proporcional"},
+        {"en": "proportionality theorem", "ko": "비례 정리", "zh": "比例定理", "es": "teorema de proporcionalidad"},
+        {"en": "AA similarity", "ko": "AA 닮음(각각)", "zh": "角角（AA）相似", "es": "semejanza AA"},
+        {"en": "SAS similarity", "ko": "SAS 닮음(변각변)", "zh": "边角边（SAS）相似", "es": "semejanza LAL"},
+        {"en": "SSS similarity", "ko": "SSS 닮음(변변변)", "zh": "边边边（SSS）相似", "es": "semejanza LLL"},
+        {"en": "dilation", "ko": "확대·축소(닮음변환)", "zh": "位似（放缩）", "es": "dilatación (homotecia)"},
+        {"en": "enlargement", "ko": "확대", "zh": "放大", "es": "ampliación"},
+        {"en": "reduction", "ko": "축소", "zh": "缩小", "es": "reducción"},
+        {"en": "image", "ko": "상", "zh": "像", "es": "imagen"},
+        {"en": "preimage", "ko": "원상", "zh": "原像", "es": "preimagen"},
+        {"en": "center of dilation", "ko": "닮음의 중심", "zh": "位似中心", "es": "centro de dilatación"},
+        {"en": "similarity ratio", "ko": "닮음비", "zh": "相似比", "es": "razón de semejanza"}
+      ]
+    },
+    {
+      "category": {
+        "en": "Polygons",
+        "ko": "다각형",
+        "zh": "多边形",
+        "es": "Polígonos"
+      },
+      "terms": [
+        {"en": "polygon", "ko": "다각형", "zh": "多边形", "es": "polígono"},
+        {"en": "regular polygon", "ko": "정다각형", "zh": "正多边形", "es": "polígono regular"},
+        {"en": "irregular polygon", "ko": "불규칙 다각형", "zh": "不规则多边形", "es": "polígono irregular"},
+        {"en": "convex polygon", "ko": "볼록다각형", "zh": "凸多边形", "es": "polígono convexo"},
+        {"en": "concave polygon", "ko": "오목다각형", "zh": "凹多边形", "es": "polígono cóncavo"},
+        {"en": "interior angle", "ko": "내각", "zh": "内角", "es": "ángulo interior"},
+        {"en": "exterior angle", "ko": "외각", "zh": "外角", "es": "ángulo exterior"},
+        {"en": "diagonal", "ko": "대각선", "zh": "对角线", "es": "diagonal"},
+        {"en": "n-gon", "ko": "n각형", "zh": "n边形", "es": "n-ágono"},
+        {"en": "decagon", "ko": "십각형", "zh": "十边形", "es": "decágono"},
+        {"en": "nonagon", "ko": "구각형", "zh": "九边形", "es": "eneágono"},
+        {"en": "octagon", "ko": "팔각형", "zh": "八边形", "es": "octágono"},
+        {"en": "heptagon", "ko": "칠각형", "zh": "七边形", "es": "heptágono"},
+        {"en": "hexagon", "ko": "육각형", "zh": "六边形", "es": "hexágono"},
+        {"en": "pentagon", "ko": "오각형", "zh": "五边形", "es": "pentágono"},
+        {"en": "quadrilateral", "ko": "사각형", "zh": "四边形", "es": "cuadrilátero"},
+        {"en": "triangle", "ko": "삼각형", "zh": "三角形", "es": "triángulo"}
+      ]
+    },
+    {
+      "category": {
+        "en": "Quadrilaterals",
+        "ko": "사각형",
+        "zh": "四边形",
+        "es": "Cuadriláteros"
+      },
+      "terms": [
+        {"en": "parallelogram", "ko": "평행사변형", "zh": "平行四边形", "es": "paralelogramo"},
+        {"en": "rectangle", "ko": "직사각형", "zh": "矩形", "es": "rectángulo"},
+        {"en": "rhombus", "ko": "마름모", "zh": "菱形", "es": "rombo"},
+        {"en": "square", "ko": "정사각형", "zh": "正方形", "es": "cuadrado"},
+        {"en": "trapezoid", "ko": "사다리꼴", "zh": "梯形", "es": "trapecio"},
+        {"en": "isosceles trapezoid", "ko": "등변사다리꼴", "zh": "等腰梯形", "es": "trapecio isósceles"},
+        {"en": "kite", "ko": "연꼴", "zh": "筝形", "es": "cometa (deltoide)"},
+        {"en": "diagonals", "ko": "대각선", "zh": "对角线", "es": "diagonales"},
+        {"en": "midsegment", "ko": "중점연결선(중위선)", "zh": "中位线", "es": "segmento medio"},
+        {"en": "consecutive angles", "ko": "이웃각", "zh": "邻角", "es": "ángulos consecutivos"},
+        {"en": "opposite angles", "ko": "대각", "zh": "对角", "es": "ángulos opuestos"},
+        {"en": "opposite sides", "ko": "대변", "zh": "对边", "es": "lados opuestos"}
+      ]
+    },
+    {
+      "category": {
+        "en": "Coordinate Geometry",
+        "ko": "좌표기하",
+        "zh": "坐标几何",
+        "es": "Geometría de Coordenadas"
+      },
+      "terms": [
+        {"en": "midpoint formula", "ko": "중점 공식", "zh": "中点公式", "es": "fórmula del punto medio"},
+        {"en": "distance formula", "ko": "거리 공식", "zh": "距离公式", "es": "fórmula de la distancia"},
+        {"en": "slope formula", "ko": "기울기 공식", "zh": "斜率公式", "es": "fórmula de la pendiente"},
+        {"en": "slope-intercept form", "ko": "기울기-절편형", "zh": "斜截式", "es": "forma pendiente-intersección"},
+        {"en": "point-slope form", "ko": "점-기울기형", "zh": "点斜式", "es": "forma punto-pendiente"},
+        {"en": "standard form", "ko": "표준형", "zh": "一般式", "es": "forma estándar"},
+        {"en": "parallel slopes", "ko": "평행 기울기(같음)", "zh": "平行斜率（斜率相等）", "es": "pendientes paralelas"},
+        {"en": "perpendicular slopes", "ko": "수직 기울기(곱이 -1)", "zh": "垂直斜率（斜率互为负倒数）", "es": "pendientes perpendiculares"}
+      ]
+    },
+    {
+      "category": {
+        "en": "Transformations",
+        "ko": "변환",
+        "zh": "变换",
+        "es": "Transformaciones"
+      },
+      "terms": [
+        {"en": "rigid motion", "ko": "강체운동", "zh": "刚体运动", "es": "movimiento rígido"},
+        {"en": "isometry", "ko": "등거리변환", "zh": "等距变换（保距变换）", "es": "isometría"},
+        {"en": "translation", "ko": "평행이동", "zh": "平移", "es": "traslación"},
+        {"en": "reflection", "ko": "대칭이동(반사)", "zh": "反射（翻折）", "es": "reflexión"},
+        {"en": "rotation", "ko": "회전이동", "zh": "旋转", "es": "rotación"},
+        {"en": "glide reflection", "ko": "활공반사", "zh": "滑移反射", "es": "reflexión con deslizamiento"},
+        {"en": "symmetry", "ko": "대칭", "zh": "对称", "es": "simetría"},
+        {"en": "line symmetry", "ko": "선대칭", "zh": "轴对称", "es": "simetría axial"},
+        {"en": "rotational symmetry", "ko": "회전대칭", "zh": "旋转对称", "es": "simetría rotacional"},
+        {"en": "orientation", "ko": "방향성", "zh": "定向（方向）", "es": "orientación"},
+        {"en": "image", "ko": "상", "zh": "像", "es": "imagen"},
+        {"en": "preimage", "ko": "원상", "zh": "原像", "es": "preimagen"},
+        {"en": "composition of transformations", "ko": "변환의 합성", "zh": "变换的复合", "es": "composición de transformaciones"}
+      ]
+    },
+    {
+      "category": {
+        "en": "Right Triangle Trigonometry",
+        "ko": "직각삼각형의 삼각비",
+        "zh": "直角三角学",
+        "es": "Trigonometría del Triángulo Rectángulo"
+      },
+      "terms": [
+        {"en": "trigonometry", "ko": "삼각법", "zh": "三角学", "es": "trigonometría"},
+        {"en": "sine", "ko": "사인(정현)", "zh": "正弦", "es": "seno"},
+        {"en": "cosine", "ko": "코사인(여현)", "zh": "余弦", "es": "coseno"},
+        {"en": "tangent", "ko": "탄젠트(정접)", "zh": "正切", "es": "tangente"},
+        {"en": "inverse sine", "ko": "역사인", "zh": "反正弦", "es": "arcoseno"},
+        {"en": "inverse cosine", "ko": "역코사인", "zh": "反余弦", "es": "arcocoseno"},
+        {"en": "inverse tangent", "ko": "역탄젠트", "zh": "反正切", "es": "arcotangente"},
+        {"en": "angle of elevation", "ko": "앙각(올려본각)", "zh": "仰角", "es": "ángulo de elevación"},
+        {"en": "angle of depression", "ko": "부각(내려본각)", "zh": "俯角", "es": "ángulo de depresión"},
+        {"en": "law of sines", "ko": "사인 법칙", "zh": "正弦定理", "es": "ley de senos"},
+        {"en": "law of cosines", "ko": "코사인 법칙", "zh": "余弦定理", "es": "ley de cosenos"},
+        {"en": "Pythagorean theorem", "ko": "피타고라스 정리", "zh": "勾股定理", "es": "teorema de Pitágoras"},
+        {"en": "converse of the Pythagorean theorem", "ko": "피타고라스 정리의 역", "zh": "勾股定理逆定理", "es": "recíproco del teorema de Pitágoras"},
+        {"en": "45-45-90 triangle", "ko": "45-45-90 삼각형", "zh": "45-45-90三角形", "es": "triángulo 45-45-90"},
+        {"en": "30-60-90 triangle", "ko": "30-60-90 삼각형", "zh": "30-60-90三角形", "es": "triángulo 30-60-90"},
+        {"en": "geometric mean", "ko": "기하평균(비례중항)", "zh": "比例中项（几何平均数）", "es": "media geométrica"}
+      ]
+    },
+    {
+      "category": {
+        "en": "Circles",
+        "ko": "원",
+        "zh": "圆",
+        "es": "Círculos"
+      },
+      "terms": [
+        {"en": "circle", "ko": "원", "zh": "圆", "es": "círculo"},
+        {"en": "center", "ko": "중심", "zh": "圆心", "es": "centro"},
+        {"en": "radius", "ko": "반지름", "zh": "半径", "es": "radio"},
+        {"en": "diameter", "ko": "지름", "zh": "直径", "es": "diámetro"},
+        {"en": "chord", "ko": "현", "zh": "弦", "es": "cuerda"},
+        {"en": "secant", "ko": "할선", "zh": "割线", "es": "secante"},
+        {"en": "tangent", "ko": "접선", "zh": "切线", "es": "tangente"},
+        {"en": "point of tangency", "ko": "접점", "zh": "切点", "es": "punto de tangencia"},
+        {"en": "arc", "ko": "호", "zh": "弧", "es": "arco"},
+        {"en": "minor arc", "ko": "열호(작은 호)", "zh": "劣弧", "es": "arco menor"},
+        {"en": "major arc", "ko": "우호(큰 호)", "zh": "优弧", "es": "arco mayor"},
+        {"en": "semicircle", "ko": "반원", "zh": "半圆", "es": "semicírculo"},
+        {"en": "central angle", "ko": "중심각", "zh": "圆心角", "es": "ángulo central"},
+        {"en": "inscribed angle", "ko": "원주각", "zh": "圆周角", "es": "ángulo inscrito"},
+        {"en": "intercepted arc", "ko": "대응하는 호", "zh": "截弧（所对弧）", "es": "arco interceptado"},
+        {"en": "concentric circles", "ko": "동심원", "zh": "同心圆", "es": "círculos concéntricos"},
+        {"en": "circumference", "ko": "원둘레", "zh": "周长（圆周）", "es": "circunferencia"},
+        {"en": "sector", "ko": "부채꼴", "zh": "扇形", "es": "sector"},
+        {"en": "segment of a circle", "ko": "활꼴", "zh": "弓形", "es": "segmento circular"},
+        {"en": "tangent line", "ko": "접선", "zh": "切线", "es": "línea tangente"},
+        {"en": "secant segment", "ko": "할선분", "zh": "割线段", "es": "segmento secante"},
+        {"en": "congruent circles", "ko": "합동인 원", "zh": "等圆", "es": "círculos congruentes"},
+        {"en": "similar circles", "ko": "닮은 원", "zh": "相似圆", "es": "círculos semejantes"}
+      ]
+    },
+    {
+      "category": {
+        "en": "Circle Theorems",
+        "ko": "원의 정리",
+        "zh": "圆定理",
+        "es": "Teoremas del Círculo"
+      },
+      "terms": [
+        {"en": "arc addition postulate", "ko": "호 덧셈 공준", "zh": "弧加法公设", "es": "postulado de la suma de arcos"},
+        {"en": "tangent line theorem", "ko": "접선 정리", "zh": "切线定理", "es": "teorema de la recta tangente"},
+        {"en": "inscribed angle theorem", "ko": "원주각 정리", "zh": "圆周角定理", "es": "teorema del ángulo inscrito"},
+        {"en": "inscribed quadrilateral theorem", "ko": "원에 내접하는 사각형 정리", "zh": "圆内接四边形定理", "es": "teorema del cuadrilátero inscrito"},
+        {"en": "tangent-chord theorem", "ko": "접선-현 각 정리", "zh": "弦切角定理", "es": "teorema del ángulo tangente-cuerda"},
+        {"en": "segments of chords theorem", "ko": "교차현 정리", "zh": "相交弦定理", "es": "teorema de las cuerdas que se intersecan"},
+        {"en": "segments of secants theorem", "ko": "할선 정리", "zh": "切割线定理", "es": "teorema de las secantes"}
+      ]
+    },
+    {
+      "category": {
+        "en": "Three-Dimensional Geometry",
+        "ko": "입체기하",
+        "zh": "立体几何",
+        "es": "Geometría Tridimensional"
+      },
+      "terms": [
+        {"en": "solid", "ko": "입체도형", "zh": "体", "es": "sólido"},
+        {"en": "prism", "ko": "각기둥", "zh": "棱柱", "es": "prisma"},
+        {"en": "pyramid", "ko": "각뿔", "zh": "棱锥", "es": "pirámide"},
+        {"en": "cylinder", "ko": "원기둥", "zh": "圆柱", "es": "cilindro"},
+        {"en": "cone", "ko": "원뿔", "zh": "圆锥", "es": "cono"},
+        {"en": "sphere", "ko": "구", "zh": "球", "es": "esfera"},
+        {"en": "hemisphere", "ko": "반구", "zh": "半球", "es": "hemisferio"},
+        {"en": "base", "ko": "밑면", "zh": "底面", "es": "base"},
+        {"en": "face", "ko": "면", "zh": "面", "es": "cara"},
+        {"en": "edge", "ko": "모서리", "zh": "棱", "es": "arista"},
+        {"en": "vertex", "ko": "꼭짓점", "zh": "顶点", "es": "vértice"},
+        {"en": "lateral face", "ko": "옆면(측면)", "zh": "侧面", "es": "cara lateral"},
+        {"en": "lateral area", "ko": "옆넓이(측면적)", "zh": "侧面积", "es": "área lateral"},
+        {"en": "net", "ko": "전개도", "zh": "展开图", "es": "desarrollo plano"},
+        {"en": "cross section", "ko": "단면", "zh": "截面", "es": "sección transversal"}
+      ]
+    },
+    {
+      "category": {
+        "en": "Common Symbols and Notation",
+        "ko": "공통 기호와 표기법",
+        "zh": "常用符号与记法",
+        "es": "Símbolos y Notación Comunes"
+      },
+      "terms": [
+        {"en": "∠ angle", "ko": "∠ 각", "zh": "∠ 角", "es": "∠ ángulo"},
+        {"en": "△ triangle", "ko": "△ 삼각형", "zh": "△ 三角形", "es": "△ triángulo"},
+        {"en": "≅ congruent", "ko": "≅ 합동", "zh": "≌ 全等", "es": "≅ congruente"},
+        {"en": "~ similar", "ko": "~ 닮음", "zh": "~ 相似", "es": "~ semejante"},
+        {"en": "∥ parallel", "ko": "∥ 평행", "zh": "∥ 平行", "es": "∥ paralelo"},
+        {"en": "⟂ perpendicular", "ko": "⟂ 수직", "zh": "⟂ 垂直", "es": "⟂ perpendicular"},
+        {"en": "° degree", "ko": "° 도", "zh": "° 度", "es": "° grado"},
+        {"en": "π pi", "ko": "π 원주율", "zh": "π 圆周率", "es": "π pi"},
+        {"en": "m∠ measure of angle", "ko": "m∠ 각의 크기", "zh": "m∠ 角的度数", "es": "m∠ medida del ángulo"},
+        {"en": "AB segment notation", "ko": "선분 AB 표기", "zh": "线段 AB", "es": "notación de segmento AB"},
+        {"en": "AB line notation", "ko": "직선 AB 표기", "zh": "直线 AB", "es": "notación de recta AB"},
+        {"en": "AB ray notation", "ko": "반직선 AB 표기", "zh": "射线 AB", "es": "notación de rayo AB"}
+      ]
+    }
+  ]
+}
