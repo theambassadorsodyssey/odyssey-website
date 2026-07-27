@@ -1,0 +1,113 @@
+{
+  "meta": {
+    "title": "Biology Vocabulary / 생물학 용어집 / 生物学词汇 / Vocabulario de Biología",
+    "languages": ["en", "ko", "zh", "es"]
+  },
+  "categories": [
+    {
+      "category": {"en": "Foundations of Biology", "ko": "생물학의 기초", "zh": "生物学基础", "es": "Fundamentos de la Biología"},
+      "terms": [
+        {"en": "biology", "ko": "생물학", "zh": "生物学", "es": "biología"},
+        {"en": "organism", "ko": "생물(유기체)", "zh": "生物体", "es": "organismo"},
+        {"en": "cell", "ko": "세포", "zh": "细胞", "es": "célula"},
+        {"en": "tissue", "ko": "조직", "zh": "组织", "es": "tejido"},
+        {"en": "organ", "ko": "기관", "zh": "器官", "es": "órgano"},
+        {"en": "organ system", "ko": "기관계", "zh": "器官系统", "es": "sistema de órganos"},
+        {"en": "homeostasis", "ko": "항상성", "zh": "稳态（内环境稳定）", "es": "homeostasis"},
+        {"en": "metabolism", "ko": "대사(신진대사)", "zh": "新陈代谢", "es": "metabolismo"},
+        {"en": "life cycle", "ko": "생활사(생활 주기)", "zh": "生命周期", "es": "ciclo de vida"},
+        {"en": "biodiversity", "ko": "생물다양성", "zh": "生物多样性", "es": "biodiversidad"}
+      ]
+    },
+    {
+      "category": {"en": "Cell Biology", "ko": "세포생물학", "zh": "细胞生物学", "es": "Biología Celular"},
+      "terms": [
+        {"en": "cell membrane", "ko": "세포막", "zh": "细胞膜", "es": "membrana celular"},
+        {"en": "cytoplasm", "ko": "세포질", "zh": "细胞质", "es": "citoplasma"},
+        {"en": "nucleus", "ko": "핵", "zh": "细胞核", "es": "núcleo"},
+        {"en": "mitochondria", "ko": "미토콘드리아", "zh": "线粒体", "es": "mitocondrias"},
+        {"en": "ribosome", "ko": "리보솜", "zh": "核糖体", "es": "ribosoma"},
+        {"en": "endoplasmic reticulum", "ko": "소포체", "zh": "内质网", "es": "retículo endoplasmático"},
+        {"en": "Golgi apparatus", "ko": "골지체", "zh": "高尔基体", "es": "aparato de Golgi"},
+        {"en": "chloroplast", "ko": "엽록체", "zh": "叶绿体", "es": "cloroplasto"},
+        {"en": "vacuole", "ko": "액포", "zh": "液泡", "es": "vacuola"},
+        {"en": "cell wall", "ko": "세포벽", "zh": "细胞壁", "es": "pared celular"},
+        {"en": "prokaryote", "ko": "원핵생물", "zh": "原核生物", "es": "procariota"},
+        {"en": "eukaryote", "ko": "진핵생물", "zh": "真核生物", "es": "eucariota"},
+        {"en": "osmosis", "ko": "삼투", "zh": "渗透作用", "es": "ósmosis"},
+        {"en": "diffusion", "ko": "확산", "zh": "扩散", "es": "difusión"},
+        {"en": "active transport", "ko": "능동수송", "zh": "主动运输", "es": "transporte activo"}
+      ]
+    },
+    {
+      "category": {"en": "Genetics", "ko": "유전학", "zh": "遗传学", "es": "Genética"},
+      "terms": [
+        {"en": "DNA", "ko": "DNA(디옥시리보핵산)", "zh": "DNA（脱氧核糖核酸）", "es": "ADN"},
+        {"en": "RNA", "ko": "RNA(리보핵산)", "zh": "RNA（核糖核酸）", "es": "ARN"},
+        {"en": "gene", "ko": "유전자", "zh": "基因", "es": "gen"},
+        {"en": "chromosome", "ko": "염색체", "zh": "染色体", "es": "cromosoma"},
+        {"en": "allele", "ko": "대립유전자", "zh": "等位基因", "es": "alelo"},
+        {"en": "genotype", "ko": "유전자형", "zh": "基因型", "es": "genotipo"},
+        {"en": "phenotype", "ko": "표현형", "zh": "表现型", "es": "fenotipo"},
+        {"en": "dominant", "ko": "우성", "zh": "显性", "es": "dominante"},
+        {"en": "recessive", "ko": "열성", "zh": "隐性", "es": "recesivo"},
+        {"en": "heredity", "ko": "유전", "zh": "遗传", "es": "herencia"},
+        {"en": "mutation", "ko": "돌연변이", "zh": "突变", "es": "mutación"},
+        {"en": "genetic code", "ko": "유전 부호", "zh": "遗传密码", "es": "código genético"},
+        {"en": "protein synthesis", "ko": "단백질 합성", "zh": "蛋白质合成", "es": "síntesis de proteínas"},
+        {"en": "transcription", "ko": "전사", "zh": "转录", "es": "transcripción"},
+        {"en": "translation", "ko": "번역(해독)", "zh": "翻译", "es": "traducción"},
+        {"en": "Punnett square", "ko": "퍼넷 사각형", "zh": "旁氏表", "es": "cuadro de Punnett"}
+      ]
+    },
+    {
+      "category": {"en": "Evolution", "ko": "진화", "zh": "进化", "es": "Evolución"},
+      "terms": [
+        {"en": "evolution", "ko": "진화", "zh": "进化", "es": "evolución"},
+        {"en": "natural selection", "ko": "자연선택", "zh": "自然选择", "es": "selección natural"},
+        {"en": "adaptation", "ko": "적응", "zh": "适应", "es": "adaptación"},
+        {"en": "species", "ko": "종", "zh": "物种", "es": "especie"},
+        {"en": "speciation", "ko": "종분화", "zh": "物种形成", "es": "especiación"},
+        {"en": "fossil", "ko": "화석", "zh": "化石", "es": "fósil"},
+        {"en": "common ancestor", "ko": "공통 조상", "zh": "共同祖先", "es": "ancestro común"},
+        {"en": "survival of the fittest", "ko": "적자생존", "zh": "适者生存", "es": "supervivencia del más apto"},
+        {"en": "gene pool", "ko": "유전자풀(유전자 집단)", "zh": "基因库", "es": "acervo genético"}
+      ]
+    },
+    {
+      "category": {"en": "Ecology", "ko": "생태학", "zh": "生态学", "es": "Ecología"},
+      "terms": [
+        {"en": "ecosystem", "ko": "생태계", "zh": "生态系统", "es": "ecosistema"},
+        {"en": "habitat", "ko": "서식지", "zh": "栖息地", "es": "hábitat"},
+        {"en": "population", "ko": "개체군(집단)", "zh": "种群", "es": "población"},
+        {"en": "community", "ko": "군집", "zh": "群落", "es": "comunidad"},
+        {"en": "food chain", "ko": "먹이사슬", "zh": "食物链", "es": "cadena alimenticia"},
+        {"en": "food web", "ko": "먹이그물", "zh": "食物网", "es": "red trófica"},
+        {"en": "producer", "ko": "생산자", "zh": "生产者", "es": "productor"},
+        {"en": "consumer", "ko": "소비자", "zh": "消费者", "es": "consumidor"},
+        {"en": "decomposer", "ko": "분해자", "zh": "分解者", "es": "descomponedor"},
+        {"en": "biome", "ko": "생물군계", "zh": "生物群系", "es": "bioma"},
+        {"en": "symbiosis", "ko": "공생", "zh": "共生", "es": "simbiosis"},
+        {"en": "predator", "ko": "포식자", "zh": "捕食者", "es": "depredador"},
+        {"en": "prey", "ko": "피식자(먹이)", "zh": "猎物", "es": "presa"},
+        {"en": "carrying capacity", "ko": "환경수용력", "zh": "环境容纳量", "es": "capacidad de carga"},
+        {"en": "niche", "ko": "생태적 지위", "zh": "生态位", "es": "nicho ecológico"}
+      ]
+    },
+    {
+      "category": {"en": "Human Body Systems", "ko": "인체 계통", "zh": "人体系统", "es": "Sistemas del Cuerpo Humano"},
+      "terms": [
+        {"en": "circulatory system", "ko": "순환계", "zh": "循环系统", "es": "sistema circulatorio"},
+        {"en": "respiratory system", "ko": "호흡계", "zh": "呼吸系统", "es": "sistema respiratorio"},
+        {"en": "digestive system", "ko": "소화계", "zh": "消化系统", "es": "sistema digestivo"},
+        {"en": "nervous system", "ko": "신경계", "zh": "神经系统", "es": "sistema nervioso"},
+        {"en": "skeletal system", "ko": "골격계", "zh": "骨骼系统", "es": "sistema esquelético"},
+        {"en": "muscular system", "ko": "근육계", "zh": "肌肉系统", "es": "sistema muscular"},
+        {"en": "immune system", "ko": "면역계", "zh": "免疫系统", "es": "sistema inmunológico"},
+        {"en": "endocrine system", "ko": "내분비계", "zh": "内分泌系统", "es": "sistema endocrino"},
+        {"en": "reproductive system", "ko": "생식계", "zh": "生殖系统", "es": "sistema reproductor"},
+        {"en": "hormone", "ko": "호르몬", "zh": "激素", "es": "hormona"}
+      ]
+    }
+  ]
+}

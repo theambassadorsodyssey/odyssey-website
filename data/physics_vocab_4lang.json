@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "title": "Physics Vocabulary / 물리학 용어집 / 物理学词汇 / Vocabulario de Física",
+    "languages": ["en", "ko", "zh", "es"]
+  },
+  "categories": [
+    {
+      "category": {"en": "Mechanics", "ko": "역학", "zh": "力学", "es": "Mecánica"},
+      "terms": [
+        {"en": "motion", "ko": "운동", "zh": "运动", "es": "movimiento"},
+        {"en": "velocity", "ko": "속도", "zh": "速度", "es": "velocidad"},
+        {"en": "speed", "ko": "속력", "zh": "速率", "es": "rapidez"},
+        {"en": "acceleration", "ko": "가속도", "zh": "加速度", "es": "aceleración"},
+        {"en": "force", "ko": "힘", "zh": "力", "es": "fuerza"},
+        {"en": "mass", "ko": "질량", "zh": "质量", "es": "masa"},
+        {"en": "weight", "ko": "무게", "zh": "重量", "es": "peso"},
+        {"en": "Newton's first law", "ko": "뉴턴 제1법칙(관성의 법칙)", "zh": "牛顿第一定律", "es": "primera ley de Newton"},
+        {"en": "Newton's second law", "ko": "뉴턴 제2법칙(가속도의 법칙)", "zh": "牛顿第二定律", "es": "segunda ley de Newton"},
+        {"en": "Newton's third law", "ko": "뉴턴 제3법칙(작용반작용의 법칙)", "zh": "牛顿第三定律", "es": "tercera ley de Newton"},
+        {"en": "friction", "ko": "마찰력", "zh": "摩擦力", "es": "fricción"},
+        {"en": "momentum", "ko": "운동량", "zh": "动量", "es": "momento (cantidad de movimiento)"},
+        {"en": "inertia", "ko": "관성", "zh": "惯性", "es": "inercia"},
+        {"en": "gravity", "ko": "중력", "zh": "重力", "es": "gravedad"},
+        {"en": "free fall", "ko": "자유낙하", "zh": "自由落体", "es": "caída libre"}
+      ]
+    },
+    {
+      "category": {"en": "Energy & Work", "ko": "에너지와 일", "zh": "能量与功", "es": "Energía y Trabajo"},
+      "terms": [
+        {"en": "work", "ko": "일", "zh": "功", "es": "trabajo"},
+        {"en": "energy", "ko": "에너지", "zh": "能量", "es": "energía"},
+        {"en": "kinetic energy", "ko": "운동에너지", "zh": "动能", "es": "energía cinética"},
+        {"en": "potential energy", "ko": "위치에너지", "zh": "势能", "es": "energía potencial"},
+        {"en": "mechanical energy", "ko": "역학적 에너지", "zh": "机械能", "es": "energía mecánica"},
+        {"en": "power", "ko": "일률(파워)", "zh": "功率", "es": "potencia"},
+        {"en": "conservation of energy", "ko": "에너지보존법칙", "zh": "能量守恒定律", "es": "conservación de la energía"},
+        {"en": "efficiency", "ko": "효율", "zh": "效率", "es": "eficiencia"}
+      ]
+    },
+    {
+      "category": {"en": "Waves & Sound", "ko": "파동과 소리", "zh": "波与声音", "es": "Ondas y Sonido"},
+      "terms": [
+        {"en": "wave", "ko": "파동", "zh": "波", "es": "onda"},
+        {"en": "wavelength", "ko": "파장", "zh": "波长", "es": "longitud de onda"},
+        {"en": "frequency", "ko": "진동수(주파수)", "zh": "频率", "es": "frecuencia"},
+        {"en": "amplitude", "ko": "진폭", "zh": "振幅", "es": "amplitud"},
+        {"en": "period", "ko": "주기", "zh": "周期", "es": "período"},
+        {"en": "transverse wave", "ko": "횡파", "zh": "横波", "es": "onda transversal"},
+        {"en": "longitudinal wave", "ko": "종파", "zh": "纵波", "es": "onda longitudinal"},
+        {"en": "sound wave", "ko": "음파", "zh": "声波", "es": "onda sonora"},
+        {"en": "pitch", "ko": "음높이", "zh": "音调", "es": "tono"},
+        {"en": "resonance", "ko": "공명", "zh": "共振", "es": "resonancia"},
+        {"en": "Doppler effect", "ko": "도플러 효과", "zh": "多普勒效应", "es": "efecto Doppler"}
+      ]
+    },
+    {
+      "category": {"en": "Electricity & Magnetism", "ko": "전기와 자기", "zh": "电与磁", "es": "Electricidad y Magnetismo"},
+      "terms": [
+        {"en": "electric charge", "ko": "전하", "zh": "电荷", "es": "carga eléctrica"},
+        {"en": "electric current", "ko": "전류", "zh": "电流", "es": "corriente eléctrica"},
+        {"en": "voltage", "ko": "전압", "zh": "电压", "es": "voltaje"},
+        {"en": "resistance", "ko": "저항", "zh": "电阻", "es": "resistencia"},
+        {"en": "circuit", "ko": "회로", "zh": "电路", "es": "circuito"},
+        {"en": "series circuit", "ko": "직렬회로", "zh": "串联电路", "es": "circuito en serie"},
+        {"en": "parallel circuit", "ko": "병렬회로", "zh": "并联电路", "es": "circuito en paralelo"},
+        {"en": "Ohm's law", "ko": "옴의 법칙", "zh": "欧姆定律", "es": "ley de Ohm"},
+        {"en": "magnetic field", "ko": "자기장", "zh": "磁场", "es": "campo magnético"},
+        {"en": "electromagnet", "ko": "전자석", "zh": "电磁铁", "es": "electroimán"},
+        {"en": "electromagnetic induction", "ko": "전자기유도", "zh": "电磁感应", "es": "inducción electromagnética"}
+      ]
+    },
+    {
+      "category": {"en": "Thermodynamics", "ko": "열역학", "zh": "热力学", "es": "Termodinámica"},
+      "terms": [
+        {"en": "temperature", "ko": "온도", "zh": "温度", "es": "temperatura"},
+        {"en": "heat", "ko": "열", "zh": "热", "es": "calor"},
+        {"en": "thermal energy", "ko": "열에너지", "zh": "热能", "es": "energía térmica"},
+        {"en": "conduction", "ko": "전도", "zh": "传导", "es": "conducción"},
+        {"en": "convection", "ko": "대류", "zh": "对流", "es": "convección"},
+        {"en": "radiation", "ko": "복사", "zh": "辐射", "es": "radiación"},
+        {"en": "specific heat", "ko": "비열", "zh": "比热", "es": "calor específico"},
+        {"en": "first law of thermodynamics", "ko": "열역학 제1법칙", "zh": "热力学第一定律", "es": "primera ley de la termodinámica"},
+        {"en": "second law of thermodynamics", "ko": "열역학 제2법칙", "zh": "热力学第二定律", "es": "segunda ley de la termodinámica"}
+      ]
+    },
+    {
+      "category": {"en": "Optics", "ko": "광학", "zh": "光学", "es": "Óptica"},
+      "terms": [
+        {"en": "light", "ko": "빛", "zh": "光", "es": "luz"},
+        {"en": "reflection", "ko": "반사", "zh": "反射", "es": "reflexión"},
+        {"en": "refraction", "ko": "굴절", "zh": "折射", "es": "refracción"},
+        {"en": "lens", "ko": "렌즈", "zh": "透镜", "es": "lente"},
+        {"en": "mirror", "ko": "거울", "zh": "镜子", "es": "espejo"},
+        {"en": "focal point", "ko": "초점", "zh": "焦点", "es": "punto focal"},
+        {"en": "diffraction", "ko": "회절", "zh": "衍射", "es": "difracción"},
+        {"en": "interference", "ko": "간섭", "zh": "干涉", "es": "interferencia"},
+        {"en": "index of refraction", "ko": "굴절률", "zh": "折射率", "es": "índice de refracción"}
+      ]
+    }
+  ]
+}

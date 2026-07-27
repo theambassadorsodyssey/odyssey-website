@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "title": "Economics Vocabulary / 경제학 용어집 / 经济学词汇 / Vocabulario de Economía",
+    "languages": ["en", "ko", "zh", "es"]
+  },
+  "categories": [
+    {
+      "category": {"en": "Foundations", "ko": "경제학의 기초", "zh": "经济学基础", "es": "Fundamentos"},
+      "terms": [
+        {"en": "economics", "ko": "경제학", "zh": "经济学", "es": "economía"},
+        {"en": "scarcity", "ko": "희소성", "zh": "稀缺性", "es": "escasez"},
+        {"en": "opportunity cost", "ko": "기회비용", "zh": "机会成本", "es": "costo de oportunidad"},
+        {"en": "supply", "ko": "공급", "zh": "供给", "es": "oferta"},
+        {"en": "demand", "ko": "수요", "zh": "需求", "es": "demanda"},
+        {"en": "equilibrium", "ko": "균형", "zh": "均衡", "es": "equilibrio"},
+        {"en": "market", "ko": "시장", "zh": "市场", "es": "mercado"},
+        {"en": "price", "ko": "가격", "zh": "价格", "es": "precio"},
+        {"en": "incentive", "ko": "유인(인센티브)", "zh": "激励", "es": "incentivo"},
+        {"en": "trade-off", "ko": "상충관계(트레이드오프)", "zh": "权衡", "es": "disyuntiva"}
+      ]
+    },
+    {
+      "category": {"en": "Microeconomics", "ko": "미시경제학", "zh": "微观经济学", "es": "Microeconomía"},
+      "terms": [
+        {"en": "consumer", "ko": "소비자", "zh": "消费者", "es": "consumidor"},
+        {"en": "producer", "ko": "생산자", "zh": "生产者", "es": "productor"},
+        {"en": "competition", "ko": "경쟁", "zh": "竞争", "es": "competencia"},
+        {"en": "monopoly", "ko": "독점", "zh": "垄断", "es": "monopolio"},
+        {"en": "elasticity", "ko": "탄력성", "zh": "弹性", "es": "elasticidad"},
+        {"en": "marginal cost", "ko": "한계비용", "zh": "边际成本", "es": "costo marginal"},
+        {"en": "marginal benefit", "ko": "한계편익", "zh": "边际收益", "es": "beneficio marginal"},
+        {"en": "profit", "ko": "이윤", "zh": "利润", "es": "ganancia"},
+        {"en": "revenue", "ko": "수입(매출)", "zh": "收入", "es": "ingreso"},
+        {"en": "cost", "ko": "비용", "zh": "成本", "es": "costo"}
+      ]
+    },
+    {
+      "category": {"en": "Macroeconomics", "ko": "거시경제학", "zh": "宏观经济学", "es": "Macroeconomía"},
+      "terms": [
+        {"en": "gross domestic product (GDP)", "ko": "국내총생산(GDP)", "zh": "国内生产总值（GDP）", "es": "producto interno bruto (PIB)"},
+        {"en": "inflation", "ko": "인플레이션(물가상승)", "zh": "通货膨胀", "es": "inflación"},
+        {"en": "unemployment", "ko": "실업", "zh": "失业", "es": "desempleo"},
+        {"en": "recession", "ko": "경기침체(불황)", "zh": "衰退", "es": "recesión"},
+        {"en": "fiscal policy", "ko": "재정정책", "zh": "财政政策", "es": "política fiscal"},
+        {"en": "monetary policy", "ko": "통화정책", "zh": "货币政策", "es": "política monetaria"},
+        {"en": "interest rate", "ko": "이자율(금리)", "zh": "利率", "es": "tasa de interés"},
+        {"en": "central bank", "ko": "중앙은행", "zh": "中央银行", "es": "banco central"},
+        {"en": "national debt", "ko": "국가부채", "zh": "国家债务", "es": "deuda nacional"},
+        {"en": "economic growth", "ko": "경제성장", "zh": "经济增长", "es": "crecimiento económico"}
+      ]
+    },
+    {
+      "category": {"en": "Personal Finance & Trade", "ko": "개인 재정과 무역", "zh": "个人理财与贸易", "es": "Finanzas Personales y Comercio"},
+      "terms": [
+        {"en": "budget", "ko": "예산", "zh": "预算", "es": "presupuesto"},
+        {"en": "saving", "ko": "저축", "zh": "储蓄", "es": "ahorro"},
+        {"en": "investment", "ko": "투자", "zh": "投资", "es": "inversión"},
+        {"en": "interest", "ko": "이자", "zh": "利息", "es": "interés"},
+        {"en": "credit", "ko": "신용", "zh": "信用", "es": "crédito"},
+        {"en": "debt", "ko": "부채(빚)", "zh": "债务", "es": "deuda"},
+        {"en": "import", "ko": "수입(들여오기)", "zh": "进口", "es": "importación"},
+        {"en": "export", "ko": "수출", "zh": "出口", "es": "exportación"},
+        {"en": "trade deficit", "ko": "무역적자", "zh": "贸易逆差", "es": "déficit comercial"},
+        {"en": "globalization", "ko": "세계화", "zh": "全球化", "es": "globalización"}
+      ]
+    }
+  ]
+}

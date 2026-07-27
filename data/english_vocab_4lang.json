@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "title": "Advanced English Vocabulary / 고급 영어(문학·작문) 용어집 / 高级英语（文学与写作）词汇 / Vocabulario de Inglés Avanzado",
+    "languages": ["en", "ko", "zh", "es"]
+  },
+  "categories": [
+    {
+      "category": {"en": "Literary Devices", "ko": "문학적 장치", "zh": "文学手法", "es": "Recursos Literarios"},
+      "terms": [
+        {"en": "metaphor", "ko": "은유", "zh": "隐喻", "es": "metáfora"},
+        {"en": "simile", "ko": "직유", "zh": "明喻", "es": "símil"},
+        {"en": "symbolism", "ko": "상징", "zh": "象征", "es": "simbolismo"},
+        {"en": "imagery", "ko": "심상(이미지)", "zh": "意象", "es": "imaginería"},
+        {"en": "personification", "ko": "의인법", "zh": "拟人", "es": "personificación"},
+        {"en": "foreshadowing", "ko": "복선", "zh": "伏笔", "es": "presagio"},
+        {"en": "irony", "ko": "아이러니(반어법)", "zh": "反讽", "es": "ironía"},
+        {"en": "tone", "ko": "어조", "zh": "语气", "es": "tono"},
+        {"en": "mood", "ko": "분위기", "zh": "氛围", "es": "ambiente"},
+        {"en": "theme", "ko": "주제", "zh": "主题", "es": "tema"},
+        {"en": "motif", "ko": "모티프(반복되는 요소)", "zh": "母题（反复出现的元素）", "es": "motivo"},
+        {"en": "allegory", "ko": "우화(알레고리)", "zh": "寓言", "es": "alegoría"},
+        {"en": "allusion", "ko": "암시(인유법)", "zh": "典故", "es": "alusión"},
+        {"en": "hyperbole", "ko": "과장법", "zh": "夸张", "es": "hipérbole"},
+        {"en": "alliteration", "ko": "두운법", "zh": "头韵", "es": "aliteración"}
+      ]
+    },
+    {
+      "category": {"en": "Narrative Elements", "ko": "서사 요소", "zh": "叙事要素", "es": "Elementos Narrativos"},
+      "terms": [
+        {"en": "plot", "ko": "플롯(줄거리)", "zh": "情节", "es": "trama"},
+        {"en": "protagonist", "ko": "주인공", "zh": "主人公", "es": "protagonista"},
+        {"en": "antagonist", "ko": "적대자(악역)", "zh": "反派", "es": "antagonista"},
+        {"en": "conflict", "ko": "갈등", "zh": "冲突", "es": "conflicto"},
+        {"en": "climax", "ko": "절정", "zh": "高潮", "es": "clímax"},
+        {"en": "resolution", "ko": "결말", "zh": "结局", "es": "resolución"},
+        {"en": "exposition", "ko": "도입부(발단)", "zh": "开端", "es": "exposición"},
+        {"en": "setting", "ko": "배경", "zh": "背景", "es": "ambientación"},
+        {"en": "narrator", "ko": "서술자(화자)", "zh": "叙述者", "es": "narrador"},
+        {"en": "point of view", "ko": "시점", "zh": "视角", "es": "punto de vista"},
+        {"en": "characterization", "ko": "인물묘사(성격 부여)", "zh": "人物塑造", "es": "caracterización"}
+      ]
+    },
+    {
+      "category": {"en": "Rhetoric", "ko": "수사학", "zh": "修辞学", "es": "Retórica"},
+      "terms": [
+        {"en": "rhetoric", "ko": "수사학", "zh": "修辞学", "es": "retórica"},
+        {"en": "ethos", "ko": "에토스(윤리적 설득)", "zh": "人格诉求（信誉）", "es": "ethos"},
+        {"en": "pathos", "ko": "파토스(감성적 설득)", "zh": "情感诉求", "es": "pathos"},
+        {"en": "logos", "ko": "로고스(논리적 설득)", "zh": "逻辑诉求", "es": "logos"},
+        {"en": "argument", "ko": "논증", "zh": "论证", "es": "argumento"},
+        {"en": "claim", "ko": "주장", "zh": "主张", "es": "afirmación"},
+        {"en": "evidence", "ko": "근거(증거)", "zh": "证据", "es": "evidencia"},
+        {"en": "counterargument", "ko": "반론", "zh": "反驳论点", "es": "contraargumento"},
+        {"en": "thesis", "ko": "논지(주제문)", "zh": "论点", "es": "tesis"},
+        {"en": "persuasion", "ko": "설득", "zh": "说服", "es": "persuasión"},
+        {"en": "rhetorical question", "ko": "수사의문문", "zh": "反问句", "es": "pregunta retórica"},
+        {"en": "audience", "ko": "독자(청중)", "zh": "受众", "es": "audiencia"},
+        {"en": "purpose", "ko": "목적", "zh": "目的", "es": "propósito"}
+      ]
+    },
+    {
+      "category": {"en": "Essay & Writing", "ko": "에세이와 작문", "zh": "论文与写作", "es": "Ensayo y Escritura"},
+      "terms": [
+        {"en": "thesis statement", "ko": "논지 진술문", "zh": "论点陈述", "es": "declaración de tesis"},
+        {"en": "topic sentence", "ko": "주제문", "zh": "主题句", "es": "oración temática"},
+        {"en": "paragraph", "ko": "문단", "zh": "段落", "es": "párrafo"},
+        {"en": "introduction", "ko": "서론", "zh": "引言", "es": "introducción"},
+        {"en": "conclusion", "ko": "결론", "zh": "结论", "es": "conclusión"},
+        {"en": "transition", "ko": "전환(연결어)", "zh": "过渡", "es": "transición"},
+        {"en": "citation", "ko": "인용(출처 표기)", "zh": "引用", "es": "cita"},
+        {"en": "paraphrase", "ko": "바꿔 쓰기(다른 말로 표현하기)", "zh": "释义（改写）", "es": "paráfrasis"},
+        {"en": "analysis", "ko": "분석", "zh": "分析", "es": "análisis"},
+        {"en": "draft", "ko": "초고", "zh": "草稿", "es": "borrador"},
+        {"en": "revision", "ko": "퇴고(수정)", "zh": "修改", "es": "revisión"},
+        {"en": "syntax", "ko": "구문(문장구조)", "zh": "句法", "es": "sintaxis"},
+        {"en": "diction", "ko": "어휘 선택(용어법)", "zh": "措辞", "es": "dicción"}
+      ]
+    }
+  ]
+}

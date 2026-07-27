@@ -1,0 +1,74 @@
+{
+  "meta": {
+    "title": "Trigonometry Vocabulary / 삼각법 용어집 / 三角学词汇 / Vocabulario de Trigonometría",
+    "languages": ["en", "ko", "zh", "es"]
+  },
+  "categories": [
+    {
+      "category": {"en": "Trig Functions", "ko": "삼각함수", "zh": "三角函数", "es": "Funciones Trigonométricas"},
+      "terms": [
+        {"en": "sine function", "ko": "사인함수", "zh": "正弦函数", "es": "función seno"},
+        {"en": "cosine function", "ko": "코사인함수", "zh": "余弦函数", "es": "función coseno"},
+        {"en": "tangent function", "ko": "탄젠트함수", "zh": "正切函数", "es": "función tangente"},
+        {"en": "cosecant", "ko": "코시컨트", "zh": "余割", "es": "cosecante"},
+        {"en": "secant", "ko": "시컨트", "zh": "正割", "es": "secante"},
+        {"en": "cotangent", "ko": "코탄젠트", "zh": "余切", "es": "cotangente"},
+        {"en": "periodic function", "ko": "주기함수", "zh": "周期函数", "es": "función periódica"},
+        {"en": "amplitude", "ko": "진폭", "zh": "振幅", "es": "amplitud"},
+        {"en": "period", "ko": "주기", "zh": "周期", "es": "período"},
+        {"en": "phase shift", "ko": "위상이동", "zh": "相位移", "es": "desplazamiento de fase"},
+        {"en": "frequency", "ko": "진동수(주파수)", "zh": "频率", "es": "frecuencia"}
+      ]
+    },
+    {
+      "category": {"en": "Unit Circle", "ko": "단위원", "zh": "单位圆", "es": "Círculo Unitario"},
+      "terms": [
+        {"en": "unit circle", "ko": "단위원", "zh": "单位圆", "es": "círculo unitario"},
+        {"en": "radian", "ko": "라디안(호도)", "zh": "弧度", "es": "radián"},
+        {"en": "degree", "ko": "도", "zh": "度", "es": "grado"},
+        {"en": "reference angle", "ko": "기준각", "zh": "参考角", "es": "ángulo de referencia"},
+        {"en": "coterminal angles", "ko": "동일 위치각", "zh": "终边相同的角", "es": "ángulos coterminales"},
+        {"en": "standard position", "ko": "표준 위치", "zh": "标准位置", "es": "posición estándar"},
+        {"en": "initial side", "ko": "시초변", "zh": "始边", "es": "lado inicial"},
+        {"en": "terminal side", "ko": "종단변", "zh": "终边", "es": "lado terminal"}
+      ]
+    },
+    {
+      "category": {"en": "Trig Identities", "ko": "삼각항등식", "zh": "三角恒等式", "es": "Identidades Trigonométricas"},
+      "terms": [
+        {"en": "Pythagorean identity", "ko": "피타고라스 항등식", "zh": "勾股恒等式", "es": "identidad pitagórica"},
+        {"en": "sum and difference formulas", "ko": "합차 공식", "zh": "和差公式", "es": "fórmulas de suma y diferencia"},
+        {"en": "double angle formula", "ko": "배각 공식", "zh": "倍角公式", "es": "fórmula del ángulo doble"},
+        {"en": "half angle formula", "ko": "반각 공식", "zh": "半角公式", "es": "fórmula del ángulo medio"},
+        {"en": "reciprocal identity", "ko": "역수 항등식", "zh": "倒数恒等式", "es": "identidad recíproca"},
+        {"en": "quotient identity", "ko": "몫 항등식", "zh": "商恒等式", "es": "identidad de cociente"},
+        {"en": "cofunction identity", "ko": "여함수 항등식", "zh": "余函数恒等式", "es": "identidad de cofunción"}
+      ]
+    },
+    {
+      "category": {"en": "Graphs of Trig Functions", "ko": "삼각함수의 그래프", "zh": "三角函数的图像", "es": "Gráficas de Funciones Trigonométricas"},
+      "terms": [
+        {"en": "sine graph", "ko": "사인 그래프", "zh": "正弦图像", "es": "gráfica del seno"},
+        {"en": "cosine graph", "ko": "코사인 그래프", "zh": "余弦图像", "es": "gráfica del coseno"},
+        {"en": "tangent graph", "ko": "탄젠트 그래프", "zh": "正切图像", "es": "gráfica de la tangente"},
+        {"en": "asymptote", "ko": "점근선", "zh": "渐近线", "es": "asíntota"},
+        {"en": "midline", "ko": "중심선", "zh": "中线", "es": "línea media"},
+        {"en": "vertical shift", "ko": "수직이동", "zh": "垂直平移", "es": "desplazamiento vertical"},
+        {"en": "horizontal shift", "ko": "수평이동", "zh": "水平平移", "es": "desplazamiento horizontal"}
+      ]
+    },
+    {
+      "category": {"en": "Applications", "ko": "응용", "zh": "应用", "es": "Aplicaciones"},
+      "terms": [
+        {"en": "law of sines", "ko": "사인 법칙", "zh": "正弦定理", "es": "ley de senos"},
+        {"en": "law of cosines", "ko": "코사인 법칙", "zh": "余弦定理", "es": "ley de cosenos"},
+        {"en": "vector", "ko": "벡터", "zh": "向量", "es": "vector"},
+        {"en": "magnitude", "ko": "크기(절댓값)", "zh": "大小（模）", "es": "magnitud"},
+        {"en": "direction", "ko": "방향", "zh": "方向", "es": "dirección"},
+        {"en": "polar coordinates", "ko": "극좌표", "zh": "极坐标", "es": "coordenadas polares"},
+        {"en": "complex number", "ko": "복소수", "zh": "复数", "es": "número complejo"},
+        {"en": "harmonic motion", "ko": "조화운동", "zh": "简谐运动", "es": "movimiento armónico"}
+      ]
+    }
+  ]
+}

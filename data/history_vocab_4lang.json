@@ -1,0 +1,81 @@
+{
+  "meta": {
+    "title": "U.S. History Vocabulary / 미국사 용어집 / 美国历史词汇 / Vocabulario de Historia de EE. UU.",
+    "languages": ["en", "ko", "zh", "es"]
+  },
+  "categories": [
+    {
+      "category": {"en": "Foundations", "ko": "건국 시기", "zh": "建国时期", "es": "Fundamentos"},
+      "terms": [
+        {"en": "colony", "ko": "식민지", "zh": "殖民地", "es": "colonia"},
+        {"en": "colonist", "ko": "식민지 주민", "zh": "殖民者", "es": "colono"},
+        {"en": "independence", "ko": "독립", "zh": "独立", "es": "independencia"},
+        {"en": "Declaration of Independence", "ko": "독립선언서", "zh": "独立宣言", "es": "Declaración de Independencia"},
+        {"en": "Constitution", "ko": "헌법", "zh": "宪法", "es": "Constitución"},
+        {"en": "Bill of Rights", "ko": "권리장전", "zh": "权利法案", "es": "Carta de Derechos"},
+        {"en": "founding fathers", "ko": "건국의 아버지들", "zh": "开国元勋", "es": "padres fundadores"},
+        {"en": "revolution", "ko": "혁명", "zh": "革命", "es": "revolución"},
+        {"en": "federalism", "ko": "연방주의", "zh": "联邦制", "es": "federalismo"},
+        {"en": "separation of powers", "ko": "권력분립", "zh": "三权分立", "es": "separación de poderes"}
+      ]
+    },
+    {
+      "category": {"en": "Government & Civics", "ko": "정부와 시민학", "zh": "政府与公民学", "es": "Gobierno y Civismo"},
+      "terms": [
+        {"en": "democracy", "ko": "민주주의", "zh": "民主制度", "es": "democracia"},
+        {"en": "republic", "ko": "공화국", "zh": "共和国", "es": "república"},
+        {"en": "checks and balances", "ko": "견제와 균형", "zh": "制衡", "es": "controles y equilibrios"},
+        {"en": "executive branch", "ko": "행정부", "zh": "行政部门", "es": "poder ejecutivo"},
+        {"en": "legislative branch", "ko": "입법부", "zh": "立法部门", "es": "poder legislativo"},
+        {"en": "judicial branch", "ko": "사법부", "zh": "司法部门", "es": "poder judicial"},
+        {"en": "amendment", "ko": "수정헌법", "zh": "修正案", "es": "enmienda"},
+        {"en": "due process", "ko": "적법절차", "zh": "正当程序", "es": "debido proceso"},
+        {"en": "citizenship", "ko": "시민권", "zh": "公民身份", "es": "ciudadanía"},
+        {"en": "suffrage", "ko": "참정권(투표권)", "zh": "选举权", "es": "sufragio"}
+      ]
+    },
+    {
+      "category": {"en": "Expansion & Conflict", "ko": "팽창과 갈등", "zh": "扩张与冲突", "es": "Expansión y Conflicto"},
+      "terms": [
+        {"en": "Manifest Destiny", "ko": "명백한 운명(팽창주의 사상)", "zh": "天定命运论", "es": "Destino Manifiesto"},
+        {"en": "westward expansion", "ko": "서부 개척(팽창)", "zh": "西进运动", "es": "expansión hacia el oeste"},
+        {"en": "Civil War", "ko": "남북전쟁", "zh": "南北战争", "es": "Guerra Civil"},
+        {"en": "secession", "ko": "탈퇴(분리독립)", "zh": "脱离联邦", "es": "secesión"},
+        {"en": "abolition", "ko": "노예제 폐지 운동", "zh": "废奴运动", "es": "abolición"},
+        {"en": "slavery", "ko": "노예제", "zh": "奴隶制", "es": "esclavitud"},
+        {"en": "emancipation", "ko": "노예해방", "zh": "解放奴隶", "es": "emancipación"},
+        {"en": "reconstruction", "ko": "재건시대", "zh": "重建时期", "es": "reconstrucción"},
+        {"en": "industrialization", "ko": "산업화", "zh": "工业化", "es": "industrialización"},
+        {"en": "immigration", "ko": "이민", "zh": "移民", "es": "inmigración"}
+      ]
+    },
+    {
+      "category": {"en": "20th Century", "ko": "20세기", "zh": "二十世纪", "es": "Siglo XX"},
+      "terms": [
+        {"en": "Great Depression", "ko": "대공황", "zh": "大萧条", "es": "Gran Depresión"},
+        {"en": "New Deal", "ko": "뉴딜 정책", "zh": "新政", "es": "Nuevo Trato (New Deal)"},
+        {"en": "World War I", "ko": "제1차 세계대전", "zh": "第一次世界大战", "es": "Primera Guerra Mundial"},
+        {"en": "World War II", "ko": "제2차 세계대전", "zh": "第二次世界大战", "es": "Segunda Guerra Mundial"},
+        {"en": "Cold War", "ko": "냉전", "zh": "冷战", "es": "Guerra Fría"},
+        {"en": "civil rights movement", "ko": "민권운동", "zh": "民权运动", "es": "movimiento de derechos civiles"},
+        {"en": "segregation", "ko": "인종분리(차별)", "zh": "种族隔离", "es": "segregación"},
+        {"en": "Great Society", "ko": "위대한 사회 정책", "zh": "伟大社会计划", "es": "Gran Sociedad"}
+      ]
+    },
+    {
+      "category": {"en": "Key Concepts", "ko": "핵심 개념", "zh": "核心概念", "es": "Conceptos Clave"},
+      "terms": [
+        {"en": "primary source", "ko": "1차 사료", "zh": "原始史料", "es": "fuente primaria"},
+        {"en": "secondary source", "ko": "2차 사료", "zh": "二手史料", "es": "fuente secundaria"},
+        {"en": "timeline", "ko": "연표(타임라인)", "zh": "时间线", "es": "línea de tiempo"},
+        {"en": "treaty", "ko": "조약", "zh": "条约", "es": "tratado"},
+        {"en": "legislation", "ko": "입법(법률)", "zh": "立法", "es": "legislación"},
+        {"en": "precedent", "ko": "선례", "zh": "先例", "es": "precedente"},
+        {"en": "sovereignty", "ko": "주권", "zh": "主权", "es": "soberanía"},
+        {"en": "nationalism", "ko": "민족주의", "zh": "民族主义", "es": "nacionalismo"},
+        {"en": "isolationism", "ko": "고립주의", "zh": "孤立主义", "es": "aislacionismo"},
+        {"en": "imperialism", "ko": "제국주의", "zh": "帝国主义", "es": "imperialismo"}
+      ]
+    }
+  ]
+}

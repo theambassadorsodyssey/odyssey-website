@@ -1,0 +1,122 @@
+{
+  "meta": {
+    "title": "Chemistry Vocabulary / 화학 용어집 / 化学词汇 / Vocabulario de Química",
+    "languages": ["en", "ko", "zh", "es"]
+  },
+  "categories": [
+    {
+      "category": {"en": "Foundations", "ko": "화학의 기초", "zh": "化学基础", "es": "Fundamentos"},
+      "terms": [
+        {"en": "matter", "ko": "물질", "zh": "物质", "es": "materia"},
+        {"en": "atom", "ko": "원자", "zh": "原子", "es": "átomo"},
+        {"en": "molecule", "ko": "분자", "zh": "分子", "es": "molécula"},
+        {"en": "element", "ko": "원소", "zh": "元素", "es": "elemento"},
+        {"en": "compound", "ko": "화합물", "zh": "化合物", "es": "compuesto"},
+        {"en": "mixture", "ko": "혼합물", "zh": "混合物", "es": "mezcla"},
+        {"en": "pure substance", "ko": "순물질", "zh": "纯净物", "es": "sustancia pura"},
+        {"en": "physical change", "ko": "물리적 변화", "zh": "物理变化", "es": "cambio físico"},
+        {"en": "chemical change", "ko": "화학적 변화", "zh": "化学变化", "es": "cambio químico"},
+        {"en": "chemical reaction", "ko": "화학반응", "zh": "化学反应", "es": "reacción química"}
+      ]
+    },
+    {
+      "category": {"en": "Atomic Structure", "ko": "원자 구조", "zh": "原子结构", "es": "Estructura Atómica"},
+      "terms": [
+        {"en": "proton", "ko": "양성자", "zh": "质子", "es": "protón"},
+        {"en": "neutron", "ko": "중성자", "zh": "中子", "es": "neutrón"},
+        {"en": "electron", "ko": "전자", "zh": "电子", "es": "electrón"},
+        {"en": "nucleus", "ko": "원자핵", "zh": "原子核", "es": "núcleo"},
+        {"en": "atomic number", "ko": "원자번호", "zh": "原子序数", "es": "número atómico"},
+        {"en": "mass number", "ko": "질량수", "zh": "质量数", "es": "número de masa"},
+        {"en": "isotope", "ko": "동위원소", "zh": "同位素", "es": "isótopo"},
+        {"en": "electron configuration", "ko": "전자배치", "zh": "电子排布", "es": "configuración electrónica"},
+        {"en": "valence electron", "ko": "원자가전자", "zh": "价电子", "es": "electrón de valencia"},
+        {"en": "periodic table", "ko": "주기율표", "zh": "元素周期表", "es": "tabla periódica"},
+        {"en": "periodic law", "ko": "주기율", "zh": "周期律", "es": "ley periódica"},
+        {"en": "atomic mass", "ko": "원자량", "zh": "原子质量", "es": "masa atómica"}
+      ]
+    },
+    {
+      "category": {"en": "Bonding", "ko": "화학 결합", "zh": "化学键", "es": "Enlace Químico"},
+      "terms": [
+        {"en": "ionic bond", "ko": "이온결합", "zh": "离子键", "es": "enlace iónico"},
+        {"en": "covalent bond", "ko": "공유결합", "zh": "共价键", "es": "enlace covalente"},
+        {"en": "metallic bond", "ko": "금속결합", "zh": "金属键", "es": "enlace metálico"},
+        {"en": "polar bond", "ko": "극성결합", "zh": "极性键", "es": "enlace polar"},
+        {"en": "nonpolar bond", "ko": "비극성결합", "zh": "非极性键", "es": "enlace no polar"},
+        {"en": "molecular formula", "ko": "분자식", "zh": "分子式", "es": "fórmula molecular"},
+        {"en": "chemical formula", "ko": "화학식", "zh": "化学式", "es": "fórmula química"},
+        {"en": "Lewis structure", "ko": "루이스 구조식", "zh": "路易斯结构式", "es": "estructura de Lewis"},
+        {"en": "electronegativity", "ko": "전기음성도", "zh": "电负性", "es": "electronegatividad"},
+        {"en": "intermolecular force", "ko": "분자간 힘", "zh": "分子间作用力", "es": "fuerza intermolecular"}
+      ]
+    },
+    {
+      "category": {"en": "Reactions & Stoichiometry", "ko": "반응과 화학량론", "zh": "反应与化学计量学", "es": "Reacciones y Estequiometría"},
+      "terms": [
+        {"en": "chemical equation", "ko": "화학반응식", "zh": "化学方程式", "es": "ecuación química"},
+        {"en": "reactant", "ko": "반응물", "zh": "反应物", "es": "reactivo"},
+        {"en": "product", "ko": "생성물", "zh": "生成物", "es": "producto"},
+        {"en": "balanced equation", "ko": "균형화학식", "zh": "配平方程式", "es": "ecuación balanceada"},
+        {"en": "mole", "ko": "몰", "zh": "摩尔", "es": "mol"},
+        {"en": "molar mass", "ko": "몰질량", "zh": "摩尔质量", "es": "masa molar"},
+        {"en": "stoichiometry", "ko": "화학량론", "zh": "化学计量学", "es": "estequiometría"},
+        {"en": "limiting reactant", "ko": "한계반응물", "zh": "限量反应物", "es": "reactivo limitante"},
+        {"en": "yield", "ko": "수율", "zh": "产率", "es": "rendimiento"},
+        {"en": "conservation of mass", "ko": "질량보존법칙", "zh": "质量守恒定律", "es": "conservación de la masa"},
+        {"en": "synthesis reaction", "ko": "합성반응", "zh": "化合反应", "es": "reacción de síntesis"},
+        {"en": "decomposition reaction", "ko": "분해반응", "zh": "分解反应", "es": "reacción de descomposición"},
+        {"en": "combustion reaction", "ko": "연소반응", "zh": "燃烧反应", "es": "reacción de combustión"},
+        {"en": "single replacement", "ko": "단일치환반응", "zh": "置换反应", "es": "reacción de sustitución simple"},
+        {"en": "double replacement", "ko": "복분해반응", "zh": "复分解反应", "es": "reacción de doble sustitución"}
+      ]
+    },
+    {
+      "category": {"en": "States of Matter", "ko": "물질의 상태", "zh": "物质的状态", "es": "Estados de la Materia"},
+      "terms": [
+        {"en": "solid", "ko": "고체", "zh": "固体", "es": "sólido"},
+        {"en": "liquid", "ko": "액체", "zh": "液体", "es": "líquido"},
+        {"en": "gas", "ko": "기체", "zh": "气体", "es": "gas"},
+        {"en": "plasma", "ko": "플라스마", "zh": "等离子体", "es": "plasma"},
+        {"en": "phase change", "ko": "상태변화", "zh": "物态变化", "es": "cambio de fase"},
+        {"en": "melting point", "ko": "녹는점", "zh": "熔点", "es": "punto de fusión"},
+        {"en": "boiling point", "ko": "끓는점", "zh": "沸点", "es": "punto de ebullición"},
+        {"en": "condensation", "ko": "응축", "zh": "凝结", "es": "condensación"},
+        {"en": "sublimation", "ko": "승화", "zh": "升华", "es": "sublimación"},
+        {"en": "evaporation", "ko": "증발", "zh": "蒸发", "es": "evaporación"},
+        {"en": "vapor pressure", "ko": "증기압", "zh": "蒸气压", "es": "presión de vapor"}
+      ]
+    },
+    {
+      "category": {"en": "Acids, Bases & Solutions", "ko": "산, 염기, 용액", "zh": "酸、碱与溶液", "es": "Ácidos, Bases y Soluciones"},
+      "terms": [
+        {"en": "acid", "ko": "산", "zh": "酸", "es": "ácido"},
+        {"en": "base", "ko": "염기", "zh": "碱", "es": "base"},
+        {"en": "pH", "ko": "pH(수소이온농도지수)", "zh": "pH值", "es": "pH"},
+        {"en": "neutralization", "ko": "중화반응", "zh": "中和反应", "es": "neutralización"},
+        {"en": "solute", "ko": "용질", "zh": "溶质", "es": "soluto"},
+        {"en": "solvent", "ko": "용매", "zh": "溶剂", "es": "solvente"},
+        {"en": "solution", "ko": "용액", "zh": "溶液", "es": "solución"},
+        {"en": "concentration", "ko": "농도", "zh": "浓度", "es": "concentración"},
+        {"en": "molarity", "ko": "몰농도", "zh": "摩尔浓度", "es": "molaridad"},
+        {"en": "dilution", "ko": "희석", "zh": "稀释", "es": "dilución"},
+        {"en": "buffer", "ko": "완충용액", "zh": "缓冲溶液", "es": "solución amortiguadora"},
+        {"en": "indicator", "ko": "지시약", "zh": "指示剂", "es": "indicador"}
+      ]
+    },
+    {
+      "category": {"en": "Thermochemistry & Energy", "ko": "열화학과 에너지", "zh": "热化学与能量", "es": "Termoquímica y Energía"},
+      "terms": [
+        {"en": "energy", "ko": "에너지", "zh": "能量", "es": "energía"},
+        {"en": "exothermic reaction", "ko": "발열반응", "zh": "放热反应", "es": "reacción exotérmica"},
+        {"en": "endothermic reaction", "ko": "흡열반응", "zh": "吸热反应", "es": "reacción endotérmica"},
+        {"en": "enthalpy", "ko": "엔탈피", "zh": "焓", "es": "entalpía"},
+        {"en": "entropy", "ko": "엔트로피", "zh": "熵", "es": "entropía"},
+        {"en": "activation energy", "ko": "활성화에너지", "zh": "活化能", "es": "energía de activación"},
+        {"en": "catalyst", "ko": "촉매", "zh": "催化剂", "es": "catalizador"},
+        {"en": "equilibrium", "ko": "평형", "zh": "平衡", "es": "equilibrio"},
+        {"en": "reaction rate", "ko": "반응속도", "zh": "反应速率", "es": "velocidad de reacción"}
+      ]
+    }
+  ]
+}

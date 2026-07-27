@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Trigonometry Vocabulary | Odyssey</title>
+<meta name="description" content="Explore 41 terms across trig functions, the unit circle, identities, graphs, and applications.">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Literata:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-primary-fixed-variant": "#004f58",
+          "on-primary": "#00363d",
+          "surface-container-low": "#1c1b1c",
+          "on-primary-container": "#002f35",
+          "on-surface-variant": "#bcc9cb",
+          "primary-fixed-dim": "#64d6e8",
+          "outline-variant": "#3d494b",
+          "on-secondary-container": "#a9bacf",
+          "surface-container": "#201f20",
+          "surface-dim": "#131314",
+          "on-error": "#690005",
+          "surface-tint": "#64d6e8",
+          "outline": "#879395",
+          "on-secondary": "#223242",
+          "on-error-container": "#ffdad6",
+          "error": "#ffb4ab",
+          "secondary-container": "#3b4a5c",
+          "surface": "#131314",
+          "surface-variant": "#353436",
+          "on-tertiary-fixed-variant": "#454748",
+          "inverse-on-surface": "#313031",
+          "surface-container-highest": "#353436",
+          "tertiary-container": "#8f9192",
+          "primary-container": "#159fb0",
+          "secondary-fixed-dim": "#b7c8dd",
+          "on-background": "#e5e2e3",
+          "on-tertiary-fixed": "#191c1d",
+          "tertiary-fixed": "#e1e3e4",
+          "surface-container-lowest": "#0e0e0f",
+          "primary": "#64d6e8",
+          "inverse-primary": "#006874",
+          "background": "#131314",
+          "on-tertiary-container": "#272a2b",
+          "surface-bright": "#39393a",
+          "on-secondary-fixed-variant": "#384859",
+          "secondary": "#b7c8dd",
+          "tertiary-fixed-dim": "#c5c7c8",
+          "inverse-surface": "#e5e2e3",
+          "on-tertiary": "#2e3132",
+          "on-primary-fixed": "#001f24",
+          "secondary-fixed": "#d3e4fa",
+          "error-container": "#93000a",
+          "tertiary": "#c5c7c8",
+          "on-surface": "#e5e2e3",
+          "on-secondary-fixed": "#0c1d2c",
+          "primary-fixed": "#99f0ff",
+          "surface-container-high": "#2a2a2b"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "lg": "48px",
+          "margin-mobile": "16px",
+          "base": "8px",
+          "margin-desktop": "64px",
+          "gutter": "24px",
+          "md": "24px",
+          "xl": "80px",
+          "sm": "12px",
+          "xs": "4px"
+        },
+        "fontFamily": {
+          "headline": ["Literata"],
+          "display": ["Literata"],
+          "body": ["Literata"],
+          "label": ["Inter"]
+        },
+        "fontSize": {
+          "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+          "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+          "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+          "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+          "display-lg": ["40px", {"lineHeight": "48px", "fontWeight": "700"}],
+          "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+          "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+          "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}]
+        }
+      },
+    },
+  }
+</script>
+<style>
+.texture-overlay {
+  background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCX6KFTatpz9OQm8tcHmTPe2p1nApZsBCQPOzTxS4m1pKJedwcBHWAbQk0QFaRaCezC9Dw3c6bWS37sQYEQceI99kAtw8L9AVJzIFn6vrqIFNZe2L4c29IgYeljZu0ePb43E1YMVwIHkpkTBoSjF9P8fWXYF9JfOUGXe2EQE9B49e53dtyjkBwkKp8cRu7XQ_uRx1Pk8_rF-OaIwRoqlD45no7HqHhLfWEg-sF2frgORskjPyNkPnpZM4bqbgExHn20-beHEY2nfHg);
+  opacity: 0.05;
+  pointer-events: none;
+}
+.card-paper {
+  background-color: #201f20;
+  border: 1px solid #3d494b;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease;
+}
+body {
+  min-height: max(884px, 100dvh);
+}
+
+/* Accordion */
+.cat-btn[aria-expanded="true"] .chevron {
+  transform: rotate(180deg);
+}
+.cat-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.28s ease;
+}
+.cat-panel.open {
+  grid-template-rows: 1fr;
+}
+.cat-panel > div {
+  overflow: hidden;
+}
+
+/* Term row hover */
+.term-row:hover {
+  background-color: rgba(100, 214, 232, 0.07);
+}
+
+/* Active language button */
+.lang-btn[data-active="true"] {
+  background-color: #159fb0;
+  color: #002f35;
+  border-color: #159fb0;
+}
+
+/* Search highlight */
+mark {
+  background: rgba(100, 214, 232, 0.25);
+  color: #64d6e8;
+  border-radius: 2px;
+  padding: 0 1px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #1c1b1c; }
+::-webkit-scrollbar-thumb { background: #3d494b; border-radius: 8px; }
+
+/* Sticky search header */
+#search-header {
+  background-color: rgba(19, 19, 20, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+</style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-secondary-container selection:text-on-secondary-container">
+<div class="fixed inset-0 texture-overlay z-0"></div>
+
+<!-- Top App Bar -->
+<header class="fixed top-0 left-0 w-full z-40 bg-surface-container border-b border-outline-variant flex justify-between items-center px-margin-mobile md:px-margin-desktop py-base">
+  <div class="flex items-center gap-md">
+    <span class="font-display text-display-lg font-bold text-primary">Odyssey</span>
+  </div>
+  <div class="hidden md:flex gap-lg">
+    <a class="font-headline text-headline-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="home.html">Home</a>
+    <a class="font-headline text-headline-md text-primary font-bold transition-colors duration-200" href="subjects.html">Subjects</a>
+    <a class="font-headline text-headline-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="scenario.html">Lessons</a>
+    <a class="font-headline text-headline-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="progress.html">Progress</a>
+  </div>
+  <div class="flex items-center gap-md">
+    <button class="material-symbols-outlined text-primary text-2xl">settings</button>
+    <div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center overflow-hidden border border-outline-variant">
+      <img alt="Student Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcSo7ENLFPdw1aFwXOe7i_sEWiA90NOPphUYk97dLUUQbUlxLqn6CNKad_BQ_9p5ff-eiJLB3hOHPpG_TSY2LfeFud5xCt2RYyjGDva4tG2O-eyzWvU7K_pOMCKWzpqhoSoJzP7Ytyek67tw03xForen9K385hQUyA839Cm6GNty3W0DPIQ6Ktw3rpsc831C5oxnH2m-r1LX4Xeok7KfvSCfA47CKJcQElnA4qstx4OfXqb7LguR29J_nhMl0j6PqP_RESZKvP4TM">
+    </div>
+  </div>
+</header>
+
+<!-- Sticky Search / Lang Header -->
+<div id="search-header" class="fixed top-[56px] left-0 w-full z-30 border-b border-outline-variant shadow-lg">
+  <div class="max-w-[900px] mx-auto px-margin-mobile md:px-margin-desktop py-sm">
+
+    <!-- Breadcrumb + Title -->
+    <div class="flex items-center justify-between gap-3 mb-sm">
+      <div>
+        <p class="font-label text-label-sm text-primary uppercase tracking-widest mb-xs">Academic Subject Hub</p>
+        <h1 class="font-display text-headline-md md:text-headline-lg text-on-background leading-tight">Trigonometry Vocabulary</h1>
+      </div>
+      <span class="material-symbols-outlined text-primary text-4xl hidden sm:block" style="font-variation-settings:'FILL' 0,'wght' 300;">change_history</span>
+    </div>
+
+    <!-- Language Switcher -->
+    <div id="langSwitch" class="flex gap-xs mb-sm flex-wrap" role="group" aria-label="Choose display language">
+      <!-- buttons injected by JS -->
+    </div>
+
+    <!-- Search -->
+    <div class="relative">
+      <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-xl">search</span>
+      <input id="searchInput" type="text" placeholder="Search a term…"
+        class="w-full pl-10 pr-9 py-2.5 rounded-xl border border-outline-variant bg-surface-container-high text-on-surface text-sm outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary placeholder:text-on-surface-variant/60 transition-all font-label">
+      <button id="clearSearch" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-primary transition-colors" aria-label="Clear search">
+        <span class="material-symbols-outlined text-xl">close</span>
+      </button>
+    </div>
+    <p id="resultCount" class="font-label text-label-sm text-on-surface-variant mt-xs"></p>
+  </div>
+</div>
+
+<!-- Main Content -->
+<main id="main-content" class="relative z-10 max-w-[900px] mx-auto px-margin-mobile md:px-margin-desktop pb-32">
+  <div id="accordion" class="space-y-3"></div>
+  <div id="emptyState" class="hidden text-center py-20">
+    <span class="material-symbols-outlined block text-5xl text-on-surface-variant/40 mb-md">search_off</span>
+    <p class="font-body text-body-md text-on-surface-variant">No terms match your search.</p>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="relative z-10 max-w-[900px] mx-auto px-margin-mobile md:px-margin-desktop pb-lg pt-sm text-center">
+  <p class="font-label text-label-sm text-on-surface-variant/60">41 terms across trig functions, the unit circle, identities, graphs, and applications.</p>
+</footer>
+
+<!-- Bottom Navigation (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-surface border-t border-surface-variant flex justify-around items-center px-4 pb-4 pt-2 shadow-sm rounded-t-xl">
+  <a href="home.html" class="flex flex-col items-center justify-center text-secondary">
+    <span class="material-symbols-outlined">home</span>
+    <span class="font-label text-label-sm">Home</span>
+  </a>
+  <a href="subjects.html" class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 scale-95 active:scale-90 transition-transform">
+    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+    <span class="font-label text-label-sm">Subjects</span>
+  </a>
+  <a href="scenario.html" class="flex flex-col items-center justify-center text-secondary">
+    <span class="material-symbols-outlined">school</span>
+    <span class="font-label text-label-sm">Lessons</span>
+  </a>
+  <a href="progress.html" class="flex flex-col items-center justify-center text-secondary">
+    <span class="material-symbols-outlined">map</span>
+    <span class="font-label text-label-sm">Progress</span>
+  </a>
+</nav>
+
+<script>
+const LANGS = [
+  { code: 'en', label: 'EN',  native: 'English'  },
+  { code: 'ko', label: '한국어', native: 'Korean'  },
+  { code: 'zh', label: '中文', native: 'Chinese'  },
+  { code: 'es', label: 'ES',  native: 'Español'  },
+];
+
+const STORAGE_KEY = 'selectedLanguage';
+
+let currentLang = localStorage.getItem(STORAGE_KEY) || 'en';
+let vocabData = null;
+let openCategories = new Set([0]);
+
+const accordionEl  = document.getElementById('accordion');
+const searchInput  = document.getElementById('searchInput');
+const clearBtn     = document.getElementById('clearSearch');
+const resultCountEl = document.getElementById('resultCount');
+const emptyStateEl = document.getElementById('emptyState');
+const langSwitchEl = document.getElementById('langSwitch');
+const mainContent  = document.getElementById('main-content');
+
+function adjustMainPadding() {
+  const searchHeader = document.getElementById('search-header');
+  const topBar = document.querySelector('header');
+  const totalOffset = (topBar?.offsetHeight || 56) + (searchHeader?.offsetHeight || 0);
+  mainContent.style.paddingTop = (totalOffset + 16) + 'px';
+}
+
+window.addEventListener('resize', adjustMainPadding);
+
+function renderLangSwitch() {
+  langSwitchEl.innerHTML = LANGS.map(l => `
+    <button
+      id="lang-btn-${l.code}"
+      class="lang-btn px-3 py-1.5 rounded-full font-label text-label-sm border border-outline-variant bg-surface-container transition-all"
+      data-lang="${l.code}"
+      data-active="${l.code === currentLang}"
+      aria-pressed="${l.code === currentLang}">
+      ${l.label}
+    </button>
+  `).join('');
+
+  langSwitchEl.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      currentLang = btn.dataset.lang;
+      localStorage.setItem(STORAGE_KEY, currentLang);
+      renderLangSwitch();
+      renderAccordion(searchInput.value.trim());
+    });
+  });
+}
+
+function highlight(text, q) {
+  if (!q) return text;
+  const idx = text.toLowerCase().indexOf(q.toLowerCase());
+  if (idx === -1) return text;
+  return (
+    text.slice(0, idx) +
+    '<mark>' + text.slice(idx, idx + q.length) + '</mark>' +
+    text.slice(idx + q.length)
+  );
+}
+
+function filterTerms(q) {
+  if (!q) return vocabData.categories.map((c, i) => ({ catIndex: i, category: c.category, terms: c.terms }));
+  const lower = q.toLowerCase();
+  return vocabData.categories.map((c, i) => {
+    const terms = c.terms.filter(t =>
+      t.en.toLowerCase().includes(lower) ||
+      t.ko.toLowerCase().includes(lower) ||
+      t.zh.toLowerCase().includes(lower) ||
+      t.es.toLowerCase().includes(lower)
+    );
+    return { catIndex: i, category: c.category, terms };
+  }).filter(c => c.terms.length > 0);
+}
+
+function renderAccordion(query = '') {
+  const filtered  = filterTerms(query.trim());
+  const total     = filtered.reduce((sum, c) => sum + c.terms.length, 0);
+  const totalAll  = vocabData.categories.reduce((s, c) => s + c.terms.length, 0);
+  const nativeName = LANGS.find(l => l.code === currentLang).native;
+
+  resultCountEl.textContent = query
+    ? `${total} term${total !== 1 ? 's' : ''} found`
+    : `${totalAll} terms across ${vocabData.categories.length} categories`;
+
+  emptyStateEl.classList.toggle('hidden', total > 0);
+  accordionEl.classList.toggle('hidden', total === 0);
+
+  const forceOpen = query.trim().length > 0;
+
+  accordionEl.innerHTML = filtered.map(c => {
+    const isOpen = forceOpen || openCategories.has(c.catIndex);
+    const rows = c.terms.map(t => `
+      <div class="term-row grid grid-cols-2 gap-3 px-4 py-2.5 rounded-lg items-baseline cursor-default transition-colors">
+        <span class="font-body text-body-md text-on-surface">${highlight(t.en, query)}</span>
+        <span class="font-body text-body-md text-primary">${highlight(t[currentLang], query)}</span>
+      </div>
+    `).join('');
+
+    return `
+      <section class="card-paper rounded-xl overflow-hidden">
+        <button class="cat-btn w-full flex items-center justify-between px-md py-sm text-left hover:bg-surface-container-high transition-colors"
+          aria-expanded="${isOpen}" data-cat="${c.catIndex}">
+          <span class="flex items-center gap-sm">
+            <span class="font-label text-label-sm font-bold text-on-primary-container bg-primary-container rounded-full w-6 h-6 flex items-center justify-center shrink-0">
+              ${c.terms.length}
+            </span>
+            <span class="font-headline text-body-md font-semibold text-on-background">
+              ${c.category[currentLang]}
+            </span>
+          </span>
+          <span class="material-symbols-outlined chevron text-on-surface-variant transition-transform duration-200 text-xl">expand_more</span>
+        </button>
+
+        <div class="cat-panel ${isOpen ? 'open' : ''}">
+          <div>
+            <div class="grid grid-cols-2 gap-3 px-4 pb-xs pt-xs border-t border-outline-variant">
+              <span class="font-label text-label-sm text-on-surface-variant uppercase tracking-wider">English</span>
+              <span class="font-label text-label-sm text-on-surface-variant uppercase tracking-wider">${nativeName}</span>
+            </div>
+            ${rows}
+            <div class="pb-xs"></div>
+          </div>
+        </div>
+      </section>
+    `;
+  }).join('');
+
+  accordionEl.querySelectorAll('.cat-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const idx = Number(btn.dataset.cat);
+      if (openCategories.has(idx)) openCategories.delete(idx);
+      else openCategories.add(idx);
+      renderAccordion(searchInput.value);
+    });
+  });
+}
+
+searchInput.addEventListener('input', e => {
+  clearBtn.classList.toggle('hidden', !e.target.value);
+  renderAccordion(e.target.value);
+});
+
+clearBtn.addEventListener('click', () => {
+  searchInput.value = '';
+  clearBtn.classList.add('hidden');
+  renderAccordion('');
+  searchInput.focus();
+});
+
+fetch('data/trigonometry_vocab_4lang.json')
+  .then(r => r.json())
+  .then(data => {
+    vocabData = data;
+    renderLangSwitch();
+    renderAccordion();
+    adjustMainPadding();
+  })
+  .catch(err => {
+    accordionEl.innerHTML = `
+      <div class="card-paper rounded-xl p-md text-center">
+        <span class="material-symbols-outlined text-error text-4xl block mb-sm">error_outline</span>
+        <p class="font-body text-body-md text-error">Could not load trigonometry vocabulary data.</p>
+        <p class="font-label text-label-sm text-on-surface-variant mt-xs">Check that data/trigonometry_vocab_4lang.json exists.</p>
+      </div>`;
+    console.error(err);
+  });
+</script>
+</body>
+</html>
