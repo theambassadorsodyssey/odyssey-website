@@ -1,0 +1,295 @@
+{
+  "meta": {
+    "title": "School Life Vocabulary / 학교·기숙사 생활 용어집 / 校园与住宿生活词汇 / Vocabulario de vida escolar y residencial",
+    "languages": [
+      "en",
+      "ko",
+      "zh",
+      "es"
+    ]
+  },
+  "categories": [
+    {
+      "category": {
+        "en": "Classroom & Coursework",
+        "ko": "수업 및 학사 용어",
+        "zh": "课堂与课业",
+        "es": "Clase y trabajo académico"
+      },
+      "terms": [
+        {
+          "en": "syllabus",
+          "ko": "강의계획서",
+          "zh": "教学大纲",
+          "es": "programa de estudios"
+        },
+        {
+          "en": "office hours",
+          "ko": "상담 시간",
+          "zh": "答疑时间",
+          "es": "horario de consulta"
+        },
+        {
+          "en": "extra credit",
+          "ko": "가산점",
+          "zh": "额外加分",
+          "es": "crédito extra"
+        },
+        {
+          "en": "rubric",
+          "ko": "채점 기준표",
+          "zh": "评分标准",
+          "es": "rúbrica"
+        },
+        {
+          "en": "plagiarism",
+          "ko": "표절",
+          "zh": "抄袭",
+          "es": "plagio"
+        },
+        {
+          "en": "deadline",
+          "ko": "마감일",
+          "zh": "截止日期",
+          "es": "fecha límite"
+        },
+        {
+          "en": "prerequisite",
+          "ko": "선수 과목",
+          "zh": "先修课程",
+          "es": "requisito previo"
+        },
+        {
+          "en": "elective",
+          "ko": "선택 과목",
+          "zh": "选修课",
+          "es": "materia optativa"
+        },
+        {
+          "en": "GPA",
+          "ko": "평점 평균",
+          "zh": "平均绩点",
+          "es": "promedio de calificaciones"
+        },
+        {
+          "en": "transcript",
+          "ko": "성적 증명서",
+          "zh": "成绩单",
+          "es": "expediente académico"
+        },
+        {
+          "en": "academic probation",
+          "ko": "학사 경고",
+          "zh": "学业警告",
+          "es": "período de prueba académica"
+        },
+        {
+          "en": "advisor",
+          "ko": "지도교사",
+          "zh": "导师",
+          "es": "consejero académico"
+        },
+        {
+          "en": "study hall",
+          "ko": "자습 시간",
+          "zh": "自习时间",
+          "es": "sala de estudio"
+        },
+        {
+          "en": "attendance",
+          "ko": "출석",
+          "zh": "出勤",
+          "es": "asistencia"
+        }
+      ]
+    },
+    {
+      "category": {
+        "en": "Boarding & Dorm Life",
+        "ko": "기숙사 생활 용어",
+        "zh": "宿舍生活",
+        "es": "Vida en la residencia"
+      },
+      "terms": [
+        {
+          "en": "dormitory",
+          "ko": "기숙사",
+          "zh": "宿舍",
+          "es": "residencia estudiantil"
+        },
+        {
+          "en": "roommate",
+          "ko": "룸메이트",
+          "zh": "室友",
+          "es": "compañero de cuarto"
+        },
+        {
+          "en": "check-in",
+          "ko": "점호(입실 확인)",
+          "zh": "签到",
+          "es": "registro de entrada"
+        },
+        {
+          "en": "check-out",
+          "ko": "외출 신고",
+          "zh": "签退",
+          "es": "registro de salida"
+        },
+        {
+          "en": "lights-out",
+          "ko": "소등 시간",
+          "zh": "熄灯时间",
+          "es": "hora de apagar luces"
+        },
+        {
+          "en": "sign-out sheet",
+          "ko": "외출 서명부",
+          "zh": "外出登记表",
+          "es": "hoja de registro de salida"
+        },
+        {
+          "en": "prefect",
+          "ko": "기숙사 선도부원",
+          "zh": "舍长",
+          "es": "prefecto"
+        },
+        {
+          "en": "dorm parent",
+          "ko": "기숙사 사감",
+          "zh": "宿舍管理员",
+          "es": "supervisor de residencia"
+        },
+        {
+          "en": "common room",
+          "ko": "공용 휴게실",
+          "zh": "公共休息室",
+          "es": "sala común"
+        },
+        {
+          "en": "curfew",
+          "ko": "통금 시간",
+          "zh": "门禁时间",
+          "es": "toque de queda"
+        },
+        {
+          "en": "laundry room",
+          "ko": "세탁실",
+          "zh": "洗衣房",
+          "es": "lavandería"
+        },
+        {
+          "en": "house meeting",
+          "ko": "기숙사 전체 회의",
+          "zh": "宿舍会议",
+          "es": "reunión de la residencia"
+        },
+        {
+          "en": "weekend leave",
+          "ko": "주말 외출 허가",
+          "zh": "周末外出许可",
+          "es": "permiso de fin de semana"
+        },
+        {
+          "en": "dining hall",
+          "ko": "학생 식당",
+          "zh": "学生食堂",
+          "es": "comedor"
+        }
+      ]
+    },
+    {
+      "category": {
+        "en": "Academic Writing",
+        "ko": "학술 글쓰기 표현",
+        "zh": "学术写作",
+        "es": "Escritura académica"
+      },
+      "terms": [
+        {
+          "en": "thesis statement",
+          "ko": "논지(주제문)",
+          "zh": "论点陈述",
+          "es": "declaración de tesis"
+        },
+        {
+          "en": "topic sentence",
+          "ko": "주제 문장",
+          "zh": "主题句",
+          "es": "oración temática"
+        },
+        {
+          "en": "citation",
+          "ko": "인용",
+          "zh": "引用",
+          "es": "cita"
+        },
+        {
+          "en": "works cited",
+          "ko": "인용 문헌 목록",
+          "zh": "引用文献",
+          "es": "obras citadas"
+        },
+        {
+          "en": "paraphrase",
+          "ko": "바꿔 쓰기(의역)",
+          "zh": "释义",
+          "es": "parafrasear"
+        },
+        {
+          "en": "rough draft",
+          "ko": "초고",
+          "zh": "初稿",
+          "es": "borrador"
+        },
+        {
+          "en": "peer review",
+          "ko": "동료 평가",
+          "zh": "同行评审",
+          "es": "revisión por pares"
+        },
+        {
+          "en": "argument",
+          "ko": "논지, 주장",
+          "zh": "论点",
+          "es": "argumento"
+        },
+        {
+          "en": "evidence",
+          "ko": "근거",
+          "zh": "证据",
+          "es": "evidencia"
+        },
+        {
+          "en": "counterargument",
+          "ko": "반론",
+          "zh": "反驳论点",
+          "es": "contraargumento"
+        },
+        {
+          "en": "conclusion",
+          "ko": "결론",
+          "zh": "结论",
+          "es": "conclusión"
+        },
+        {
+          "en": "introduction",
+          "ko": "서론",
+          "zh": "引言",
+          "es": "introducción"
+        },
+        {
+          "en": "outline",
+          "ko": "개요",
+          "zh": "提纲",
+          "es": "esquema"
+        },
+        {
+          "en": "revision",
+          "ko": "퇴고(수정)",
+          "zh": "修改",
+          "es": "revisión"
+        }
+      ]
+    }
+  ]
+}
