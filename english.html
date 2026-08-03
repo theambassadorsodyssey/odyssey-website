@@ -178,7 +178,14 @@ mark {
     <a class="font-headline text-headline-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="scenario.html">Lessons</a>
     <a class="font-headline text-headline-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="progress.html">Progress</a>
   </div>
-  <div class="flex items-center gap-md">
+  <div class="relative hidden md:block" id="global-search-wrap">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg pointer-events-none">search</span>
+<input id="globalSearchInput" type="text" placeholder="Search all terms..." autocomplete="off" class="w-56 focus:w-72 transition-all duration-200 bg-surface-container-high border border-outline-variant rounded-full pl-9 pr-4 py-2 text-sm font-body text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:border-primary">
+</div>
+<div id="globalSearchResults" class="hidden absolute top-full mt-2 right-0 w-80 max-h-96 overflow-y-auto bg-surface-container-high border border-outline-variant rounded-xl shadow-lg z-50"></div>
+</div>
+<div class="flex items-center gap-md">
     <button class="material-symbols-outlined text-primary text-2xl">settings</button>
     <div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center overflow-hidden border border-outline-variant">
       <img alt="Student Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcSo7ENLFPdw1aFwXOe7i_sEWiA90NOPphUYk97dLUUQbUlxLqn6CNKad_BQ_9p5ff-eiJLB3hOHPpG_TSY2LfeFud5xCt2RYyjGDva4tG2O-eyzWvU7K_pOMCKWzpqhoSoJzP7Ytyek67tw03xForen9K385hQUyA839Cm6GNty3W0DPIQ6Ktw3rpsc831C5oxnH2m-r1LX4Xeok7KfvSCfA47CKJcQElnA4qstx4OfXqb7LguR29J_nhMl0j6PqP_RESZKvP4TM">
@@ -443,6 +450,113 @@ fetch('data/english_vocab_4lang.json')
       </div>`;
     console.error(err);
   });
+</script>
+<script>
+(function () {
+  var GS_SUBJECT_FILES = [
+    { file: 'biology.html',      json: 'data/biology_vocab_4lang.json',      label: 'Biology' },
+    { file: 'chemistry.html',    json: 'data/chemistry_vocab_4lang.json',    label: 'Chemistry' },
+    { file: 'economics.html',    json: 'data/economics_vocab_4lang.json',    label: 'Economics' },
+    { file: 'english.html',      json: 'data/english_vocab_4lang.json',      label: 'Advanced English' },
+    { file: 'geometry.html',     json: 'data/geometry_vocab_4lang.json',     label: 'Geometry' },
+    { file: 'history.html',      json: 'data/history_vocab_4lang.json',      label: 'U.S. History' },
+    { file: 'physics.html',      json: 'data/physics_vocab_4lang.json',      label: 'Physics' },
+    { file: 'trigonometry.html', json: 'data/trigonometry_vocab_4lang.json', label: 'Trigonometry' }
+  ];
+
+  var gsAllTerms = null;
+  var gsLoading = null;
+
+  function gsLoadAllTerms() {
+    if (gsAllTerms) return Promise.resolve(gsAllTerms);
+    if (gsLoading) return gsLoading;
+    gsLoading = Promise.allSettled(
+      GS_SUBJECT_FILES.map(function (s) { return fetch(s.json).then(function (r) { return r.json(); }); })
+    ).then(function (results) {
+      var terms = [];
+      results.forEach(function (res, i) {
+        if (res.status === 'fulfilled') {
+          (res.value.categories || []).forEach(function (cat) {
+            (cat.terms || []).forEach(function (t) {
+              terms.push(Object.assign({}, t, { file: GS_SUBJECT_FILES[i].file, label: GS_SUBJECT_FILES[i].label }));
+            });
+          });
+        }
+      });
+      gsAllTerms = terms;
+      return terms;
+    });
+    return gsLoading;
+  }
+
+  function gsCurrentLang() {
+    return localStorage.getItem('selectedLanguage') || 'en';
+  }
+
+  function gsEscapeHtml(str) {
+    return String(str).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  function gsRenderResults(query) {
+    var box = document.getElementById('globalSearchResults');
+    if (!box) return;
+    var q = query.trim().toLowerCase();
+    if (!q) { box.classList.add('hidden'); box.innerHTML = ''; return; }
+    if (!gsAllTerms) { return; }
+
+    var lang = gsCurrentLang();
+    var matches = gsAllTerms.filter(function (t) {
+      return (t.en && t.en.toLowerCase().indexOf(q) !== -1) ||
+             (t.ko && t.ko.toLowerCase().indexOf(q) !== -1) ||
+             (t.zh && t.zh.toLowerCase().indexOf(q) !== -1) ||
+             (t.es && t.es.toLowerCase().indexOf(q) !== -1);
+    }).slice(0, 8);
+
+    if (!matches.length) {
+      box.innerHTML = '<div class="px-4 py-3 text-sm text-on-surface-variant">No terms found</div>';
+      box.classList.remove('hidden');
+      return;
+    }
+
+    box.innerHTML = matches.map(function (t) {
+      var translation = (lang !== 'en' && t[lang]) ? '<span class="text-xs text-primary block">' + gsEscapeHtml(t[lang]) + '</span>' : '';
+      return '<a href="' + t.file + '?q=' + encodeURIComponent(t.en) + '" class="flex items-center justify-between gap-3 px-4 py-2.5 hover:bg-surface-container-highest transition-colors border-b border-outline-variant last:border-0">' +
+        '<span class="flex flex-col">' +
+          '<span class="text-sm font-medium text-on-surface">' + gsEscapeHtml(t.en) + '</span>' +
+          translation +
+        '</span>' +
+        '<span class="text-xs text-on-surface-variant shrink-0">' + t.label + '</span>' +
+      '</a>';
+    }).join('');
+    box.classList.remove('hidden');
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var input = document.getElementById('globalSearchInput');
+    var box = document.getElementById('globalSearchResults');
+    if (!input || !box) return;
+
+    input.addEventListener('focus', function () {
+      gsLoadAllTerms().then(function () { gsRenderResults(input.value); });
+    });
+    input.addEventListener('input', function () {
+      gsLoadAllTerms().then(function () { gsRenderResults(input.value); });
+    });
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('#global-search-wrap')) {
+        box.classList.add('hidden');
+      }
+    });
+    input.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') {
+        var first = box.querySelector('a');
+        if (first) window.location.href = first.getAttribute('href');
+      }
+    });
+  });
+})();
 </script>
 </body>
 </html>
