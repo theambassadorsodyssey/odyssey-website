@@ -421,8 +421,17 @@ fetch('data/economics_vocab_4lang.json')
   .then(r => r.json())
   .then(data => {
     vocabData = data;
+
+    // Deep-link support: ?q=term (from Word of the Day / global search) prefills the search box
+    const urlParams = new URLSearchParams(window.location.search);
+    const qParam = urlParams.get('q');
+    if (qParam) {
+      searchInput.value = qParam;
+      clearBtn.classList.remove('hidden');
+    }
+
     renderLangSwitch();
-    renderAccordion();
+    renderAccordion(searchInput.value);
     adjustMainPadding();
   })
   .catch(err => {
