@@ -80,7 +80,7 @@
     {
       "id": "clinic",
       "icon": "local_hospital",
-      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuC7ov4mAZ4jFhKgdI0EnjyG3xYDLZOWwvJIbEjntGnT_kppxxUV4YQhVIeoK4nzq2hxfQxaJqIQjSjKB3dhJQPnPq_-XZ3cQ0v8gpBl6-QY3T_1E5nY7-PmvXFm6H5NAGm1B2W9kIYQjjxWjkQfF4WQjmXVc9M9r2Y_3Hn8dR7iAj6uSg4tW7CQjX3nOa2K5oI9Xj",
+      "image": "https://images.unsplash.com/photo-1771574204208-b47e2d863bc5?auto=format&fit=crop&w=1200&q=80",
       "level": {
         "en": "Beginner",
         "ko": "초급",
@@ -168,7 +168,7 @@
     {
       "id": "banking",
       "icon": "account_balance",
-      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuD3nQY7lZ5oI2c9pXk8vR1jT4uW6eF0aG2hB5cD7eF9gH1iJ3kL5mN7oP9qR1sT3uV5wX7yZ9aB1cD3eF5gH7iJ9kL1mN3oP5",
+      "image": "https://images.unsplash.com/photo-1663504361329-0ec10598d773?auto=format&fit=crop&w=1200&q=80",
       "level": {
         "en": "Advanced",
         "ko": "고급",
