@@ -1,0 +1,283 @@
+{
+  "scenarios": [
+    {
+      "id": "supermarket",
+      "icon": "local_mall",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDa5781iF7xE7Ermh93MG5OWEE6IxeTdY5fKq-ia7ZcF0biwnizeSg4tV6wOMERmcI23nOMrYj-djH9gSQ3f45B428VQU3bzrLpFWJWxKtkiUbw016dwQngV1GN4w0YFgXxARWxnJNs8oCr9xK1xj_IJGOZZtssTZgBSHopOdNQ1dRsKx21jw0hlff7kFE_bwKYJgrV14S9wAtgwvNnmqQQ9YlygVHOb0wIQMU59LWX1eWW4wm1MYGztnsEc3JfAZwEuq5HkBtgFeA",
+      "level": {
+        "en": "Intermediate",
+        "ko": "중급",
+        "zh": "中级",
+        "es": "Intermedio"
+      },
+      "title": {
+        "en": "At the Supermarket",
+        "ko": "슈퍼마켓에서",
+        "zh": "在超市",
+        "es": "En el supermercado"
+      },
+      "description": {
+        "en": "Navigating a grocery store in a new country can be overwhelming. In this scenario, you will learn how to locate specific items, ask for assistance with pricing, and successfully complete a checkout transaction at a typical academic-area supermarket.",
+        "ko": "새로운 나라에서 식료품점을 이용하는 것은 어려울 수 있습니다. 이 시나리오에서는 특정 물건을 찾고, 가격에 대해 도움을 요청하며, 전형적인 학교 근처 슈퍼마켓에서 결제 과정을 성공적으로 완료하는 방법을 배웁니다.",
+        "zh": "在一个新国家的杂货店购物可能会让人不知所措。在这个情景中，您将学习如何找到特定商品，询问价格帮助，以及在典型的学术区超市成功完成结账交易。",
+        "es": "Navegar por una tienda de comestibles en un país nuevo puede ser abrumador. En este escenario, aprenderás a localizar artículos específicos, pedir ayuda con los precios y completar con éxito una transacción de pago en un supermercado típico de zona académica."
+      },
+      "mentorNote": {
+        "en": "In most academic towns, students are expected to bring their own reusable bags or pay a small fee for paper ones. Don't be surprised if the cashier asks: 'Do you need a bag today?'",
+        "ko": "대부분의 대학 도시에서 학생들은 재사용 가능한 가방을 직접 가져오거나 종이 봉투에 소액을 지불해야 합니다. 계산원이 '오늘 봉투가 필요하신가요?'라고 물어도 당황하지 마세요.",
+        "zh": "在大多数学术城镇，学生需要自带可重复使用的购物袋，或为纸袋支付少量费用。如果收银员问：'您今天需要袋子吗？'不要感到惊讶。",
+        "es": "En la mayoría de las ciudades universitarias, se espera que los estudiantes traigan sus propias bolsas reutilizables o paguen una pequeña tarifa por las de papel. No te sorprendas si el cajero pregunta: '¿Necesitas una bolsa hoy?'"
+      },
+      "vocabulary": [
+        {
+          "en": "aisle",
+          "pronunciation": "/aɪl/",
+          "ko": "통로",
+          "zh": "通路",
+          "es": "pasillo"
+        },
+        {
+          "en": "self-checkout",
+          "pronunciation": "/ˌselfˈtʃekaʊt/",
+          "ko": "셀프 계산대",
+          "zh": "自助结账",
+          "es": "autopago"
+        },
+        {
+          "en": "receipt",
+          "pronunciation": "/rɪˈsiːt/",
+          "ko": "영수증",
+          "zh": "收据",
+          "es": "recibo"
+        },
+        {
+          "en": "organic",
+          "pronunciation": "/ɔːrˈɡænɪk/",
+          "ko": "유기농",
+          "zh": "有机的",
+          "es": "orgánico"
+        }
+      ],
+      "dialogue": [
+        {
+          "speaker": "staff",
+          "text": "Hello! Are you finding everything okay, or can I help you locate something today?"
+        },
+        {
+          "speaker": "user",
+          "text": "Actually, yes. Could you tell me where I can find the organic almond milk?"
+        },
+        {
+          "speaker": "staff",
+          "text": "Sure thing. That's located in the dairy aisle, which is aisle four, just past the produce section on your left."
+        },
+        {
+          "speaker": "user",
+          "text": "Aisle four, got it. Thank you so much for your help!"
+        }
+      ]
+    },
+    {
+      "id": "clinic",
+      "icon": "local_hospital",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuC7ov4mAZ4jFhKgdI0EnjyG3xYDLZOWwvJIbEjntGnT_kppxxUV4YQhVIeoK4nzq2hxfQxaJqIQjSjKB3dhJQPnPq_-XZ3cQ0v8gpBl6-QY3T_1E5nY7-PmvXFm6H5NAGm1B2W9kIYQjjxWjkQfF4WQjmXVc9M9r2Y_3Hn8dR7iAj6uSg4tW7CQjX3nOa2K5oI9Xj",
+      "level": {
+        "en": "Beginner",
+        "ko": "초급",
+        "zh": "初级",
+        "es": "Principiante"
+      },
+      "title": {
+        "en": "At the Clinic",
+        "ko": "병원(클리닉)에서",
+        "zh": "在诊所",
+        "es": "En la clínica"
+      },
+      "description": {
+        "en": "Describing symptoms and understanding basic medical instructions can be stressful in an unfamiliar healthcare system. In this scenario, you will learn how to explain how you're feeling, understand common instructions from a nurse, and navigate a routine walk-in clinic visit.",
+        "ko": "낯선 의료 시스템 속에서 증상을 설명하고 기본적인 의료 지시사항을 이해하는 것은 스트레스가 될 수 있습니다. 이 시나리오에서는 몸 상태를 설명하고, 간호사의 일반적인 안내를 이해하며, 예약 없이 방문하는 클리닉 진료 절차를 익힙니다.",
+        "zh": "在陌生的医疗系统中描述症状并理解基本的医疗指示可能会让人感到压力。在这个情景中，您将学习如何描述自己的身体状况，理解护士常见的指示，并顺利完成一次普通的免预约诊所就诊。",
+        "es": "Describir síntomas y comprender instrucciones médicas básicas puede ser estresante en un sistema de salud desconocido. En este escenario, aprenderás a explicar cómo te sientes, a entender las indicaciones comunes de una enfermera y a completar una visita de rutina sin cita previa en una clínica."
+      },
+      "mentorNote": {
+        "en": "Most campus health centers accept walk-ins for minor issues, but it's best to call ahead if you can. Bring your student ID and insurance card to every visit — you'll be asked for both at check-in.",
+        "ko": "대부분의 학교 보건소는 경미한 증상에 대해 예약 없이도 진료를 받아주지만, 가능하다면 미리 전화하는 것이 좋습니다. 방문할 때마다 학생증과 보험카드를 꼭 챙기세요 — 접수 시 두 가지 모두 요구받게 됩니다.",
+        "zh": "大多数校园医疗中心接受因轻微问题而无需预约的就诊，但如果可以的话，最好提前打电话确认。每次就诊都请携带学生证和保险卡——登记时会要求出示这两样证件。",
+        "es": "La mayoría de los centros de salud del campus aceptan pacientes sin cita para problemas menores, pero es mejor llamar con antelación si es posible. Lleva tu identificación de estudiante y tu tarjeta de seguro a cada visita — te las pedirán al momento de registrarte."
+      },
+      "vocabulary": [
+        {
+          "en": "symptom",
+          "pronunciation": "/ˈsɪmptəm/",
+          "ko": "증상",
+          "zh": "症状",
+          "es": "síntoma"
+        },
+        {
+          "en": "appointment",
+          "pronunciation": "/əˈpɔɪntmənt/",
+          "ko": "예약",
+          "zh": "预约",
+          "es": "cita"
+        },
+        {
+          "en": "prescription",
+          "pronunciation": "/prɪˈskrɪpʃən/",
+          "ko": "처방전",
+          "zh": "处方",
+          "es": "receta médica"
+        },
+        {
+          "en": "insurance card",
+          "pronunciation": "/ɪnˈʃʊərəns kɑːrd/",
+          "ko": "보험카드",
+          "zh": "保险卡",
+          "es": "tarjeta de seguro"
+        },
+        {
+          "en": "fever",
+          "pronunciation": "/ˈfiːvər/",
+          "ko": "열",
+          "zh": "发烧",
+          "es": "fiebre"
+        }
+      ],
+      "dialogue": [
+        {
+          "speaker": "nurse",
+          "text": "Hi there, welcome in. What brings you in today?"
+        },
+        {
+          "speaker": "user",
+          "text": "Hi, I've had a sore throat and a mild fever since yesterday."
+        },
+        {
+          "speaker": "nurse",
+          "text": "Okay, let's get your temperature checked. Do you have your insurance card with you?"
+        },
+        {
+          "speaker": "user",
+          "text": "Yes, here it is. Should I wait here or in the waiting room?"
+        },
+        {
+          "speaker": "nurse",
+          "text": "You can head back to the waiting room — the doctor will call your name shortly."
+        }
+      ]
+    },
+    {
+      "id": "banking",
+      "icon": "account_balance",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuD3nQY7lZ5oI2c9pXk8vR1jT4uW6eF0aG2hB5cD7eF9gH1iJ3kL5mN7oP9qR1sT3uV5wX7yZ9aB1cD3eF5gH7iJ9kL1mN3oP5",
+      "level": {
+        "en": "Advanced",
+        "ko": "고급",
+        "zh": "高级",
+        "es": "Avanzado"
+      },
+      "title": {
+        "en": "At the Bank",
+        "ko": "은행에서",
+        "zh": "在银行",
+        "es": "En el banco"
+      },
+      "description": {
+        "en": "Opening an account or handling everyday banking for the first time can involve unfamiliar paperwork and vocabulary. In this scenario, you will learn how to open a student checking account, ask about fees, and communicate confidently with a bank teller.",
+        "ko": "처음으로 계좌를 개설하거나 일상적인 은행 업무를 처리하는 것은 낯선 서류와 용어 때문에 어려울 수 있습니다. 이 시나리오에서는 학생용 입출금 계좌를 개설하고, 수수료에 대해 질문하며, 은행 창구 직원과 자신 있게 소통하는 방법을 배웁니다.",
+        "zh": "第一次开设账户或处理日常银行业务时，可能会遇到陌生的文件和词汇。在这个情景中，您将学习如何开设学生支票账户、询问相关费用，并自信地与银行柜员沟通。",
+        "es": "Abrir una cuenta o realizar trámites bancarios cotidianos por primera vez puede implicar papeleo y vocabulario desconocidos. En este escenario, aprenderás a abrir una cuenta corriente para estudiantes, preguntar sobre las tarifas y comunicarte con confianza con un cajero bancario."
+      },
+      "mentorNote": {
+        "en": "Many banks near campus offer fee-free student checking accounts — always ask if there's a student option before opening one. You'll usually need your passport, I-20 form, and proof of address.",
+        "ko": "학교 근처 많은 은행에서는 수수료가 없는 학생용 입출금 계좌를 제공합니다 — 계좌를 개설하기 전에 항상 학생 전용 옵션이 있는지 물어보세요. 보통 여권, I-20 서류, 그리고 주소 증명이 필요합니다.",
+        "zh": "校园附近的许多银行都提供免费的学生支票账户——开户前请务必询问是否有学生专属选项。通常您需要护照、I-20表格以及地址证明。",
+        "es": "Muchos bancos cerca del campus ofrecen cuentas corrientes estudiantiles sin comisiones — pregunta siempre si existe una opción para estudiantes antes de abrir una cuenta. Normalmente necesitarás tu pasaporte, el formulario I-20 y un comprobante de domicilio."
+      },
+      "vocabulary": [
+        {
+          "en": "checking account",
+          "pronunciation": "/ˈtʃekɪŋ əˈkaʊnt/",
+          "ko": "입출금 계좌",
+          "zh": "支票账户",
+          "es": "cuenta corriente"
+        },
+        {
+          "en": "deposit",
+          "pronunciation": "/dɪˈpɒzɪt/",
+          "ko": "입금",
+          "zh": "存款",
+          "es": "depósito"
+        },
+        {
+          "en": "withdrawal",
+          "pronunciation": "/wɪðˈdrɔːəl/",
+          "ko": "출금",
+          "zh": "取款",
+          "es": "retiro"
+        },
+        {
+          "en": "routing number",
+          "pronunciation": "/ˈruːtɪŋ ˈnʌmbər/",
+          "ko": "은행 코드 번호",
+          "zh": "汇款路由号",
+          "es": "número de ruta bancaria"
+        },
+        {
+          "en": "overdraft fee",
+          "pronunciation": "/ˈoʊvərdræft fiː/",
+          "ko": "초과 인출 수수료",
+          "zh": "透支费",
+          "es": "cargo por sobregiro"
+        }
+      ],
+      "dialogue": [
+        {
+          "speaker": "teller",
+          "text": "Good afternoon! How can I help you today?"
+        },
+        {
+          "speaker": "user",
+          "text": "Hi, I'd like to open a checking account. Do you have any options for students?"
+        },
+        {
+          "speaker": "teller",
+          "text": "We do — it has no monthly fee as long as you're enrolled full-time. Do you have your passport and student ID with you?"
+        },
+        {
+          "speaker": "user",
+          "text": "Yes, both right here. What else will I need?"
+        },
+        {
+          "speaker": "teller",
+          "text": "Just proof of address, like a dorm confirmation letter. Once I have those, we can get you set up in about fifteen minutes."
+        }
+      ]
+    }
+  ],
+  "speakerLabels": {
+    "staff": {
+      "en": "Staff Member",
+      "ko": "직원",
+      "zh": "店员",
+      "es": "Empleado"
+    },
+    "nurse": {
+      "en": "Nurse",
+      "ko": "간호사",
+      "zh": "护士",
+      "es": "Enfermera"
+    },
+    "teller": {
+      "en": "Bank Teller",
+      "ko": "은행원",
+      "zh": "银行柜员",
+      "es": "Cajero bancario"
+    },
+    "user": {
+      "en": "You",
+      "ko": "당신",
+      "zh": "你",
+      "es": "Tú"
+    }
+  }
+}
