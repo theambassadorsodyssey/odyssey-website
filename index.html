@@ -213,11 +213,11 @@ body {
 </div>
 <h3 class="font-label text-label-md uppercase tracking-widest mb-md opacity-80" data-i18n="word_of_day_title">Word of the Day</h3>
 <div class="mb-lg">
-<h2 class="font-display text-display-lg font-bold mb-xs" data-i18n="word_of_day_word">Abstract</h2>
-<p class="font-label text-label-sm italic mb-md">/ˈæb.strækt/</p>
-<p class="font-body text-body-md leading-relaxed opacity-90" data-i18n="word_of_day_desc">Existing in thought or as an idea but not having a physical or concrete existence.</p>
+<h2 id="wod-word" class="font-display text-display-lg font-bold mb-xs">Loading…</h2>
+<p id="wod-subject" class="font-label text-label-sm italic mb-md opacity-80">&nbsp;</p>
+<p id="wod-translation" class="font-body text-body-md leading-relaxed opacity-90">&nbsp;</p>
 </div>
-<button class="w-full py-3 bg-on-secondary text-secondary font-label rounded-lg flex items-center justify-center gap-xs hover:bg-secondary-fixed-dim transition-colors">
+<button id="wod-btn" class="w-full py-3 bg-on-secondary text-secondary font-label rounded-lg flex items-center justify-center gap-xs hover:bg-secondary-fixed-dim transition-colors">
                     <span data-i18n="word_of_day_btn">Add to Lexicon</span>
                     <span class="material-symbols-outlined text-sm">add_circle</span>
 </button>
@@ -450,6 +450,7 @@ function applyLanguage(lang) {
     }
   });
   updateButtonStyles(lang);
+  renderWordOfDay(lang);
 }
 
 langButtons.forEach(btn => {
@@ -460,9 +461,77 @@ langButtons.forEach(btn => {
   });
 });
 
+/* ---------- Word of the Day ---------- */
+
+const SUBJECT_FILES = [
+  { file: 'biology.html',      json: 'data/biology_vocab_4lang.json' },
+  { file: 'chemistry.html',    json: 'data/chemistry_vocab_4lang.json' },
+  { file: 'economics.html',    json: 'data/economics_vocab_4lang.json' },
+  { file: 'english.html',      json: 'data/english_vocab_4lang.json' },
+  { file: 'geometry.html',     json: 'data/geometry_vocab_4lang.json' },
+  { file: 'history.html',      json: 'data/history_vocab_4lang.json' },
+  { file: 'physics.html',      json: 'data/physics_vocab_4lang.json' },
+  { file: 'trigonometry.html', json: 'data/trigonometry_vocab_4lang.json' },
+];
+
+let allTerms = [];
+let wordOfDayReady = false;
+
+async function loadAllVocab() {
+  const results = await Promise.allSettled(
+    SUBJECT_FILES.map(s => fetch(s.json).then(r => r.json()))
+  );
+  results.forEach((res, i) => {
+    if (res.status === 'fulfilled') {
+      const data = res.value;
+      (data.categories || []).forEach(cat => {
+        (cat.terms || []).forEach(term => {
+          allTerms.push({ ...term, category: cat.category, file: SUBJECT_FILES[i].file });
+        });
+      });
+    } else {
+      console.error('Failed to load', SUBJECT_FILES[i].json, res.reason);
+    }
+  });
+  wordOfDayReady = allTerms.length > 0;
+}
+
+function getTodayIndex(len) {
+  // Days since epoch, in the user's local timezone, so it changes at local midnight.
+  const now = new Date();
+  const localMidnight = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const daysSinceEpoch = Math.floor(localMidnight.getTime() / 86400000);
+  return daysSinceEpoch % len;
+}
+
+function renderWordOfDay(lang) {
+  const wordEl = document.getElementById('wod-word');
+  const subjectEl = document.getElementById('wod-subject');
+  const translationEl = document.getElementById('wod-translation');
+  const btn = document.getElementById('wod-btn');
+  if (!wordEl) return;
+
+  if (!wordOfDayReady) {
+    wordEl.textContent = '...';
+    return;
+  }
+
+  const idx = getTodayIndex(allTerms.length);
+  const term = allTerms[idx];
+
+  wordEl.textContent = term.en;
+  subjectEl.textContent = (term.category && (term.category[lang] || term.category.en)) || '';
+  translationEl.textContent = (lang === 'en') ? '' : (term[lang] || '');
+
+  btn.onclick = () => {
+    window.location.href = `${term.file}?q=${encodeURIComponent(term.en)}`;
+  };
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const savedLang = localStorage.getItem('selectedLanguage') || 'en';
   applyLanguage(savedLang);
+  loadAllVocab().then(() => renderWordOfDay(savedLang));
 });
 </script>
 </body></html>
