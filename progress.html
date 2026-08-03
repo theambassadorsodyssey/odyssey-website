@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 
 <html class="dark" lang="en"><head>
+<script src="odyssey-core.js"></script>
+
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -54,25 +56,35 @@
 </header>
 <main class="relative z-10 max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop pt-32 pb-xl">
 <!-- Academic Stats Cards -->
-<div class="grid grid-cols-4 md:grid-cols-12 gap-gutter mb-lg">
-<div class="col-span-4 md:col-span-6 bg-surface border border-surface-variant p-md rounded-xl paper-shadow flex flex-col justify-between h-full">
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-gutter mb-lg">
+<div class="bg-surface border border-surface-variant p-md rounded-xl paper-shadow flex flex-col justify-between h-full">
 <div class="flex items-center justify-between mb-base">
-<span class="font-label-md text-label-md text-secondary uppercase tracking-wider" data-i18n="prog_words_label">Words Mastered</span>
-<span class="material-symbols-outlined text-primary" data-icon="auto_stories">auto_stories</span>
+<span class="font-label-md text-label-md text-secondary uppercase tracking-wider" data-i18n="prog_words_label">Words Saved</span>
+<span class="material-symbols-outlined text-primary">auto_stories</span>
 </div>
 <div>
-<div class="font-display-lg text-display-lg text-primary">1,428</div>
-<p class="font-body-md text-on-surface-variant mt-xs" data-i18n="prog_words_sub">Top 5% of Scholars</p>
+<div id="stat-words" class="font-display-lg text-display-lg text-primary">0</div>
+<p class="font-body-md text-on-surface-variant mt-xs" data-i18n="prog_words_sub">In My Lexicon</p>
 </div>
 </div>
-<div class="col-span-4 md:col-span-6 bg-surface border border-surface-variant p-md rounded-xl paper-shadow flex flex-col justify-between h-full">
+<div class="bg-surface border border-surface-variant p-md rounded-xl paper-shadow flex flex-col justify-between h-full">
+<div class="flex items-center justify-between mb-base">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-wider" data-i18n="prog_streak_label">Day Streak</span>
+<span class="material-symbols-outlined text-primary">local_fire_department</span>
+</div>
+<div>
+<div id="stat-streak" class="font-display-lg text-display-lg text-primary">0</div>
+<p class="font-body-md text-on-surface-variant mt-xs" data-i18n="prog_streak_sub">Consecutive days</p>
+</div>
+</div>
+<div class="bg-surface border border-surface-variant p-md rounded-xl paper-shadow flex flex-col justify-between h-full">
 <div class="flex items-center justify-between mb-base">
 <span class="font-label-md text-label-md text-secondary uppercase tracking-wider" data-i18n="prog_days_label">Days Active</span>
-<span class="material-symbols-outlined text-primary" data-icon="calendar_today">calendar_today</span>
+<span class="material-symbols-outlined text-primary">calendar_today</span>
 </div>
 <div>
-<div class="font-display-lg text-display-lg text-primary">84</div>
-<p class="font-body-md text-on-surface-variant mt-xs" data-i18n="prog_days_sub">Perfect 12-week streak</p>
+<div id="stat-days" class="font-display-lg text-display-lg text-primary">0</div>
+<p class="font-body-md text-on-surface-variant mt-xs" data-i18n="prog_days_sub">Total visits logged</p>
 </div>
 </div>
 </div>
@@ -95,7 +107,7 @@
 </div>
 <div class="p-md md:p-lg md:w-2/3 flex flex-col justify-center">
 <h3 class="font-headline-md text-headline-md text-on-surface mb-base" data-i18n="prog_share_title">Share My Weekly Progress</h3>
-<p class="font-body-md text-on-surface-variant mb-md max-w-xl" data-i18n="prog_share_desc">You've completed 15 lessons and learned 124 new academic phrases this week. Celebrate your scholarly journey with your network.</p>
+<p id="prog-share-desc" class="font-body-md text-on-surface-variant mb-md max-w-xl">You've saved 0 words and have a 0-day streak. Celebrate your scholarly journey with your network.</p>
 <div class="flex flex-wrap gap-md">
 <!-- Kakao -->
 <button id="btn-kakao" class="flex items-center gap-base px-md py-sm bg-[#FEE500] text-[#191919] font-label-md rounded-lg hover:opacity-90 transition-opacity active:scale-95">
@@ -122,51 +134,38 @@
 </div>
 </div>
 </section>
-<!-- Community Highlights -->
+<!-- My Lexicon Section -->
 <section>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-md" data-i18n="prog_community_title">Odyssey Scholars Near You</h3>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<!-- Community Card 1 -->
-<div class="bg-surface border border-surface-variant p-md rounded-xl paper-shadow flex gap-md">
-<div class="w-12 h-12 rounded-lg bg-secondary-container flex-shrink-0 flex items-center justify-center text-on-secondary-container">
-<span class="material-symbols-outlined" data-icon="groups">groups</span>
-</div>
-<div>
-<h4 class="font-label-md text-label-md text-on-surface" data-i18n="prog_comm1_title">London Study Circle</h4>
-<p class="font-label-sm text-label-sm text-on-surface-variant mb-base" data-i18n="prog_comm1_members">12 Members active today</p>
-<button class="text-primary font-label-md hover:underline flex items-center gap-xs">
-<span data-i18n="prog_comm1_btn">Join Discussion</span> <span class="material-symbols-outlined text-[16px]" data-icon="arrow_forward">arrow_forward</span>
+<div class="flex items-center justify-between mb-md">
+<h3 class="font-headline-md text-headline-md text-on-surface" data-i18n="prog_lexicon_title">My Lexicon</h3>
+<button id="btn-start-quiz" class="flex items-center gap-xs px-md py-sm bg-primary text-on-primary font-label-md rounded-lg hover:bg-primary-container transition-all">
+<span class="material-symbols-outlined text-[18px]">quiz</span>
+<span data-i18n="prog_review_btn">Start Review</span>
 </button>
 </div>
+<div id="lexicon-empty" class="hidden bg-surface border border-surface-variant border-dashed p-lg rounded-xl text-center">
+<span class="material-symbols-outlined text-4xl text-on-surface-variant opacity-50 mb-sm inline-block">bookmark_border</span>
+<p class="font-body-md text-on-surface-variant" data-i18n="prog_lexicon_empty">No saved words yet. Tap the bookmark icon next to any word to save it here.</p>
+<a href="subjects.html" class="inline-block mt-md text-primary font-label-md hover:underline" data-i18n="prog_lexicon_browse">Browse Subjects →</a>
 </div>
-<!-- Community Card 2 -->
-<div class="bg-surface border border-surface-variant p-md rounded-xl paper-shadow flex gap-md">
-<div class="w-12 h-12 rounded-lg bg-primary-container flex-shrink-0 flex items-center justify-center text-on-primary-container">
-<span class="material-symbols-outlined" data-icon="emoji_events">emoji_events</span>
-</div>
-<div>
-<h4 class="font-label-md text-label-md text-on-surface" data-i18n="prog_comm2_title">Vocabulary Challenge</h4>
-<p class="font-label-sm text-label-sm text-on-surface-variant mb-base" data-i18n="prog_comm2_sub">New global leaderboard open</p>
-<button class="text-primary font-label-md hover:underline flex items-center gap-xs">
-<span data-i18n="prog_comm2_btn">View Rankings</span> <span class="material-symbols-outlined text-[16px]" data-icon="arrow_forward">arrow_forward</span>
-</button>
-</div>
-</div>
-<!-- Community Card 3 -->
-<div class="bg-surface border border-surface-variant p-md rounded-xl paper-shadow flex gap-md">
-<div class="w-12 h-12 rounded-lg bg-tertiary-container flex-shrink-0 flex items-center justify-center text-on-tertiary-container">
-<span class="material-symbols-outlined" data-icon="psychology">psychology</span>
-</div>
-<div>
-<h4 class="font-label-md text-label-md text-on-surface" data-i18n="prog_comm3_title">Mentor Office Hours</h4>
-<p class="font-label-sm text-label-sm text-on-surface-variant mb-base" data-i18n="prog_comm3_sub">Live Q&amp;A starts in 2 hours</p>
-<button class="text-primary font-label-md hover:underline flex items-center gap-xs">
-<span data-i18n="prog_comm3_btn">Set Reminder</span> <span class="material-symbols-outlined text-[16px]" data-icon="arrow_forward">arrow_forward</span>
-</button>
-</div>
-</div>
-</div>
+<div id="lexicon-list" class="grid grid-cols-1 md:grid-cols-2 gap-md"></div>
 </section>
+
+<!-- Review Quiz Overlay -->
+<div id="quiz-overlay" class="hidden fixed inset-0 z-[80] bg-black/60 flex items-center justify-center p-md">
+<div class="bg-surface border border-surface-variant rounded-xl paper-shadow w-full max-w-md p-lg relative">
+<button id="btn-close-quiz" class="absolute top-md right-md material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">close</button>
+<p id="quiz-progress" class="font-label-sm text-label-sm text-on-surface-variant mb-sm uppercase tracking-wider">1 / 1</p>
+<div class="text-center py-lg">
+<h4 id="quiz-word" class="font-display-lg text-display-lg text-on-surface mb-md">word</h4>
+<p id="quiz-answer" class="font-body-lg text-body-lg text-primary hidden">answer</p>
+</div>
+<div class="flex gap-md">
+<button id="btn-show-answer" class="flex-1 py-3 bg-primary text-on-primary font-label rounded-lg hover:bg-primary-container transition-colors" data-i18n="prog_quiz_show">Show Answer</button>
+<button id="btn-next-card" class="hidden flex-1 py-3 border border-primary text-primary font-label rounded-lg hover:bg-primary-container hover:text-on-primary transition-colors" data-i18n="prog_quiz_next">Next</button>
+</div>
+</div>
+</div>
 </main>
 
 <!-- Toast Notification -->
@@ -200,12 +199,16 @@
 (function () {
   const SITE_URL = location.href.replace(/\/[^/]*$/, '/') + 'progress.html';
   const SHARE_TITLE = '🎓 Odyssey — 나의 학습 진도';
-  const SHARE_TEXT =
-    '📚 이번 주 학습 결과\n' +
-    '• 숙달 단어: 1,428개 (상위 5%)\n' +
-    '• 연속 학습: 84일 (12주 완주)\n' +
-    '• 완료 레슨: 15개 · 새 표현: 124개\n\n' +
-    'Odyssey와 함께 학문적 여정을 떠나보세요! 👉';
+
+  function buildShareText() {
+    const lang = localStorage.getItem('selectedLanguage') || 'en';
+    const t = (window.__progressTranslations && window.__progressTranslations[lang]) || {};
+    const tpl = t.prog_share_share_text || '📚 My Odyssey stats\n• Words saved: {words}\n• Day streak: {streak}\n• Days active: {days}';
+    const words = window.Odyssey ? Odyssey.getLexicon().length : 0;
+    const streak = window.Odyssey ? Odyssey.getStreak() : 0;
+    const days = window.Odyssey ? Odyssey.getDaysActive() : 0;
+    return tpl.replace('{words}', words).replace('{streak}', streak).replace('{days}', days);
+  }
 
   function showToast(msg) {
     const toast = document.getElementById('share-toast');
@@ -222,7 +225,7 @@
   async function doShare(platform) {
     const shareData = {
       title: SHARE_TITLE,
-      text: SHARE_TEXT,
+      text: buildShareText(),
       url: SITE_URL
     };
 
@@ -237,7 +240,7 @@
     }
 
     // 데스크톱 폴백: 플랫폼별 딥링크 또는 클립보드 복사
-    const encodedText = encodeURIComponent(SHARE_TEXT + '\n' + SITE_URL);
+    const encodedText = encodeURIComponent(buildShareText() + '\n' + SITE_URL);
     const encodedUrl  = encodeURIComponent(SITE_URL);
 
     let deepLink = null;
@@ -255,7 +258,7 @@
       window.open(deepLink, '_blank', 'noopener,noreferrer');
     } else {
       // 클립보드 복사
-      const copyText = SHARE_TEXT + '\n' + SITE_URL;
+      const copyText = buildShareText() + '\n' + SITE_URL;
       try {
         await navigator.clipboard.writeText(copyText);
         showToast('링크가 복사되었습니다 ✓');
@@ -295,22 +298,21 @@ const translations = {
     prog_words_sub: "Top 5% of Scholars",
     prog_days_label: "Days Active",
     prog_days_sub: "Perfect 12-week streak",
+    prog_streak_label: "Day Streak",
+    prog_streak_sub: "Consecutive days",
     prog_share_title: "Share My Weekly Progress",
-    prog_share_desc: "You've completed 15 lessons and learned 124 new academic phrases this week. Celebrate your scholarly journey with your network.",
     prog_kakao: "KakaoTalk",
     prog_wechat: "WeChat",
     prog_whatsapp: "WhatsApp",
     prog_more_options: "More Options",
-    prog_community_title: "Odyssey Scholars Near You",
-    prog_comm1_title: "London Study Circle",
-    prog_comm1_members: "12 Members active today",
-    prog_comm1_btn: "Join Discussion",
-    prog_comm2_title: "Vocabulary Challenge",
-    prog_comm2_sub: "New global leaderboard open",
-    prog_comm2_btn: "View Rankings",
-    prog_comm3_title: "Mentor Office Hours",
-    prog_comm3_sub: "Live Q&A starts in 2 hours",
-    prog_comm3_btn: "Set Reminder"
+    prog_lexicon_title: "My Lexicon",
+    prog_review_btn: "Start Review",
+    prog_lexicon_empty: "No saved words yet. Tap the bookmark icon next to any word to save it here.",
+    prog_lexicon_browse: "Browse Subjects \u2192",
+    prog_quiz_show: "Show Answer",
+    prog_quiz_next: "Next",
+    prog_share_share_text: "\ud83d\udcda My Odyssey learning stats\n\u2022 Words saved: {words}\n\u2022 Day streak: {streak}\n\u2022 Days active: {days}\n\nJoin me on Odyssey! \ud83d\udc49",
+    prog_share_desc_tpl: "You've saved {words} words and have a {streak}-day streak. Celebrate your scholarly journey with your network."
   },
   ko: {
     menu_home: "홈",
@@ -322,22 +324,21 @@ const translations = {
     prog_words_sub: "상위 5% 학자",
     prog_days_label: "학습 일수",
     prog_days_sub: "12주 연속 완주",
+    prog_streak_label: "연속 학습일",
+    prog_streak_sub: "연속 방문일",
     prog_share_title: "주간 학습 진도 공유",
-    prog_share_desc: "이번 주에 15개의 레슨을 완료하고 124개의 새로운 학술 표현을 배웠습니다. 학문적 여정을 네트워크와 함께 축하하세요.",
     prog_kakao: "카카오톡",
     prog_wechat: "위챗",
     prog_whatsapp: "왓츠앱",
     prog_more_options: "더 보기",
-    prog_community_title: "내 주변의 오디세이 학자들",
-    prog_comm1_title: "런던 스터디 허브",
-    prog_comm1_members: "오늘 활동 중인 회원 12명",
-    prog_comm1_btn: "토론 연겨보기",
-    prog_comm2_title: "어휘 첼린지",
-    prog_comm2_sub: "새 글로벌 리더보드 개혀",
-    prog_comm2_btn: "순위로이더보기",
-    prog_comm3_title: "멘토 오피스 아워",
-    prog_comm3_sub: "2시간 후 라이브 Q&A 시작",
-    prog_comm3_btn: "알림 설정"
+    prog_lexicon_title: "내 단어장",
+    prog_review_btn: "복습 시작",
+    prog_lexicon_empty: "아직 저장된 단어가 없어요. 단어 옆 책갈피 아이콘을 눌러 저장해보세요.",
+    prog_lexicon_browse: "과목 둘러보기 \u2192",
+    prog_quiz_show: "정답 보기",
+    prog_quiz_next: "다음",
+    prog_share_share_text: "\ud83d\udcda 나의 Odyssey 학습 기록\n\u2022 저장한 단어: {words}개\n\u2022 연속 학습: {streak}일\n\u2022 총 방문일: {days}일\n\nOdyssey와 함께 학문적 여정을 떠나보세요! \ud83d\udc49",
+    prog_share_desc_tpl: "저장한 단어 {words}개, 연속 학습 {streak}일을 기록했습니다. 학문적 여정을 네트워크와 함께 축하하세요."
   },
   zh: {
     menu_home: "首页",
@@ -349,22 +350,21 @@ const translations = {
     prog_words_sub: "前5%学者",
     prog_days_label: "学习天数",
     prog_days_sub: "12周连续完美",
+    prog_streak_label: "连续学习天数",
+    prog_streak_sub: "连续访问天数",
     prog_share_title: "分享我的周学习进度",
-    prog_share_desc: "本周您完成了15课并学了124个新学术短语。与您的网络分享您的学术之旅。",
     prog_kakao: "KakaoTalk",
     prog_wechat: "微信",
     prog_whatsapp: "WhatsApp",
     prog_more_options: "更多选项",
-    prog_community_title: "您附近的奥得赛学者",
-    prog_comm1_title: "伦敦学习小组",
-    prog_comm1_members: "今日12位成员在线",
-    prog_comm1_btn: "加入讨论",
-    prog_comm2_title: "词汇挑战",
-    prog_comm2_sub: "新全球排行榜已开放",
-    prog_comm2_btn: "查看排名",
-    prog_comm3_title: "导师办公时间",
-    prog_comm3_sub: "2小时后开始直播问答",
-    prog_comm3_btn: "设置提醒"
+    prog_lexicon_title: "我的词汇表",
+    prog_review_btn: "开始复习",
+    prog_lexicon_empty: "还没有保存的单词。点击单词旁的书签图标即可保存。",
+    prog_lexicon_browse: "浏览学科 \u2192",
+    prog_quiz_show: "显示答案",
+    prog_quiz_next: "下一个",
+    prog_share_share_text: "\ud83d\udcda 我的 Odyssey 学习记录\n\u2022 已保存单词：{words}\n\u2022 连续学习：{streak}天\n\u2022 活跃天数：{days}天\n\n快来加入 Odyssey 吧！\ud83d\udc49",
+    prog_share_desc_tpl: "您已保存 {words} 个单词，连续学习 {streak} 天。与您的网络分享您的学术之旅。"
   },
   es: {
     menu_home: "Inicio",
@@ -376,24 +376,25 @@ const translations = {
     prog_words_sub: "Top 5% de los estudiantes",
     prog_days_label: "Días activo",
     prog_days_sub: "Racha perfecta de 12 semanas",
+    prog_streak_label: "Racha de días",
+    prog_streak_sub: "Días consecutivos",
     prog_share_title: "Compartir mi progreso semanal",
-    prog_share_desc: "Completaste 15 lecciones y aprendiste 124 frases académicas nuevas esta semana. Celebra tu viaje académico con tu red.",
     prog_kakao: "KakaoTalk",
     prog_wechat: "WeChat",
     prog_whatsapp: "WhatsApp",
     prog_more_options: "Más opciones",
-    prog_community_title: "Estudiantes de Odyssey cerca de ti",
-    prog_comm1_title: "Círculo de estudio de Londres",
-    prog_comm1_members: "12 miembros activos hoy",
-    prog_comm1_btn: "Unirse a la discusión",
-    prog_comm2_title: "Desafío de vocabulario",
-    prog_comm2_sub: "Nueva tabla de clasificación global abierta",
-    prog_comm2_btn: "Ver clasificaciones",
-    prog_comm3_title: "Horas de oficina del mentor",
-    prog_comm3_sub: "Preguntas y respuestas en vivo comienzan en 2 horas",
-    prog_comm3_btn: "Establecer recordatorio"
+    prog_lexicon_title: "Mi Lexicón",
+    prog_review_btn: "Iniciar repaso",
+    prog_lexicon_empty: "Aún no hay palabras guardadas. Toca el icono de marcador junto a cualquier palabra para guardarla aquí.",
+    prog_lexicon_browse: "Explorar asignaturas \u2192",
+    prog_quiz_show: "Mostrar respuesta",
+    prog_quiz_next: "Siguiente",
+    prog_share_share_text: "\ud83d\udcda Mis estadísticas de aprendizaje en Odyssey\n\u2022 Palabras guardadas: {words}\n\u2022 Racha de días: {streak}\n\u2022 Días activo: {days}\n\n\u00a1Únete a Odyssey! \ud83d\udc49",
+    prog_share_desc_tpl: "Has guardado {words} palabras y tienes una racha de {streak} días. Celebra tu viaje académico con tu red."
   }
 };
+
+window.__progressTranslations = translations;
 
 const langButtons = document.querySelectorAll('#lang-buttons button');
 const defaultClass = "flex items-center gap-xs px-md py-base border-2 border-outline-variant text-secondary font-label rounded-full hover:bg-secondary-container hover:border-secondary-container transition-all";
@@ -425,6 +426,8 @@ function applyLanguage(lang) {
     if (t[key]) el.textContent = t[key];
   });
   updateButtonStyles(lang);
+  renderStats();
+  renderLexiconList(lang);
 }
 
 langButtons.forEach(btn => {
@@ -433,6 +436,115 @@ langButtons.forEach(btn => {
     localStorage.setItem('selectedLanguage', targetLang);
     applyLanguage(targetLang);
   });
+});
+
+/* ---------- Real stats & My Lexicon ---------- */
+
+function renderStats() {
+  if (!window.Odyssey) return;
+  const wordsEl = document.getElementById('stat-words');
+  const streakEl = document.getElementById('stat-streak');
+  const daysEl = document.getElementById('stat-days');
+  const words = Odyssey.getLexicon().length;
+  const streak = Odyssey.getStreak();
+  const days = Odyssey.getDaysActive();
+  if (wordsEl) wordsEl.textContent = words;
+  if (streakEl) streakEl.textContent = streak;
+  if (daysEl) daysEl.textContent = days;
+
+  const shareDescEl = document.getElementById('prog-share-desc');
+  const lang = localStorage.getItem('selectedLanguage') || 'en';
+  const t = translations[lang] || translations.en;
+  if (shareDescEl && t.prog_share_desc_tpl) {
+    shareDescEl.textContent = t.prog_share_desc_tpl
+      .replace('{words}', words)
+      .replace('{streak}', streak);
+  }
+}
+
+function renderLexiconList(lang) {
+  if (!window.Odyssey) return;
+  const list = Odyssey.getLexicon();
+  const listEl = document.getElementById('lexicon-list');
+  const emptyEl = document.getElementById('lexicon-empty');
+  if (!listEl) return;
+
+  emptyEl.classList.toggle('hidden', list.length > 0);
+  listEl.classList.toggle('hidden', list.length === 0);
+
+  listEl.innerHTML = list.map(w => {
+    const translation = (lang !== 'en' && w[lang]) ? w[lang] : '';
+    const subjectLabel = Odyssey.subjectLabel(w.file, lang);
+    return `
+      <div class="bg-surface border border-surface-variant rounded-lg p-md flex items-center justify-between gap-md">
+        <div class="min-w-0">
+          <p class="font-label-md text-label-md text-on-surface truncate">${w.en}</p>
+          ${translation ? `<p class="font-body-md text-primary truncate">${translation}</p>` : ''}
+          <a href="${w.file}?q=${encodeURIComponent(w.en)}&lang=${lang}" class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors">${subjectLabel}</a>
+        </div>
+        <button class="remove-word-btn material-symbols-outlined text-on-surface-variant hover:text-error transition-colors shrink-0" data-en="${w.en.replace(/"/g, '&quot;')}" title="Remove">delete</button>
+      </div>
+    `;
+  }).join('');
+
+  listEl.querySelectorAll('.remove-word-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      Odyssey.removeWord(btn.dataset.en);
+      renderStats();
+      renderLexiconList(localStorage.getItem('selectedLanguage') || 'en');
+    });
+  });
+}
+
+/* ---------- Review quiz ---------- */
+
+let quizQueue = [];
+let quizIndex = 0;
+
+function startQuiz() {
+  if (!window.Odyssey) return;
+  quizQueue = Odyssey.getLexicon().slice();
+  if (!quizQueue.length) return;
+  // Shuffle
+  for (let i = quizQueue.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [quizQueue[i], quizQueue[j]] = [quizQueue[j], quizQueue[i]];
+  }
+  quizIndex = 0;
+  document.getElementById('quiz-overlay').classList.remove('hidden');
+  showQuizCard();
+}
+
+function showQuizCard() {
+  const lang = localStorage.getItem('selectedLanguage') || 'en';
+  const word = quizQueue[quizIndex];
+  document.getElementById('quiz-progress').textContent = `${quizIndex + 1} / ${quizQueue.length}`;
+  document.getElementById('quiz-word').textContent = word.en;
+  const answerEl = document.getElementById('quiz-answer');
+  answerEl.textContent = (lang !== 'en' && word[lang]) ? word[lang] : word.en;
+  answerEl.classList.add('hidden');
+  document.getElementById('btn-show-answer').classList.remove('hidden');
+  document.getElementById('btn-next-card').classList.add('hidden');
+}
+
+function closeQuiz() {
+  document.getElementById('quiz-overlay').classList.add('hidden');
+}
+
+document.getElementById('btn-start-quiz').addEventListener('click', startQuiz);
+document.getElementById('btn-close-quiz').addEventListener('click', closeQuiz);
+document.getElementById('btn-show-answer').addEventListener('click', () => {
+  document.getElementById('quiz-answer').classList.remove('hidden');
+  document.getElementById('btn-show-answer').classList.add('hidden');
+  document.getElementById('btn-next-card').classList.remove('hidden');
+});
+document.getElementById('btn-next-card').addEventListener('click', () => {
+  quizIndex++;
+  if (quizIndex >= quizQueue.length) {
+    closeQuiz();
+    return;
+  }
+  showQuizCard();
 });
 
 document.addEventListener('DOMContentLoaded', () => {

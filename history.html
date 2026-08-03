@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html class="dark" lang="en">
 <head>
+<script src="odyssey-core.js"></script>
+
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>U.S. History Vocabulary | Odyssey</title>
@@ -354,25 +356,38 @@ function renderAccordion(query = '') {
 
   accordionEl.innerHTML = filtered.map(c => {
     const isOpen = forceOpen || openCategories.has(c.catIndex);
-    const rows = c.terms.map(t => isEn ? `
-      <div class="term-row px-4 py-2.5 rounded-lg items-baseline cursor-default transition-colors">
+    const rows = c.terms.map(t => {
+      const saved = window.Odyssey && Odyssey.isSaved(t.en);
+      const safeEn = String(t.en).replace(/"/g, '&quot;');
+      const btn = `<button class="lexicon-btn material-symbols-outlined text-lg shrink-0 transition-opacity ${saved ? 'text-primary' : 'text-on-surface-variant opacity-40 hover:opacity-100'}" data-en="${safeEn}" title="Save to My Lexicon" style="font-variation-settings:'FILL' ${saved ? 1 : 0}">bookmark</button>`;
+      return isEn ? `
+      <div class="term-row flex items-center justify-between gap-3 px-4 py-2.5 rounded-lg transition-colors">
         <span class="font-body text-body-md text-on-surface">${highlight(t.en, query)}</span>
+        ${btn}
       </div>
     ` : `
-      <div class="term-row grid grid-cols-2 gap-3 px-4 py-2.5 rounded-lg items-baseline cursor-default transition-colors">
-        <span class="font-body text-body-md text-on-surface">${highlight(t.en, query)}</span>
-        <span class="font-body text-body-md text-primary">${highlight(t[currentLang], query)}</span>
+      <div class="term-row flex items-center justify-between gap-3 px-4 py-2.5 rounded-lg transition-colors">
+        <div class="grid grid-cols-2 gap-3 flex-1">
+          <span class="font-body text-body-md text-on-surface">${highlight(t.en, query)}</span>
+          <span class="font-body text-body-md text-primary">${highlight(t[currentLang], query)}</span>
+        </div>
+        ${btn}
       </div>
-    `).join('');
+    `;
+    }).join('');
 
     const headerHtml = isEn ? `
-      <div class="px-4 pb-xs pt-xs border-t border-outline-variant">
+      <div class="flex items-center justify-between gap-3 px-4 pb-xs pt-xs border-t border-outline-variant">
         <span class="font-label text-label-sm text-on-surface-variant uppercase tracking-wider">English</span>
+        <span class="w-6 shrink-0"></span>
       </div>
     ` : `
-      <div class="grid grid-cols-2 gap-3 px-4 pb-xs pt-xs border-t border-outline-variant">
-        <span class="font-label text-label-sm text-on-surface-variant uppercase tracking-wider">English</span>
-        <span class="font-label text-label-sm text-on-surface-variant uppercase tracking-wider">${nativeName}</span>
+      <div class="flex items-center justify-between gap-3 px-4 pb-xs pt-xs border-t border-outline-variant">
+        <div class="grid grid-cols-2 gap-3 flex-1">
+          <span class="font-label text-label-sm text-on-surface-variant uppercase tracking-wider">English</span>
+          <span class="font-label text-label-sm text-on-surface-variant uppercase tracking-wider">${nativeName}</span>
+        </div>
+        <span class="w-6 shrink-0"></span>
       </div>
     `;
 
@@ -408,6 +423,29 @@ function renderAccordion(query = '') {
       if (openCategories.has(idx)) openCategories.delete(idx);
       else openCategories.add(idx);
       renderAccordion(searchInput.value);
+    });
+  });
+
+  accordionEl.querySelectorAll('.lexicon-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (!window.Odyssey) return;
+      const en = btn.dataset.en;
+      let term = null;
+      vocabData.categories.some(c => {
+        const found = c.terms.find(t => t.en === en);
+        if (found) { term = found; return true; }
+        return false;
+      });
+      if (!term) return;
+      const nowSaved = Odyssey.toggleWord({
+        en: term.en, ko: term.ko, zh: term.zh, es: term.es,
+        file: location.pathname.split('/').pop() || ''
+      });
+      btn.classList.toggle('text-primary', nowSaved);
+      btn.classList.toggle('text-on-surface-variant', !nowSaved);
+      btn.classList.toggle('opacity-40', !nowSaved);
+      btn.style.fontVariationSettings = "'FILL' " + (nowSaved ? 1 : 0);
     });
   });
 }

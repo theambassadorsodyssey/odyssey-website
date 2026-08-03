@@ -1,4 +1,6 @@
 <!DOCTYPE html><html class="dark" lang="en"><head>
+<script src="odyssey-core.js"></script>
+
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Odyssey - Scholarly Dashboard</title>
@@ -221,7 +223,7 @@ body {
 <h3 class="font-label text-label-md uppercase tracking-widest mb-md opacity-80" data-i18n="word_of_day_title">Word of the Day</h3>
 <div class="mb-lg">
 <h2 id="wod-word" class="font-display text-display-lg font-bold mb-xs">Loading…</h2>
-<p id="wod-subject" class="font-label text-label-sm italic mb-md opacity-80">&nbsp;</p>
+<a id="wod-subject" href="subjects.html" class="font-label text-label-sm italic mb-md opacity-80 underline decoration-dotted hover:opacity-100 inline-block">&nbsp;</a>
 <p id="wod-translation" class="font-body text-body-md leading-relaxed opacity-90">&nbsp;</p>
 </div>
 <button id="wod-btn" class="w-full py-3 bg-on-secondary text-secondary font-label rounded-lg flex items-center justify-center gap-xs hover:bg-secondary-fixed-dim transition-colors">
@@ -313,6 +315,7 @@ const translations = {
     word_of_day_word: "Abstract",
     word_of_day_desc: "Existing in thought or as an idea but not having a physical or concrete existence.",
     word_of_day_btn: "Add to Lexicon",
+    word_of_day_btn_saved: "Saved to Lexicon",
     daily_life_title: "Daily Life",
     daily_life_subtitle: "Supermarkets, Clinics, Banking",
     daily_life_desc: "Practice essential communication for your new environment through realistic simulations.",
@@ -346,6 +349,7 @@ const translations = {
     word_of_day_word: "추상적인 (Abstract)",
     word_of_day_desc: "생각이나 관념으로 존재하지만 물리적이거나 구체적인 형태로는 존재하지 않는 것.",
     word_of_day_btn: "어휘장에 추가",
+    word_of_day_btn_saved: "어휘장에 저장됨",
     daily_life_title: "일상 생활",
     daily_life_subtitle: "마트, 병원, 은행",
     daily_life_desc: "실감 나는 시뮬레이션을 통해 새로운 환경에 필요한 필수 회화를 연습해 보세요.",
@@ -379,6 +383,7 @@ const translations = {
     word_of_day_word: "抽象 (Abstract)",
     word_of_day_desc: "存在于思想或作为一种想法，但没有物理或具体的存在。",
     word_of_day_btn: "添加到词汇表",
+    word_of_day_btn_saved: "已保存到词汇表",
     daily_life_title: "日常生活",
     daily_life_subtitle: "超市、诊所、银行",
     daily_life_desc: "通过逼真场景模拟，在新环境中练习必不可少的沟通方式。",
@@ -412,6 +417,7 @@ const translations = {
     word_of_day_word: "Abstracto (Abstract)",
     word_of_day_desc: "Existente en el pensamiento o como una idea pero que no tiene una existencia física o concreta.",
     word_of_day_btn: "Añadir al lexicón",
+    word_of_day_btn_saved: "Guardado en el lexicón",
     daily_life_title: "Vida diaria",
     daily_life_subtitle: "Supermercados, clínicas, banca",
     daily_life_desc: "Practica la comunicación esencial para tu nuevo entorno a través de simulaciones realistas.",
@@ -531,10 +537,32 @@ function renderWordOfDay(lang) {
   subjectEl.textContent = (term.category && (term.category[lang] || term.category.en)) || '';
   translationEl.textContent = (lang === 'en') ? '' : (term[lang] || '');
 
+  const qText = (lang !== 'en' && term[lang]) ? term[lang] : term.en;
+  subjectEl.href = `${term.file}?q=${encodeURIComponent(qText)}&lang=${lang}`;
+
+  updateWodButton(term, lang);
   btn.onclick = () => {
-    const qText = (lang !== 'en' && term[lang]) ? term[lang] : term.en;
-    window.location.href = `${term.file}?q=${encodeURIComponent(qText)}&lang=${lang}`;
+    if (!window.Odyssey) return;
+    const nowSaved = Odyssey.toggleWord({
+      en: term.en, ko: term.ko, zh: term.zh, es: term.es, file: term.file
+    });
+    updateWodButton(term, lang, nowSaved);
   };
+}
+
+function updateWodButton(term, lang, forcedState) {
+  const btn = document.getElementById('wod-btn');
+  if (!btn || !window.Odyssey) return;
+  const saved = (typeof forcedState === 'boolean') ? forcedState : Odyssey.isSaved(term.en);
+  const labelEl = btn.querySelector('span[data-i18n]');
+  const iconEl = btn.querySelector('.material-symbols-outlined');
+  const t = (translations[lang] || translations.en);
+  if (labelEl) labelEl.textContent = saved ? (t.word_of_day_btn_saved || 'Saved') : (t.word_of_day_btn || 'Add to Lexicon');
+  if (iconEl) {
+    iconEl.textContent = saved ? 'check_circle' : 'add_circle';
+    iconEl.style.fontVariationSettings = "'FILL' " + (saved ? 1 : 0);
+  }
+  btn.classList.toggle('opacity-80', saved);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
