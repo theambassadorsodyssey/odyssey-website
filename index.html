@@ -258,9 +258,9 @@ body {
 </div>
 <div class="p-md">
 <p class="font-body text-body-md text-on-surface-variant mb-md" data-i18n="prep_school_desc">Get ahead for the upcoming semester with curated prep modules and advanced vocabulary.</p>
-<button class="px-md py-base border-2 border-primary text-primary font-label rounded-lg hover:bg-primary hover:text-on-primary transition-all" data-i18n="prep_school_btn">
+<a href="school-life.html" class="inline-block px-md py-base border-2 border-primary text-primary font-label rounded-lg hover:bg-primary hover:text-on-primary transition-all" data-i18n="prep_school_btn">
                         Open Hubs
-                    </button>
+                    </a>
 </div>
 </div>
 <!-- Continue Learning Card -->
@@ -479,6 +479,7 @@ const SUBJECT_FILES = [
   { file: 'history.html',      json: 'data/history_vocab_4lang.json' },
   { file: 'physics.html',      json: 'data/physics_vocab_4lang.json' },
   { file: 'trigonometry.html', json: 'data/trigonometry_vocab_4lang.json' },
+  { file: 'school-life.html',  json: 'data/school_life_vocab_4lang.json' },
 ];
 
 let allTerms = [];
@@ -552,7 +553,8 @@ document.addEventListener('DOMContentLoaded', () => {
     { file: 'geometry.html',     json: 'data/geometry_vocab_4lang.json',     names: { en: 'Geometry',          ko: '기하학',      zh: '几何学',   es: 'Geometría' } },
     { file: 'history.html',      json: 'data/history_vocab_4lang.json',      names: { en: 'U.S. History',      ko: '미국사',      zh: '美国历史', es: 'Historia de EE. UU.' } },
     { file: 'physics.html',      json: 'data/physics_vocab_4lang.json',      names: { en: 'Physics',           ko: '물리학',      zh: '物理学',   es: 'Física' } },
-    { file: 'trigonometry.html', json: 'data/trigonometry_vocab_4lang.json', names: { en: 'Trigonometry',      ko: '삼각함수',    zh: '三角函数', es: 'Trigonometría' } }
+    { file: 'trigonometry.html', json: 'data/trigonometry_vocab_4lang.json', names: { en: 'Trigonometry',      ko: '삼각함수',    zh: '三角函数', es: 'Trigonometría' } },
+    { file: 'school-life.html',  json: 'data/school_life_vocab_4lang.json',  names: { en: 'School Life',       ko: '학교·기숙사 생활', zh: '校园生活', es: 'Vida escolar' } }
   ];
   var GS_LANGS = ['en', 'ko', 'zh', 'es'];
 

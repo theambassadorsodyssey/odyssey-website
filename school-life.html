@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Biology Vocabulary | Odyssey</title>
-<meta name="description" content="Explore 75 terms across core biology topics — cell biology, genetics, evolution, ecology, and human body systems.">
+<title>School Life Vocabulary | Odyssey</title>
+<meta name="description" content="Explore 42 terms across classroom life, boarding life, and academic writing.">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Literata:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
@@ -200,10 +200,10 @@ mark {
     <!-- Breadcrumb + Title -->
     <div class="flex items-center justify-between gap-3 mb-sm">
       <div>
-        <p class="font-label text-label-sm text-primary uppercase tracking-widest mb-xs">Academic Subject Hub</p>
-        <h1 class="font-display text-headline-md md:text-headline-lg text-on-background leading-tight">Biology Vocabulary</h1>
+        <p class="font-label text-label-sm text-primary uppercase tracking-widest mb-xs">Campus &amp; Boarding Life Hub</p>
+        <h1 class="font-display text-headline-md md:text-headline-lg text-on-background leading-tight">School Life Vocabulary</h1>
       </div>
-      <span class="material-symbols-outlined text-primary text-4xl hidden sm:block" style="font-variation-settings:'FILL' 0,'wght' 300;">biotech</span>
+      <span class="material-symbols-outlined text-primary text-4xl hidden sm:block" style="font-variation-settings:'FILL' 0,'wght' 300;">apartment</span>
     </div>
 
     <!-- Language Switcher -->
@@ -235,7 +235,7 @@ mark {
 
 <!-- Footer -->
 <footer class="relative z-10 max-w-[900px] mx-auto px-margin-mobile md:px-margin-desktop pb-lg pt-sm text-center">
-  <p class="font-label text-label-sm text-on-surface-variant/60">75 terms across core biology topics — cell biology, genetics, evolution, ecology, and human body systems.</p>
+  <p class="font-label text-label-sm text-on-surface-variant/60">42 terms across classroom life, boarding life, and academic writing.</p>
 </footer>
 
 <!-- Bottom Navigation (Mobile Only) -->
@@ -424,7 +424,7 @@ clearBtn.addEventListener('click', () => {
   searchInput.focus();
 });
 
-fetch('data/biology_vocab_4lang.json')
+fetch('data/school_life_vocab_4lang.json')
   .then(r => r.json())
   .then(data => {
     vocabData = data;
@@ -450,8 +450,8 @@ fetch('data/biology_vocab_4lang.json')
     accordionEl.innerHTML = `
       <div class="card-paper rounded-xl p-md text-center">
         <span class="material-symbols-outlined text-error text-4xl block mb-sm">error_outline</span>
-        <p class="font-body text-body-md text-error">Could not load biology vocabulary data.</p>
-        <p class="font-label text-label-sm text-on-surface-variant mt-xs">Check that data/biology_vocab_4lang.json exists.</p>
+        <p class="font-body text-body-md text-error">Could not load school life vocabulary data.</p>
+        <p class="font-label text-label-sm text-on-surface-variant mt-xs">Check that data/school_life_vocab_4lang.json exists.</p>
       </div>`;
     console.error(err);
   });
