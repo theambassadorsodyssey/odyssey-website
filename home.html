@@ -485,7 +485,6 @@ const SUBJECT_FILES = [
   { file: 'history.html',      json: 'data/history_vocab_4lang.json' },
   { file: 'physics.html',      json: 'data/physics_vocab_4lang.json' },
   { file: 'trigonometry.html', json: 'data/trigonometry_vocab_4lang.json' },
-  { file: 'school-life.html',  json: 'data/school_life_vocab_4lang.json' },
 ];
 
 let allTerms = [];
@@ -534,20 +533,32 @@ function renderWordOfDay(lang) {
   const term = allTerms[idx];
 
   wordEl.textContent = term.en;
-  subjectEl.textContent = (term.category && (term.category[lang] || term.category.en)) || '';
-  translationEl.textContent = (lang === 'en') ? '' : (term[lang] || '');
+  
+  const subjectName = window.Odyssey ? Odyssey.subjectLabel(term.file, 'en') : '';
+  const categoryName = (term.category && term.category.en) || '';
+  if (subjectEl) {
+    subjectEl.textContent = categoryName ? `${subjectName} · ${categoryName}` : subjectName;
+  }
+  
+  if (translationEl) {
+    translationEl.textContent = (lang === 'en') ? '' : (term[lang] || '');
+  }
 
   const qText = (lang !== 'en' && term[lang]) ? term[lang] : term.en;
-  subjectEl.href = `${term.file}?q=${encodeURIComponent(qText)}&lang=${lang}`;
+  if (subjectEl) {
+    subjectEl.href = `${term.file}?q=${encodeURIComponent(qText)}&lang=${lang}`;
+  }
 
   updateWodButton(term, lang);
-  btn.onclick = () => {
-    if (!window.Odyssey) return;
-    const nowSaved = Odyssey.toggleWord({
-      en: term.en, ko: term.ko, zh: term.zh, es: term.es, file: term.file
-    });
-    updateWodButton(term, lang, nowSaved);
-  };
+  if (btn) {
+    btn.onclick = () => {
+      if (!window.Odyssey) return;
+      const nowSaved = Odyssey.toggleWord({
+        en: term.en, ko: term.ko, zh: term.zh, es: term.es, file: term.file
+      });
+      updateWodButton(term, lang, nowSaved);
+    };
+  }
 }
 
 function updateWodButton(term, lang, forcedState) {
