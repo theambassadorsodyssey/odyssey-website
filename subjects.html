@@ -45,17 +45,19 @@
 <a class="font-headline text-headline-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="scenario.html">Lessons</a>
 <a class="font-headline text-headline-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="progress.html">Progress</a>
 </div>
-<div class="relative hidden md:block" id="global-search-wrap">
-<div class="relative">
+<div class="absolute inset-0 md:inset-auto md:relative bg-surface-container md:bg-transparent px-margin-mobile md:px-0 py-base md:py-0 hidden md:flex items-center z-50" id="global-search-wrap">
+<div class="relative w-full md:w-auto flex items-center">
 <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg pointer-events-none">search</span>
-<input id="globalSearchInput" type="text" placeholder="Search all terms..." autocomplete="off" class="w-56 focus:w-72 transition-all duration-200 bg-surface-container-high border border-outline-variant rounded-full pl-9 pr-4 py-2 text-sm font-body text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:border-primary">
+<input id="globalSearchInput" type="text" placeholder="Search all terms..." autocomplete="off" class="w-full md:w-56 md:focus:w-72 transition-all duration-200 bg-surface-container-high border border-outline-variant rounded-full pl-9 pr-10 md:pr-4 py-2 text-sm font-body text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:border-primary">
+<button onclick="document.getElementById('global-search-wrap').classList.add('hidden')" class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg md:hidden">close</button>
 </div>
-<div id="globalSearchResults" class="hidden absolute top-full mt-2 right-0 w-80 max-h-96 overflow-y-auto bg-surface-container-high border border-outline-variant rounded-xl shadow-lg z-50"></div>
+<div id="globalSearchResults" class="hidden absolute top-full mt-2 left-margin-mobile right-margin-mobile md:left-auto md:right-0 w-[calc(100vw-2*var(--margin-mobile))] md:w-80 max-h-96 overflow-y-auto bg-surface-container-high border border-outline-variant rounded-xl shadow-lg z-50"></div>
 </div>
 <div class="flex items-center gap-md">
+<button id="globalSearchToggleBtn" class="material-symbols-outlined text-primary text-2xl md:hidden">search</button>
 <button class="material-symbols-outlined text-primary text-2xl">settings</button>
 <div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center overflow-hidden border border-outline-variant">
-<img alt="Student Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAA9Ap9f_D4vEm_CCz7HTWU28KUw3-Or8h4PQsEgD7-fRkIQCkVhmtAulOzLRt8wFXLQOGM1u6EV4DuVM8S208OMbQLl2WIPTTLaGCtHOpe3E6FkpVhlOrjBV07wH_5J0k_rdZXuko2E_Mp3pW4jejwdRz2v3SEkO1Lvnsqn5JbDHT_bjf5uMYjR-OAvn2BWcczSdAmuB3vKhLJn6Hb1wv1iiSN9zIEUEhNGi7211jgg3jUU9zgCTMM1v42pmDUY28k8I3XRecDEbI"/>
+<img alt="Student Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcSo7ENLFPdw1aFwXOe7i_sEWiA90NOPphUYk97dLUUQbUlxLqn6CNKad_BQ_9p5ff-eiJLB3hOHPpG_TSY2LfeFud5xCt2RYyjGDva4tG2O-eyzWvU7K_pOMCKWzpqhoSoJzP7Ytyek67tw03xForen9K385hQUyA839Cm6GNty3W0DPIQ6Ktw3rpsc831C5oxnH2m-r1LX4Xeok7KfvSCfA47CKJcQElnA4qstx4OfXqb7LguR29J_nhMl0j6PqP_RESZKvP4TM">
 </div>
 </div>
 </header>
@@ -400,147 +402,5 @@ document.addEventListener('DOMContentLoaded', () => {
   applyLanguage(savedLang);
 });
 </script>
-<script>
-(function () {
-  var GS_SUBJECT_FILES = [
-    { file: 'biology.html',      json: 'data/biology_vocab_4lang.json',      names: { en: 'Biology',           ko: '생물학',      zh: '生物学',   es: 'Biología' } },
-    { file: 'chemistry.html',    json: 'data/chemistry_vocab_4lang.json',    names: { en: 'Chemistry',         ko: '화학',        zh: '化学',     es: 'Química' } },
-    { file: 'economics.html',    json: 'data/economics_vocab_4lang.json',    names: { en: 'Economics',         ko: '경제학',      zh: '经济学',   es: 'Economía' } },
-    { file: 'english.html',      json: 'data/english_vocab_4lang.json',      names: { en: 'Advanced English',  ko: '심화 영어',   zh: '高级英语', es: 'Inglés avanzado' } },
-    { file: 'geometry.html',     json: 'data/geometry_vocab_4lang.json',     names: { en: 'Geometry',          ko: '기하학',      zh: '几何学',   es: 'Geometría' } },
-    { file: 'history.html',      json: 'data/history_vocab_4lang.json',      names: { en: 'U.S. History',      ko: '미국사',      zh: '美国历史', es: 'Historia de EE. UU.' } },
-    { file: 'physics.html',      json: 'data/physics_vocab_4lang.json',      names: { en: 'Physics',           ko: '물리학',      zh: '物理学',   es: 'Física' } },
-    { file: 'trigonometry.html', json: 'data/trigonometry_vocab_4lang.json', names: { en: 'Trigonometry',      ko: '삼각함수',    zh: '三角函数', es: 'Trigonometría' } },
-    { file: 'school-life.html',  json: 'data/school_life_vocab_4lang.json',  names: { en: 'School Life',       ko: '학교·기숙사 생활', zh: '校园生活', es: 'Vida escolar' } }
-  ];
-  var GS_LANGS = ['en', 'ko', 'zh', 'es'];
 
-  var gsAllTerms = null;
-  var gsLoading = null;
-
-  function gsLoadAllTerms() {
-    if (gsAllTerms) return Promise.resolve(gsAllTerms);
-    if (gsLoading) return gsLoading;
-    gsLoading = Promise.allSettled(
-      GS_SUBJECT_FILES.map(function (s) { return fetch(s.json).then(function (r) { return r.json(); }); })
-    ).then(function (results) {
-      var terms = [];
-      results.forEach(function (res, i) {
-        if (res.status === 'fulfilled') {
-          (res.value.categories || []).forEach(function (cat) {
-            (cat.terms || []).forEach(function (t) {
-              terms.push(Object.assign({}, t, { file: GS_SUBJECT_FILES[i].file, subjectNames: GS_SUBJECT_FILES[i].names }));
-            });
-          });
-        }
-      });
-      gsAllTerms = terms;
-      return terms;
-    });
-    return gsLoading;
-  }
-
-  function gsCurrentLang() {
-    return localStorage.getItem('selectedLanguage') || 'en';
-  }
-
-  function gsEscapeHtml(str) {
-    return String(str).replace(/[&<>"']/g, function (c) {
-      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
-    });
-  }
-
-  // Returns the language code of the first field that contains q, or null.
-  function gsMatchedLang(fields, q) {
-    for (var i = 0; i < GS_LANGS.length; i++) {
-      var lang = GS_LANGS[i];
-      var val = fields[lang];
-      if (val && val.toLowerCase().indexOf(q) !== -1) return lang;
-    }
-    return null;
-  }
-
-  function gsRenderResults(query) {
-    var box = document.getElementById('globalSearchResults');
-    if (!box) return;
-    var q = query.trim().toLowerCase();
-    if (!q) { box.classList.add('hidden'); box.innerHTML = ''; return; }
-    if (!gsAllTerms) { return; }
-
-    // Subject-level matches (search the subject's own name in all 4 languages)
-    var subjectMatches = [];
-    GS_SUBJECT_FILES.forEach(function (s) {
-      var lang = gsMatchedLang(s.names, q);
-      if (lang) subjectMatches.push({ type: 'subject', file: s.file, matchedLang: lang, matchedText: s.names[lang], names: s.names });
-    });
-    subjectMatches = subjectMatches.slice(0, 3);
-
-    // Term-level matches
-    var termMatches = [];
-    gsAllTerms.forEach(function (t) {
-      var lang = gsMatchedLang(t, q);
-      if (lang) termMatches.push({ type: 'term', term: t, matchedLang: lang, matchedText: t[lang] });
-    });
-    termMatches = termMatches.slice(0, 8 - subjectMatches.length);
-
-    var results = subjectMatches.concat(termMatches);
-
-    if (!results.length) {
-      box.innerHTML = '<div class="px-4 py-3 text-sm text-on-surface-variant">No terms found</div>';
-      box.classList.remove('hidden');
-      return;
-    }
-
-    var displayLang = gsCurrentLang();
-
-    box.innerHTML = results.map(function (r) {
-      if (r.type === 'subject') {
-        var label = r.names[displayLang] || r.names.en;
-        return '<a href="' + r.file + '?lang=' + r.matchedLang + '" class="flex items-center gap-3 px-4 py-2.5 hover:bg-surface-container-highest transition-colors border-b border-outline-variant last:border-0 bg-surface-container-high/50">' +
-          '<span class="material-symbols-outlined text-primary text-lg">folder_open</span>' +
-          '<span class="flex flex-col">' +
-            '<span class="text-sm font-semibold text-on-surface">' + gsEscapeHtml(label) + '</span>' +
-            '<span class="text-xs text-on-surface-variant">View all terms</span>' +
-          '</span>' +
-        '</a>';
-      }
-      var t = r.term;
-      var subjectLabel = t.subjectNames[displayLang] || t.subjectNames.en;
-      var translation = (displayLang !== 'en' && t[displayLang]) ? '<span class="text-xs text-primary block">' + gsEscapeHtml(t[displayLang]) + '</span>' : '';
-      return '<a href="' + t.file + '?q=' + encodeURIComponent(r.matchedText) + '&lang=' + r.matchedLang + '" class="flex items-center justify-between gap-3 px-4 py-2.5 hover:bg-surface-container-highest transition-colors border-b border-outline-variant last:border-0">' +
-        '<span class="flex flex-col">' +
-          '<span class="text-sm font-medium text-on-surface">' + gsEscapeHtml(t.en) + '</span>' +
-          translation +
-        '</span>' +
-        '<span class="text-xs text-on-surface-variant shrink-0">' + gsEscapeHtml(subjectLabel) + '</span>' +
-      '</a>';
-    }).join('');
-    box.classList.remove('hidden');
-  }
-
-  document.addEventListener('DOMContentLoaded', function () {
-    var input = document.getElementById('globalSearchInput');
-    var box = document.getElementById('globalSearchResults');
-    if (!input || !box) return;
-
-    input.addEventListener('focus', function () {
-      gsLoadAllTerms().then(function () { gsRenderResults(input.value); });
-    });
-    input.addEventListener('input', function () {
-      gsLoadAllTerms().then(function () { gsRenderResults(input.value); });
-    });
-    document.addEventListener('click', function (e) {
-      if (!e.target.closest('#global-search-wrap')) {
-        box.classList.add('hidden');
-      }
-    });
-    input.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter') {
-        var first = box.querySelector('a');
-        if (first) window.location.href = first.getAttribute('href');
-      }
-    });
-  });
-})();
-</script>
 </body></html>
